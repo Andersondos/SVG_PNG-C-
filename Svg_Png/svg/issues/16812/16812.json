@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "First time using this library - evaluating to see how I might make some button controls that take SVG rather than bitmap etc.\n \nUsing Inkscape to make shapes for a GUI. Found one that didn't render correctly with this library.\n \nSample shape attached to replicate the problem. (Should be a diamond with curved edges, but also with a hole in the middle).\n \nAfter investigating it seems that the problem is when a path contains a closepath (z) followed by a relative moveto (m). The SVG documentation says:\n \n*** If a \"closepath\" is followed immediately by a \"moveto\", then the \"moveto\" identifies the start point of the next subpath. ***\n \nIt doesn't differentiate between M and m.\n \nSo I tried a mod to the code. If closepath was the last command, and the next command is moveto (M or m) then I add a SvgMoveToSegment using the last known sub-path start point. This fixes the problem. I don't know whether there is more involved to cover other cases, or whether the developer's here think this isn't a bux, but maybe an Inkscape problem, etc.\n \nThanks - Jon.",
+    "LastUpdatedDate": "2013-02-21T16:25:59.8-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2011-10-28T03:59:24.43-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "closepath (z or Z) followed by moveto (m) bug?",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 16812
+  },
+  "FileAttachments": [
+    {
+      "FileId": 5980,
+      "FileName": "PathWithHole.svg",
+      "DownloadUrl": ".\\5980"
+    }
+  ],
+  "Comments": []
+}

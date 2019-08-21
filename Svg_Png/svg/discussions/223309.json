@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "479507",
+    "ThreadId": "223309",
+    "Html": "<p>Hello,</p>\r\n<p>Occasionally, a point within a path gets stored in the svg file in scientific notation ie (72.6261,6.5e-4) - Seems to happen a lot when converting Text to Paths.</p>\r\n<p>This breaks the SplitCommands and ParseCoordinates methods in SvgPathBuilder.cs</p>\r\n<p>I've made the following changes as a work around, I'm sure someone can come up with a more elegant solution.</p>\r\n<p>In SplitCommands, I've modified the line:</p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><span style=\"color:blue\">if</span> (<span style=\"color:blue\">char</span>.IsLetter(path[i]))\r\n</pre>\r\n</div>\r\n<p>to be</p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><span style=\"color:blue\">if</span> (<span style=\"color:blue\">char</span>.IsLetter(path[i]) &amp;&amp; path[i]!=<span style=\"color:#a31515\">'e'</span>)\r\n</pre>\r\n</div>\r\n<p>and in ParseCoordinates, I've modified the line:</p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><span style=\"color:blue\">var</span> parts = coords.Remove(0, 1).Replace(<span style=\"color:#a31515\">&quot;-&quot;</span>, <span style=\"color:#a31515\">&quot; -&quot;</span>).Split(<span style=\"color:blue\">new</span>[] { <span style=\"color:#a31515\">','</span>, <span style=\"color:#a31515\">' '</span>, <span style=\"color:#a31515\">'\\r'</span>, <span style=\"color:#a31515\">'\\n'</span> },\r\n      StringSplitOptions.RemoveEmptyEntries);\r\n</pre>\r\n</div>\r\n<p>to be</p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><span style=\"color:blue\">var</span> parts = coords.Remove(0, 1).Split(<span style=\"color:blue\">new</span>[] { <span style=\"color:#a31515\">','</span>, <span style=\"color:#a31515\">' '</span>, <span style=\"color:#a31515\">'\\r'</span>, <span style=\"color:#a31515\">'\\n'</span> }, StringSplitOptions.RemoveEmptyEntries);</pre>\r\n</div>\r\n<p><br>&nbsp;</p>",
+    "PostedDate": "2010-08-11T23:10:14.87-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello,\n\nI am using svgdocument to convert SVG to PNG. If the svg file contains image element in it..then exception is thrown while converting svg to image..following is the sample SVG code which I am trying to convert into PNG :\n<svg height=\"628\" version=\"1.1\" width=\"1360\" xmlns=\"http://www.w3.org/2000/svg\" style=\"overflow: hidden; position: relative; transform: translate3d(0px, 0px, 0px) scale(1, 1) rotate3d(0, 0, 0, 0deg);\" viewBox=\"0 0 1360 628\" preserveAspectRatio=\"xMinYMin\"><desc>Created with Raphaël 2.1.0</desc><defs/><rect x=\"0\" y=\"0\" width=\"1360\" height=\"628\" r=\"0\" rx=\"0\" ry=\"0\" fill=\"none\" stroke=\"none\" style=\"\"/><rect x=\"643\" y=\"296\" width=\"74\" height=\"36\" r=\"0\" rx=\"0\" ry=\"0\" fill=\"#ffffff\" stroke=\"#ffffff\" style=\"opacity: 1; cursor: pointer;\" cx=\"0\" cy=\"0\" opacity=\"1\" transform=\"matrix(1,0,0,1,0,0)\" table_name=\"1\"/><circle cx=\"716.75\" cy=\"284\" r=\"6.5\" fill=\"#9c1c6b\" stroke=\"#ffffff\" style=\"cursor: pointer;\" stroke-width=\"1.5\" chart_unique_seat_id=\"1\" ticket_type_id=\"1982\" ticket_type_name=\"y\" is_booked=\"0\" is_reserved=\"0\" display_chair_name=\"4\" transform=\"matrix(1,0,0,1,0,0)\"/><circle cx=\"716.75\" cy=\"344\" r=\"6.5\" fill=\"#9c1c6b\" stroke=\"#ffffff\" style=\"cursor: pointer;\" stroke-width=\"1.5\" chart_unique_seat_id=\"2\" ticket_type_id=\"1982\" ticket_type_name=\"y\" is_booked=\"0\" is_reserved=\"0\" display_chair_name=\"7\" transform=\"matrix(1,0,0,1,0,0)\"/><circle cx=\"695.25\" cy=\"284\" r=\"6.5\" fill=\"#9c1c6b\" stroke=\"#ffffff\" style=\"cursor: pointer;\" stroke-width=\"1.5\" chart_unique_seat_id=\"3\" ticket_type_id=\"1982\" ticket_type_name=\"y\" is_booked=\"0\" is_reserved=\"0\" display_chair_name=\"3\" transform=\"matrix(1,0,0,1,0,0)\"/><circle cx=\"695.25\" cy=\"344\" r=\"6.5\" fill=\"#9c1c6b\" stroke=\"#ffffff\" style=\"cursor: pointer;\" stroke-width=\"1.5\" chart_unique_seat_id=\"4\" ticket_type_id=\"1982\" ticket_type_name=\"y\" is_booked=\"0\" is_reserved=\"0\" display_chair_name=\"8\" transform=\"matrix(1,0,0,1,0,0)\"/><circle cx=\"673.75\" cy=\"284\" r=\"6.5\" fill=\"#9c1c6b\" stroke=\"#ffffff\" style=\"cursor: pointer;\" stroke-width=\"1.5\" chart_unique_seat_id=\"5\" ticket_type_id=\"1982\" ticket_type_name=\"y\" is_booked=\"0\" is_reserved=\"0\" display_chair_name=\"2\" transform=\"matrix(1,0,0,1,0,0)\"/><circle cx=\"673.75\" cy=\"344\" r=\"6.5\" fill=\"#9c1c6b\" stroke=\"#ffffff\" style=\"cursor: pointer;\" stroke-width=\"1.5\" chart_unique_seat_id=\"6\" ticket_type_id=\"1982\" ticket_type_name=\"y\" is_booked=\"0\" is_reserved=\"0\" display_chair_name=\"9\" transform=\"matrix(1,0,0,1,0,0)\"/><circle cx=\"652.25\" cy=\"284\" r=\"6.5\" fill=\"#9c1c6b\" stroke=\"#ffffff\" style=\"cursor: pointer;\" stroke-width=\"1.5\" chart_unique_seat_id=\"7\" ticket_type_id=\"1982\" ticket_type_name=\"y\" is_booked=\"0\" is_reserved=\"0\" display_chair_name=\"1\" transform=\"matrix(1,0,0,1,0,0)\"/><circle cx=\"652.25\" cy=\"344\" r=\"6.5\" fill=\"#9c1c6b\" stroke=\"#ffffff\" style=\"cursor: pointer;\" stroke-width=\"1.5\" chart_unique_seat_id=\"8\" ticket_type_id=\"1982\" ticket_type_name=\"y\" is_booked=\"0\" is_reserved=\"0\" display_chair_name=\"10\" transform=\"matrix(1,0,0,1,0,0)\"/><circle cx=\"631\" cy=\"326\" r=\"6.5\" fill=\"#9c1c6b\" stroke=\"#ffffff\" style=\"cursor: pointer;\" stroke-width=\"1.5\" chart_unique_seat_id=\"9\" ticket_type_id=\"1982\" ticket_type_name=\"y\" is_booked=\"0\" is_reserved=\"0\" display_chair_name=\"11\" transform=\"matrix(1,0,0,1,0,0)\"/><circle cx=\"729\" cy=\"326\" r=\"6.5\" fill=\"#9c1c6b\" stroke=\"#ffffff\" style=\"cursor: pointer;\" stroke-width=\"1.5\" chart_unique_seat_id=\"10\" ticket_type_id=\"1982\" ticket_type_name=\"y\" is_booked=\"0\" is_reserved=\"0\" display_chair_name=\"6\" transform=\"matrix(1,0,0,1,0,0)\"/><circle cx=\"631\" cy=\"305\" r=\"6.5\" fill=\"#9c1c6b\" stroke=\"#ffffff\" style=\"cursor: pointer;\" stroke-width=\"1.5\" chart_unique_seat_id=\"11\" ticket_type_id=\"1982\" ticket_type_name=\"y\" is_booked=\"0\" is_reserved=\"0\" display_chair_name=\"12\" transform=\"matrix(1,0,0,1,0,0)\"/><circle cx=\"729\" cy=\"305\" r=\"6.5\" fill=\"#9c1c6b\" stroke=\"#ffffff\" style=\"cursor: pointer;\" stroke-width=\"1.5\" chart_unique_seat_id=\"12\" ticket_type_id=\"1982\" ticket_type_name=\"y\" is_booked=\"0\" is_reserved=\"0\" display_chair_name=\"5\" transform=\"matrix(1,0,0,1,0,0)\"/><text style=\"text-anchor: middle; font: 10px \"Arial\"; cursor: pointer;\" x=\"680\" y=\"314\" text-anchor=\"middle\" font=\"10px \"Arial\"\" stroke=\"none\" fill=\"#9c0045\" transform=\"matrix(1,0,0,1,0,0)\"><tspan dy=\"3.5\">1</tspan></text><rect x=\"530\" y=\"264\" width=\"300\" height=\"100\" r=\"0\" rx=\"0\" ry=\"0\" fill=\"#e61873\" stroke=\"#ffffff\" style=\"cursor: pointer; opacity: 1; fill-opacity: 0.7;\" cx=\"0\" cy=\"0\" opacity=\"1\" fill-opacity=\"0.7\" transform=\"matrix(1,0,0,1,8,133)\" table_name=\"undefined\"/><path style=\"\" fill=\"none\" stroke=\"none\" d=\"M538,397L838,397L838,497L538,497L538,397\"/><image x=\"534\" y=\"393\" width=\"8\" height=\"8\" preserveAspectRatio=\"none\" href=\"/Images/Style/resize-2.svg\" style=\"\" fill=\"#ffffff\" stroke=\"#000000\" transform=\"matrix(1,0,0,1,0,0)\"/><image x=\"834\" y=\"393\" width=\"8\" height=\"8\" preserveAspectRatio=\"none\" href=\"/Images/Style/resize-1.svg\" style=\"\" fill=\"#ffffff\" stroke=\"#000000\" transform=\"matrix(1,0,0,1,0,0)\"/><image x=\"834\" y=\"493\" width=\"8\" height=\"8\" preserveAspectRatio=\"none\" href=\"/Images/Style/resize-2.svg\" style=\"\" fill=\"#ffffff\" stroke=\"#000000\" transform=\"matrix(1,0,0,1,0,0)\"/><image x=\"534\" y=\"493\" width=\"8\" height=\"8\" preserveAspectRatio=\"none\" href=\"/Images/Style/resize-1.svg\" style=\"\" fill=\"#ffffff\" stroke=\"#000000\" transform=\"matrix(1,0,0,1,0,0)\"/><image x=\"661\" y=\"417\" width=\"55\" height=\"65\" preserveAspectRatio=\"none\" href=\"/Images/Style/center-horizontal-stage.svg\" style=\"\"/></svg>\n\nCan anyone please look into the issue? and let me know how to resolve it.\n\nThanks,\nDrashty",
+    "LastUpdatedDate": "2015-02-04T06:28:47.803-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2015-02-04T06:28:47.803-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Use svg rendering engine under medium trust level",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 21710
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

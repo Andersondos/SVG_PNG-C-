@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Class \"SvgCubicCurveSegment\" has an overwritten \"ToString\" method. The other classes don't have one.\n\nThat ist not comfortable during debugging processes. You should add them.",
+    "LastUpdatedDate": "2015-03-17T19:48:20.64-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2015-03-17T19:47:39.933-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Incomplete implementation of classes inherited from SvgPathSegment",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 21784
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

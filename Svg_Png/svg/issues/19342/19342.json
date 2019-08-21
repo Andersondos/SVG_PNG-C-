@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi,  \n   I used this library to convert SVG image to PNG/JPG , but the resulting image has portion of blurs. Text part is rendered great, but graph part of the image is blurred. Attached the generated jpg image.\n\nAny ideas how I can fix it?\n\nCode: \nSvgDocument svg = SvgDocument.Open(imagePath);\nsvg.Draw().Save(imagePath + \".jpg\", ImageFormat.Jpeg);\n\nthanks",
+    "LastUpdatedDate": "2013-02-21T16:25:58.153-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2013-02-11T13:07:06.7-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Image loaded from SVG is has blurs in it",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 19342
+  },
+  "FileAttachments": [
+    {
+      "FileId": 6801,
+      "FileName": "FundedStatus1.svg.jpg",
+      "DownloadUrl": ".\\6801"
+    }
+  ],
+  "Comments": []
+}

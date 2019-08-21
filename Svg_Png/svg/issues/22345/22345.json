@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi I am getting \"Overflow Error\" \n\nCreateSvgDocument(svgsvgDoc, width).Draw().Save(imagePath, ImageFormat.Png);\n\nIs this issue resolved?",
+    "LastUpdatedDate": "2016-09-15T02:37:16.75-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2016-09-08T23:20:26.113-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Overflow Error",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 22345
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

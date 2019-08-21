@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "426341",
+    "ThreadId": "208026",
+    "Html": "<p>Hi,</p>\r\n<p>I have a SVG file in which the color is coded inside the style section with fill:rgb(X,X,X),</p>\r\n<p>I would like to access this information and convert it to what I want in C# before dumping the SVG into an IMAGE.</p>\r\n<p>I tried</p>\r\n<p>doc.GetElementbyId(&quot;style&quot;).content = &quot;fill:rgb(Y,Y,Y)&quot;;</p>\r\n<p>but this did not work.</p>\r\n<p>Help is appriciated.</p>\r\n<p>Best Regards</p>\r\n<p>A</p>",
+    "PostedDate": "2010-04-01T01:29:13.863-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "427408",
+    "ThreadId": "208026",
+    "Html": "<p>Hey,</p>\r\n<p>Sorry for not getting back to you sooner.</p>\r\n<p>What you want <em>should</em> be possible by doing the following:</p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre>((SvgVisualElement)doc.GetElementById(<span style=\"color:#A31515\">&quot;style&quot;</span>)).Fill = <span style=\"color:Blue\">new</span> SvgColourServer(Color.Black);</pre>\r\n</div>\r\n<p>Hope this helps.</p>\r\n<p>Cheers,<br>Scriv</p>",
+    "PostedDate": "2010-04-05T05:57:33.27-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "433201",
+    "ThreadId": "208026",
+    "Html": "<p>Hi Dave,</p>\r\n<p>Thanks for the answer. I have a problem. I can not find the SvgVisualElement object in my SVG dll. I had 0.5.2.0 version.</p>\r\n<p>Do I have a wrong DLL.</p>\r\n<p>Best Regards</p>\r\n<p>Atilla</p>",
+    "PostedDate": "2010-04-20T07:49:39.717-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "439529",
+    "ThreadId": "208026",
+    "Html": "<p>Sorry for the <em>extremely </em>late response, Atilla.</p>\r\n<p>It may have been called SvgGraphicsElement in that version. I can't remember off the top of my head when it was refactored to be SvgVisualElement.</p>\r\n<p>I will get a code sample up for you tonight or tomorrow night because it's definitely possible to do what you want to do, I just haven't documented it.</p>\r\n<p>Again, I'm very sorry about not getting back to you sooner.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-05-05T15:30:41.6-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "439761",
+    "ThreadId": "208026",
+    "Html": "<p>Okay, I've given this a go (using the latest source code, but version 0.5.2.0 should work the same way):</p>\r\n<p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre>            <span style=\"color:blue\">var</span> sampleDoc = SvgDocument.Open(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, <span style=\"color:#a31515\">@&quot;..\\..\\sample.svg&quot;</span>));\r\n            sampleDoc.GetElementById&lt;SvgUse&gt;(<span style=\"color:#a31515\">&quot;Commonwealth_Star&quot;</span>).Fill = <span style=\"color:blue\">new</span> SvgColourServer(Color.Black);\r\n            sampleDoc.Draw().Save(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, <span style=\"color:#a31515\">@&quot;..\\..\\sample.png&quot;</span>));\r\n</pre>\r\n</div>\r\n</p>\r\n<p>It's simply a case of getting the required element (SvgCircle, SvgPath, SvgPolygon etc) and setting he Fill property of the element and that calling Draw().</p>\r\n<p>I've added this to the Samples folder in the <a href=\"http://svg.codeplex.com/SourceControl/changeset/view/48301\">latest check-in</a> under the RuntimeUpdates folder so you can download and run the code (note that it depends on VS 2010 but should be an easy conversion to VS 2008).</p>\r\n<p>Let me know if this isn't suitable for you.</p>\r\n<p>Scriv</p>",
+    "PostedDate": "2010-05-06T03:12:29.77-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "440443",
+    "ThreadId": "208026",
+    "Html": "<p>Thank you very much it helped a lot.</p>",
+    "PostedDate": "2010-05-07T11:28:15.98-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

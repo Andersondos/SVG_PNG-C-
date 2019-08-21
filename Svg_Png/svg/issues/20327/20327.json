@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When executing the code below in IIS 7.;. an System.Security.SecurityException is thrown.  Anyone have any ideas.  \n\n\n\nvar byteArray = Encoding.ASCII.GetBytes(SaveFormat.Value.Replace(\"image/svg+xml,\",string.Empty));\n\n            using (var stream = new MemoryStream(byteArray))\n            {\n                var svgDocument = SvgDocument.Open(stream);\n                var bitmap = svgDocument.Draw();\n\n                MemoryStream memoryStream = new MemoryStream();\n                bitmap.Save(memoryStream, ImageFormat.Png);\n\n\n                 string data = \"data:image/png;base64,\" + Convert.ToBase64String(memoryStream.ToArray());\n                \n                 }\n            }",
+    "LastUpdatedDate": "2013-10-18T13:11:00.18-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2013-10-18T13:11:00.18-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "System.Security.SecurityException when called in IIS",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 20327
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

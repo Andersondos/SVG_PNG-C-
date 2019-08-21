@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "215236",
+    "ThreadId": "63311",
+    "Html": "<p>Hi there,</p>\r\n<p>is it possible (and if so, how?) to resize (scale) an SVG document?</p>\r\n<p>Cheerio,</p>\r\n<p>&nbsp;</p>\r\n<p>Golo</p>",
+    "PostedDate": "2009-07-23T04:33:57.933-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "215246",
+    "ThreadId": "63311",
+    "Html": "<p>Golo,</p>\r\n<p>The best way to do this would be to apply a scale transform to the root element:</p>\r\n<p>&lt;svg ... transform=&quot;scale(2)&quot; ...&gt;<br>&nbsp;&nbsp;&nbsp; ....</p>\r\n<p>Or using the API after the document has been loaded:</p>\r\n<p>var svgDoc = SvgDocument.Open(&quot;path&quot;);<br>svgDoc.Transforms.Add(new SvgScale(2));</p>\r\n<p>The scale factor can be positive or negative.</p>\r\n<p>If you do this watch out for width and height though, as the system isn't yet automatically adjusting them based on scaling. So if you scale up or down apply the same scaling to the Width &amp; Height properties of the document.</p>\r\n<p>Scriv</p>",
+    "PostedDate": "2009-07-23T04:53:27.45-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "215279",
+    "ThreadId": "63311",
+    "Html": "<p>Hi Scriv,</p>\r\n<p>great, thanks for helping so fast :-)!</p>\r\n<p>Your solution worked perfectly, except one little caveat: You have to insert a</p>\r\n<p>svgDoc.Transforms = new SvgTransformsCollection();</p>\r\n<p>in between.</p>\r\n<p>Cheerio,</p>\r\n<p>Golo</p>",
+    "PostedDate": "2009-07-23T06:08:09.68-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1447605",
+    "ThreadId": "645962",
+    "Html": "I have been searching for days for some documentation or samples for creating a new SVG Document. What I want to do is generate some polygons in and SVG Doc and save it but have not found any samples for this. Anyone had any experience with this?\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2015-10-08T01:56:53.82-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1449442",
+    "ThreadId": "645962",
+    "Html": "This should get you started.<br />\n<pre><code>var oSvgDocument = new SvgDocument();\n\nvar oSvgPolygon_Square = new SvgPolygon\n{\n    Stroke = new SvgColourServer(Color.Blue),\n    StrokeWidth = 40.0F,\n    StrokeOpacity = 0.50F,\n    StrokeLineJoin = SvgStrokeLineJoin.Bevel,\n\n    Fill = new SvgColourServer(Color.Red),\n    FillOpacity = 0.50F,\n    FillRule = SvgFillRule.EvenOdd,\n\n    Points = new SvgPointCollection(),\n};\n\noSvgPolygon_Square.Points.AddRange(new[]\n{\n    new SvgUnit(300F), new SvgUnit(300F),\n    new SvgUnit(300F), new SvgUnit(600F),\n    new SvgUnit(600F), new SvgUnit(600F),\n    new SvgUnit(600F), new SvgUnit(300F),\n});\n\nvar oSvgPolygon_Triangle = new SvgPolygon\n{\n    Stroke = new SvgColourServer(Color.Green),\n    StrokeWidth = 20.0F,\n    StrokeOpacity = 0.50F,\n    StrokeLineJoin = SvgStrokeLineJoin.Round,\n\n    Fill = new SvgColourServer(Color.Yellow),\n    FillOpacity = 0.50F,\n    FillRule = SvgFillRule.EvenOdd,\n\n    Points = new SvgPointCollection(),\n};\n\noSvgPolygon_Triangle.Points.AddRange(new[]\n{\n    new SvgUnit(150F), new SvgUnit(300F),\n    new SvgUnit(750F), new SvgUnit(450F),\n    new SvgUnit(150F), new SvgUnit(600F),\n});\n\noSvgDocument.Children.Add(oSvgPolygon_Square);\noSvgDocument.Children.Add(oSvgPolygon_Triangle);\n\noSvgDocument.Write(&quot;Shapes.svg&quot;);</code></pre>\n\n",
+    "PostedDate": "2015-10-22T15:08:49.047-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

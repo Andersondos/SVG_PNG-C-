@@ -1,0 +1,37 @@
+Index: Document Structure/SvgDocument.cs
+===================================================================
+--- Document Structure/SvgDocument.cs	(revision 11621)
++++ Document Structure/SvgDocument.cs	(working copy)
+@@ -152,14 +152,11 @@
+                                     svgDocument = (SvgDocument) element;
+                                 }
+ 
+-                                if (element == null)
+-                                    continue;
+-
+-                                // Add to the parents children
+-                                if (elementStack.Count > 0)
++                                // Add to the parents children if a known element
++                                if (element !=null && elementStack.Count > 0)
+                                 {
+                                     parent = elementStack.Peek();
+-                                    parent.Children.Add(element);
++											   if(parent !=null) parent.Children.Add(element);
+                                 }
+ 
+                                 // Push element into stack
+@@ -171,13 +168,10 @@
+ 
+                                 break;
+                             case XmlNodeType.EndElement:
+-                                // Skip if no element was created
+-                                if (element == null)
+-                                    continue;
+                                 // Pop the element out of the stack
+                                 element = elementStack.Pop();
+ 
+-                                if (value.Length > 0)
++                                if (element !=null && value.Length > 0)
+                                 {
+                                     element.Content = value.ToString();
+                                     // Reset content value for new element

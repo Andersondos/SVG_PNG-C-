@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1038329",
+    "ThreadId": "442279",
+    "Html": "Hi\r<br />\n<br />\nI am generating png images from svg.\r<br />\nThe problem is that the images are blurry and not the best quality.\r<br />\nI would just like to increase the DPI of the generated image (without decreasing the size of the image obviously).\r<br />\n<br />\nMy basic test code is as follows:<br />\n<pre><code>string filePath = MapPath(&quot;chart.svg&quot;);\nvar sampleDoc = SvgDocument.Open(filePath);\nsampleDoc.Draw().Save(MapPath(&quot;output/chart.png&quot;));</code></pre>\n\nI have tried setting the PPI for the document before doing the Draw but that seemed to have no effect.\r<br />\n<br />\nIs anyone able to point me in the right direction?\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2013-05-01T16:32:03.517-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1102444",
+    "ThreadId": "442279",
+    "Html": "Hey,\r<br />\n<br />\nI've been looking into this same issue recently. Did you have any luck in figuring this out?<br />\n",
+    "PostedDate": "2013-10-01T12:50:42.813-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1102501",
+    "ThreadId": "442279",
+    "Html": "Hi Stuart\r<br />\n<br />\nNo I didn't manage to get it working using the SVG rendering engine.\r<br />\n<br />\nFor various reasons I ended up using a third party tool called AbcPdf.\r<br />\nI wanted to export various reports made up of HTML and SVG to PDF files and AbcPdf did the trick.\r<br />\n<br />\nI think AbcPdf uses SVG Rendering Engine under the covers anyway so their must be some way to get it to behave.\r<br />\n<br />\nI did have some troubles with AbcPdf.<br />\nIf you do end up using it you will need to do things like.<br />\n<ul>\n<li>Set the rendering engine from the default to EngineType.Gecko otherwise SVG won't be exported.</li>\n<li>Set the &quot;DotsPerInch&quot; for the document</li>\n<li>\nFlatten each page of the document.<br />\n</li>\n</ul>\nThere is help online about how to do all that and the support is quite good. <br />\n",
+    "PostedDate": "2013-10-01T16:05:29.777-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1355925",
+    "ThreadId": "442279",
+    "Html": "actually you CAN, but maybe its a bit of a workaround. \r<br />\n<br />\nwhat i discovered was that in my original SVGs i had a resolution set. what i then did, was manipulate the SVG before converting.\r<br />\n<br />\nso in my case the start of a saved SVG file would therefore chage from:<br />\n<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;svg version=&quot;1.2&quot; baseProfil=&quot;full&quot; width=&quot;1011px&quot; height=&quot;638px&quot; viewBox=&quot;0 0 1011 638&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;\n  &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;1011&quot; height=&quot;638&quot; fill=&quot;#FFFFFF&quot;/&gt;\n  &lt;g&gt;\n</code></pre>\n\nto:<br />\n<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;svg version=&quot;1.2&quot; baseProfil=&quot;full&quot; width=&quot;4044px&quot; height=&quot;2552px&quot; viewBox=&quot;0 0 4044 2552&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;\n  &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;4044&quot; height=&quot;2552&quot; fill=&quot;#FFFFFF&quot;/&gt;\n  &lt;g transform=&quot;scale(4.0, 4.0)&quot;&gt;\n</code></pre>\n\nwhat i did after that was change the source code in SvgDocument.cs in the Draw() method. I added an overload taking 2 floats for setting the DPI; \r<br />\n<br />\nmy final code then looks like this:<br />\n<pre><code>SvgDocument document = SvgDocument.Open(@&quot;C:\\TEMP\\svgs\\example.svg&quot;);\ndocument.Ppi = 1200;\nvar bitmap = document.Draw(1200, 1200);\nvar png = ImageFormat.Png;\nbitmap.Save(@&quot;C:\\TEMP\\svgs\\example.png&quot;, png);\n</code></pre>\n\nmy Draw method in SvgDocument.cs looks like this:<br />\n<pre><code>public virtual Bitmap Draw(float? dpiX, float? dpiY)\n        {\n            //Trace.TraceInformation(&quot;Begin Render&quot;);\n\n            var size = GetDimensions();\n            var bitmap = new Bitmap((int)Math.Ceiling(size.Width), (int)Math.Ceiling(size.Height));\n\n            if (dpiX != null &amp;&amp; dpiY != null)\n                bitmap.SetResolution(dpiX.Value, dpiY.Value);\n\n            try\n            {\n                using (var renderer = SvgRenderer.FromImage(bitmap))\n                {\n                    renderer.TextRenderingHint = TextRenderingHint.AntiAlias;\n                    renderer.TextContrast = 1;\n                    renderer.PixelOffsetMode = PixelOffsetMode.Half;\n                    this.Render(renderer);\n                    renderer.Save();\n                }\n            }\n            catch\n            {\n                bitmap.Dispose();\n                throw;\n            }\n\n            //Trace.TraceInformation(&quot;End Render&quot;);\n            return bitmap;\n        }</code></pre>\n\nhope this helps somebody<br />\n",
+    "PostedDate": "2015-02-26T03:26:30.033-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

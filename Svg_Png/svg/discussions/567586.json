@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1305248",
+    "ThreadId": "567586",
+    "Html": "Hi,\r<br />\n<br />\nHow can I add generic elements in to the defs-Element? I want to add a &lt;style&gt; and a &lt;symbol&gt;. Since there is no SvgStyle oder SvgSymbol class I have to do this somehow. But how?\r<br />\n<br />\nThanx, S.<br />\n",
+    "PostedDate": "2014-09-16T08:57:33.973-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1330779",
+    "ThreadId": "567586",
+    "Html": "the codeplex repo is over 2 years old, please use this fork now: <a href=\"https://github.com/vvvv/SVG\" rel=\"nofollow\">https://github.com/vvvv/SVG</a><br />\n",
+    "PostedDate": "2014-12-10T14:12:16.173-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

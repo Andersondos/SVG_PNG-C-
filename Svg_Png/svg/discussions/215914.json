@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "455081",
+    "ThreadId": "215914",
+    "Html": "<p>Hi,</p>\r\n<p>Is it possible to save svg file to pdf using your engine? I am not sure how to get started.</p>\r\n<p>&nbsp;</p>\r\n<p>Many Thanks</p>\r\n<p>Jerry</p>",
+    "PostedDate": "2010-06-14T01:32:25.687-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "541549",
+    "ThreadId": "215914",
+    "Html": "\r\n<p>I have the same problem, hope somebody can give us some suggestion.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>\r\n<p>Kevin</p>\r\n",
+    "PostedDate": "2010-12-29T01:14:37.597-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "541688",
+    "ThreadId": "215914",
+    "Html": "\r\n<p>You might consider saving the SVG to JPG or PNG, then using iText to embed the image into PDF.</p>\r\n",
+    "PostedDate": "2010-12-29T07:15:13.72-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

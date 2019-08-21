@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2008-05-31T21:37:45.903-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "In SVG\\Transforms\\SvgTransformConverter.cs::ConvertFrom()\n \nThis was what I did to get it to accept the second parameter:\n \n                       case \"scale\":\n                            string[] scales = contents.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);\n                            float sx = float.Parse(scales[0].Trim(), NumberStyles.Float, CultureInfo.InvariantCulture);\n                            float sy = float.Parse(scales[1].Trim(), NumberStyles.Float, CultureInfo.InvariantCulture);\n                            transformList.Add(new SvgScale(sx, sy));\n                            break;",
+    "LastUpdatedDate": "2013-05-16T04:04:31.237-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2008-05-13T14:00:01.347-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Optional second parameter for scale transform not supported",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6156
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I've added similar code (changeset #11351) to what you provided, but had to modify it slightly to still allow for both scale(n) and scale(x,y). The code above will throw an exception if 'scale(10)' is used.",
+      "PostedDate": "2008-05-16T17:14:38.117-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-05-16T17:14:38.757-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-05-31T21:37:45.903-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:10.467-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:31.237-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

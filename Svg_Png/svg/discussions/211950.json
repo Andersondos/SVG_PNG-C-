@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "440444",
+    "ThreadId": "211950",
+    "Html": "<p>HI</p>\r\n<p>I have these SVG files sets&nbsp;&nbsp;in which I have some children with polyline and style with fill.</p>\r\n<p>The svg.dll wont let me fill the content unless I make the polyline into polygon (by editing the svg file set)</p>\r\n<p>Does SVG standard require polyline to be able to be filled as well, because these sets of svg files has a lot of same</p>\r\n<p>type of files.</p>\r\n<p>Regards/</p>",
+    "PostedDate": "2010-05-07T11:30:58.72-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "440672",
+    "ThreadId": "211950",
+    "Html": "<p>Additional note to this.</p>\r\n<p>Some java applications for SVG processing can do this somehow. Like batik-squiggle.jar , so I am not sure if the standard asks you to do this or not.</p>\r\n<p>Best Regards</p>\r\n<p>Atilla</p>",
+    "PostedDate": "2010-05-08T11:39:54.84-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Example:\n<text style=\"letter-spacing:9.02056122px;...\">text</text>\n \nIt looks like \"_path.GetBounds().Width\" does not return valid width.\nAdding 5.2 to the width solved my problem.\n \nIt might be something similar to this problem:\nhttp://www.codeproject.com/KB/GDI-plus/measurestring.aspx\n \nFile: SvgText.cs\n-----------------\nlocation = new PointF(_path.GetBounds().Width + 5.2f + start + letterSpacing, location.Y);\n-----------------\n \nI know this is not completely right solution but it worked for me.\n \nRegards,\nTomazZ",
+    "LastUpdatedDate": "2013-02-21T16:26:00.647-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2011-04-23T12:04:58.3-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "letter-spacing & _path.GetBounds().Width",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 15747
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

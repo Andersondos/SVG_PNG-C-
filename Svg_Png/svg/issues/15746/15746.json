@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t width=\"595px\" height=\"595px\" viewBox=\"0 0 595 595\" enable-background=\"new 0 0 595 595\" xml:space=\"preserve\">\n<g>\n\t<radialGradient id=\"SVGID_1_\" cx=\"422.4502\" cy=\"-35.7002\" r=\"556.4982\" gradientUnits=\"userSpaceOnUse\">\n\t\t<stop  offset=\"0\" style=\"stop-color:#FFFFFF\"/>\n\t\t<stop  offset=\"0.1151\" style=\"stop-color:#FDFEFA\"/>\n\t\t<stop  offset=\"0.2592\" style=\"stop-color:#F6FAEA\"/>\n\t\t<stop  offset=\"0.4187\" style=\"stop-color:#EAF4D1\"/>\n\t\t<stop  offset=\"0.5894\" style=\"stop-color:#DAEBAD\"/>\n\t\t<stop  offset=\"0.769\" style=\"stop-color:#C6DF7F\"/>\n\t\t<stop  offset=\"0.9534\" style=\"stop-color:#ADD248\"/>\n\t\t<stop  offset=\"1\" style=\"stop-color:#A6CE39\"/>\n\t</radialGradient>\n\t<rect fill-rule=\"evenodd\" clip-rule=\"evenodd\" fill=\"url(#SVGID_1_)\" width=\"595\" height=\"595\"/>\n \n</g>\n</svg>\n \nThe above svg code should render with a green background and a white to green gradient centered in the top right. Bur the colours are inverted and there is no nackground color!",
+    "LastUpdatedDate": "2013-02-21T16:26:00.82-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2011-04-23T02:54:14.89-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "radialGradient not rendering properly",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 15746
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

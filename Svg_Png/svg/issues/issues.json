@@ -1,0 +1,426 @@
+[
+  {
+    "Id": 5650,
+    "Title": "Support SVG element \"clipPath\""
+  },
+  {
+    "Id": 5651,
+    "Title": "Support SVG element \"radialGradient\" fully."
+  },
+  {
+    "Id": 5652,
+    "Title": "Support querystring defined entities for Svg.Web.SvgHandler"
+  },
+  {
+    "Id": 5653,
+    "Title": "Files without a width/height defined throw an exception when rendered."
+  },
+  {
+    "Id": 5701,
+    "Title": "Ensure XML API documention in the code"
+  },
+  {
+    "Id": 5822,
+    "Title": "Add SVG CSS Stylesheet support"
+  },
+  {
+    "Id": 5823,
+    "Title": "Add support to reference elements within another file"
+  },
+  {
+    "Id": 5921,
+    "Title": "latest version from source control does not compile"
+  },
+  {
+    "Id": 6018,
+    "Title": "Float parsing culture dependent errors"
+  },
+  {
+    "Id": 6071,
+    "Title": "H,h,V,v path elements support."
+  },
+  {
+    "Id": 6072,
+    "Title": "Library incorrectly handles linear gradients."
+  },
+  {
+    "Id": 6156,
+    "Title": "Optional second parameter for scale transform not supported"
+  },
+  {
+    "Id": 6184,
+    "Title": "Transforms are parsed but ignored"
+  },
+  {
+    "Id": 6324,
+    "Title": "SvgElement.PushTransforms and ViewBox"
+  },
+  {
+    "Id": 6344,
+    "Title": "FIX: Parsing document incorrectly parents elements when it encounters empty nodes which are in a different namespace"
+  },
+  {
+    "Id": 6381,
+    "Title": "Units in inches are incorrectly parsed as millimeters."
+  },
+  {
+    "Id": 6382,
+    "Title": "Support EM font sizes"
+  },
+  {
+    "Id": 6455,
+    "Title": "Arc Segments in SvgPathBuilder"
+  },
+  {
+    "Id": 7522,
+    "Title": "support rotate(angle,cx,cy)"
+  },
+  {
+    "Id": 7523,
+    "Title": "support use xlink:href"
+  },
+  {
+    "Id": 7524,
+    "Title": "support style stroke-dasharray"
+  },
+  {
+    "Id": 7525,
+    "Title": "matrix problem, path not flipped"
+  },
+  {
+    "Id": 7526,
+    "Title": "whitespaces \\t \\r \\n in path and points result in exception"
+  },
+  {
+    "Id": 7694,
+    "Title": "Inkscape SVG file does not render properly"
+  },
+  {
+    "Id": 7826,
+    "Title": "Support basic filter effects such as gaussian blur."
+  },
+  {
+    "Id": 7845,
+    "Title": "Arc Path Renders incorrectly"
+  },
+  {
+    "Id": 7914,
+    "Title": "ViewBox transforms are incorrectly applied causing image distortion"
+  },
+  {
+    "Id": 7923,
+    "Title": "Refactor element factory to use MEF"
+  },
+  {
+    "Id": 7971,
+    "Title": "Linear Gradient not working"
+  },
+  {
+    "Id": 7986,
+    "Title": "public static SvgDocument Open(XmlDocument document) returns null"
+  },
+  {
+    "Id": 8107,
+    "Title": "Support SvgRenderer.Transform.Rotate()"
+  },
+  {
+    "Id": 8184,
+    "Title": "Enable Rendering to WinForms via System.Drawing.Graphics"
+  },
+  {
+    "Id": 8248,
+    "Title": "Serializable"
+  },
+  {
+    "Id": 8494,
+    "Title": "Polyline Fill"
+  },
+  {
+    "Id": 8589,
+    "Title": "Investigate Piccolo integration support"
+  },
+  {
+    "Id": 9367,
+    "Title": "Add Image suppport"
+  },
+  {
+    "Id": 9368,
+    "Title": "Added TransformedBounds and Draw(padding)"
+  },
+  {
+    "Id": 9525,
+    "Title": "Minor bug in SvgTransformConverter.ConvertFrom rotate handling"
+  },
+  {
+    "Id": 9838,
+    "Title": "problem with following files"
+  },
+  {
+    "Id": 10231,
+    "Title": "SvgPathBuilder can't handle whitespace in the path"
+  },
+  {
+    "Id": 10232,
+    "Title": "SvgDocument.Open performance is really bad due to the Trace.TraceInformation calls"
+  },
+  {
+    "Id": 10256,
+    "Title": "Display svg file at webpage(ASP.net)"
+  },
+  {
+    "Id": 10260,
+    "Title": "Refactor SvgHandler to allow extensiblility through inheritance"
+  },
+  {
+    "Id": 10487,
+    "Title": "The cubic Bézier curve path parsing/rendering incorrectly."
+  },
+  {
+    "Id": 10725,
+    "Title": "TSpan elements not rendered correctly"
+  },
+  {
+    "Id": 10736,
+    "Title": "svg.Draw() background color problem"
+  },
+  {
+    "Id": 10937,
+    "Title": "Out of memory exception"
+  },
+  {
+    "Id": 11282,
+    "Title": "Opacity is inverted (treated as transparency) in gradients"
+  },
+  {
+    "Id": 12949,
+    "Title": "Cannot reference other documents via URLs"
+  },
+  {
+    "Id": 13531,
+    "Title": "convert to pdf?"
+  },
+  {
+    "Id": 13986,
+    "Title": "Issue with Points in scientific notation"
+  },
+  {
+    "Id": 13987,
+    "Title": "Issue with relative move in a multisegment path"
+  },
+  {
+    "Id": 14000,
+    "Title": "Colour"
+  },
+  {
+    "Id": 14179,
+    "Title": "rendering errors..."
+  },
+  {
+    "Id": 14482,
+    "Title": "Support embedded fonts/glyphs"
+  },
+  {
+    "Id": 14582,
+    "Title": "Clip paths are not cached correctly"
+  },
+  {
+    "Id": 14583,
+    "Title": "Clip paths with transforms are not rendered correctly"
+  },
+  {
+    "Id": 14584,
+    "Title": "Clip"
+  },
+  {
+    "Id": 14616,
+    "Title": "System.OutOfMemoryException: Out of memory."
+  },
+  {
+    "Id": 15042,
+    "Title": "Exception while parsing SvgText"
+  },
+  {
+    "Id": 15085,
+    "Title": "Tspan content within text can not be displayed"
+  },
+  {
+    "Id": 15128,
+    "Title": "Path of text improper null check"
+  },
+  {
+    "Id": 15131,
+    "Title": "Alpha conversion truncates to 0 in svgcolourserver"
+  },
+  {
+    "Id": 15746,
+    "Title": "radialGradient not rendering properly"
+  },
+  {
+    "Id": 15747,
+    "Title": "letter-spacing & _path.GetBounds().Width"
+  },
+  {
+    "Id": 16315,
+    "Title": "Error when dash lines exists in the svg file"
+  },
+  {
+    "Id": 16342,
+    "Title": "HREF gradients are order dependent"
+  },
+  {
+    "Id": 16606,
+    "Title": "Svg is not rendered"
+  },
+  {
+    "Id": 16812,
+    "Title": "closepath (z or Z) followed by moveto (m) bug?"
+  },
+  {
+    "Id": 17469,
+    "Title": "Rendered incorrectly"
+  },
+  {
+    "Id": 17961,
+    "Title": "Draw() method returns null reference exception"
+  },
+  {
+    "Id": 17980,
+    "Title": "SvgDocument.Open(streamSvg) always returns null"
+  },
+  {
+    "Id": 18015,
+    "Title": "Fix for SvgText.cs MeasureString(..) throws NullReferenceException on empty <tspan>"
+  },
+  {
+    "Id": 18017,
+    "Title": "Getting a black/blank Bitmap on file with textPath tags"
+  },
+  {
+    "Id": 18912,
+    "Title": "Nuget"
+  },
+  {
+    "Id": 19341,
+    "Title": "image parts blurred on converting from svg to PNG/GIF/JPEG"
+  },
+  {
+    "Id": 19342,
+    "Title": "Image loaded from SVG is has blurs in it"
+  },
+  {
+    "Id": 19652,
+    "Title": "Can I set the DPI for the generated image."
+  },
+  {
+    "Id": 19996,
+    "Title": "SVG.dll not converting wrapped text"
+  },
+  {
+    "Id": 20165,
+    "Title": "Exception \"Translate transforms must be in the format 'translate(x, y)'"
+  },
+  {
+    "Id": 20327,
+    "Title": "System.Security.SecurityException when called in IIS"
+  },
+  {
+    "Id": 20745,
+    "Title": "DashPattern value is not valid."
+  },
+  {
+    "Id": 20753,
+    "Title": "Intermittent (but frequent!) empty SvgDocument after SvgDocument.Open"
+  },
+  {
+    "Id": 20935,
+    "Title": "problem while rendering empty lines"
+  },
+  {
+    "Id": 21003,
+    "Title": "The image rendered by the library is different from the one displayed on the browser"
+  },
+  {
+    "Id": 21014,
+    "Title": "Not rendering correctly"
+  },
+  {
+    "Id": 21049,
+    "Title": "Unnecessary borders are rendered"
+  },
+  {
+    "Id": 21095,
+    "Title": "Not able to see embedded image into exported png file."
+  },
+  {
+    "Id": 21100,
+    "Title": "Text not rendering"
+  },
+  {
+    "Id": 21197,
+    "Title": "conversion crash when set both attr \"stroke-dasharray\" and style \"stroke\""
+  },
+  {
+    "Id": 21432,
+    "Title": "Aspect ratio default value"
+  },
+  {
+    "Id": 21434,
+    "Title": "Error drawing svg from IE11"
+  },
+  {
+    "Id": 21710,
+    "Title": "Use svg rendering engine under medium trust level"
+  },
+  {
+    "Id": 21783,
+    "Title": "Bugs in SvgPathBuilder: Coordiantes with e-format"
+  },
+  {
+    "Id": 21784,
+    "Title": "Incomplete implementation of classes inherited from SvgPathSegment"
+  },
+  {
+    "Id": 21785,
+    "Title": "m Command not working"
+  },
+  {
+    "Id": 21818,
+    "Title": "svgDocument.Draw fails always"
+  },
+  {
+    "Id": 21985,
+    "Title": "creating path with pathsegmentlist"
+  },
+  {
+    "Id": 22073,
+    "Title": "Issue with unknown elements while opening document"
+  },
+  {
+    "Id": 22107,
+    "Title": "Svg issue"
+  },
+  {
+    "Id": 22109,
+    "Title": "How to show an image inside shapes like back of an phone case(with transparent hole for camera) in the webpage?"
+  },
+  {
+    "Id": 22200,
+    "Title": "Bug in v2.1 Render Issue"
+  },
+  {
+    "Id": 22338,
+    "Title": "Blur the text when convert to image"
+  },
+  {
+    "Id": 22345,
+    "Title": "Overflow Error"
+  },
+  {
+    "Id": 22548,
+    "Title": "svgDocument.Draw() exception"
+  },
+  {
+    "Id": 22554,
+    "Title": "Spline chart is not getting rendered properly"
+  }
+]

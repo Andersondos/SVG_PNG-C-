@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "682463",
+    "ThreadId": "275411",
+    "Html": "\r\n<p>Hi Expert,</p>\r\n<p>Is it possible to render an SVG in Microsoft Word, using the SVG Rendering Engine? If it works, please let me know how. The following is a work-around I tried, but I don't get the result.</p>\r\n<p>I tried to read the SVG into a memory stream and save it as PNG or JPG for rendering in Word, but all I get are black boxes with the resulting jpg or png file size -&gt; 2KB.&nbsp;</p>\r\n<p>What am I doing wrong here? Please help...</p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre> <span style=\"color:blue\">using</span> (FileStream fileStream = File.OpenRead(svgImagePath))\r\n    {\r\n           MemoryStream memoryStream = <span style=\"color:blue\">new</span> MemoryStream();\r\n           memoryStream.SetLength(fileStream.Length);\r\n           fileStream.Read(memoryStream.GetBuffer(), 0, (<span style=\"color:blue\">int</span>)fileStream.Length);\r\n           SvgDocument svgDocument = SvgDocument.Open(memoryStream);\r\n           <span style=\"color:blue\">string</span> imagePath = <span style=\"color:#a31515\">&quot;local.jpg&quot;</span>;\r\n           svgDocument.Draw().Save(imagePath);\r\n     }\r\n</pre>\r\n</div>\r\n<p>Many thanks,</p>\r\n<p>Greets,</p>\r\n",
+    "PostedDate": "2011-10-11T01:33:00.27-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi All,\n \nI am using .NET 2.0 and trying to export highcharts using Clément Agarini module. And using svg.dll.\nBut SvgDocument.Open(streamSvg) method always returns null.\nPlease help to rectify the issue\nThanks in advance..",
+    "LastUpdatedDate": "2013-02-21T16:25:59.3-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2012-05-03T02:16:10.303-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "SvgDocument.Open(streamSvg) always returns null",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 17980
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Have a look at my issue here: http://svg.codeplex.com/workitem/17961\r\n\r\nIf you are using the .dll in the download section, try getting the source and compiling it yourself.",
+      "PostedDate": "2012-05-11T05:10:56.923-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:25:59.3-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

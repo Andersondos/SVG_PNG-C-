@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I found that Visio tends to add newlines and tabs to log path statements so they wrap and are indented.  The path builder throws an error while parsing those paths.\n \nI added the following code into SvgPathBuilder.Parse so it can handle them:\npath = path.Replace(Environment.NewLine, \" \").Replace(\"\\t\", \" \");\n \nI would imagine that SplitCommands could be modified to eliminate the whitespace.  That would likely be better but the solution above performs plenty good enough for my humble needs.",
+    "LastUpdatedDate": "2013-02-21T16:26:05.153-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "High",
+      "Severity": 150,
+      "Id": 3
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2009-07-01T12:31:49.507-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "SvgPathBuilder can't handle whitespace in the path",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 10231
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hmmmm I'll have to look into this one. I was aware of the problem but thought that I had fixed it. I guess not! ",
+      "PostedDate": "2009-07-01T16:33:05.017-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-07-01T16:34:01.453-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:05.153-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

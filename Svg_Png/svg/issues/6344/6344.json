@@ -1,0 +1,76 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Parser breaks when it encounters say <defs><somecrud:foo /></defs> (like inkscape metadata). It won't pop the defs element from the stack, and following elements are parented under defs. \n \nPatch attached (svn diff). Its a bit dodgy, I was in a hurry. Stack now contains nulls for ignored elements.\n \nKeep up the good work :)",
+    "LastUpdatedDate": "2013-06-14T00:27:52.32-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2008-06-11T19:23:46.137-07:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "FIX: Parsing document incorrectly parents elements when it encounters empty nodes which are in a different namespace",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6344
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1540,
+      "FileName": "ParseFix.diff",
+      "DownloadUrl": ".\\1540"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Fixed in latest checkin. Manged to expand on your fix to a point where unsupported elements are simply ignored and the parser will close parent elements are required.",
+      "PostedDate": "2008-06-17T06:29:03.697-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-06-17T06:29:03.98-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:09.87-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:30.587-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:30.69-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-06-14T00:27:52.32-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

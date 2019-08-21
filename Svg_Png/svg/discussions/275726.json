@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "683608",
+    "ThreadId": "275726",
+    "Html": "<p>Hi,</p>\n<p>Just wanted to know how to create a SVGPath? I could not assign values to PathData as shown below.</p>\n<p>&nbsp;</p>\n<p>SvgPath p = new SvgPath();<br /> p.Stroke=new SvgColourServer(Color.Black);<br /> p.StrokeWidth= new SvgUnit(1);<br />p.PathData= <strong>?</strong></p>\n<p>&nbsp;</p>\n<p>Please let me know how to assign values.</p>\n<p>thanks,</p>\n<p>sanjeev</p>",
+    "PostedDate": "2011-10-13T03:59:41.113-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

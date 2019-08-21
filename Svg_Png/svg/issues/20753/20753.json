@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello\n\nI'm developing a web application which helps defining diagrams from svg basic shapes. When I render the diagram server side I open the shapes composing it with `SvgDocument.Open` and draw them on a surface. All good, it works, but every now and then (actually _pretty frequently_), and with no difference at all with other normal executions, `SvgDocument.Open` silently fails and returns a `null` value. I tried several overloads, and right now I'm trying to remove the responsibility of reading the file from __Svg__, I read it myself and supply it to the method as an `XmlDocument`, this way I'm sure there's no concurrency issue on the shape files I read. When the problem happens I can see from debugger that the `XmlDocument` I supply is ok, and it contains the body of the shape, but still the method returns a `null` document.\n\nAny thoughts?\n\nThanks\n\nRoberto",
+    "LastUpdatedDate": "2014-02-21T05:24:49.793-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2014-02-21T05:23:00.25-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Intermittent (but frequent!) empty SvgDocument after SvgDocument.Open",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 20753
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1015396",
+    "ThreadId": "436660",
+    "Html": "Hi - I am getting a  System.OutOfMemoryException: Out of memory error when calling Draw(). Under certain circumstances it works fine, but when the svg changes, I sometimes get the error.<br />\n<br />\nvar svgDocument = SvgDocument.Open(s);<br />\nvar bitmap = svgDocument.Draw(); // out of memory error<br />\n<br />\nI am using version 0.5.2.0 as provided on the Downloads page (<a href=\"http://svg.codeplex.com/downloads/get/47881\" rel=\"nofollow\">http://svg.codeplex.com/downloads/get/47881</a>).<br />\n",
+    "PostedDate": "2013-03-14T09:40:12.807-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

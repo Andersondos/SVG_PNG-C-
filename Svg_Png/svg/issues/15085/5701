@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="568"
+   height="690"
+   id="svg2217"
+   sodipodi:version="0.32"
+   inkscape:version="0.45.1"
+   sodipodi:docname="DotNet3.0.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   sodipodi:docbase="C:\Documents and Settings\Soum\Desktop">
+  <metadata
+     id="metadata2360">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="712"
+     inkscape:window-width="1024"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="0.54637681"
+     inkscape:cx="284"
+     inkscape:cy="345"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:current-layer="svg2217" />
+  <defs
+     id="defs2220">
+    <linearGradient
+       id="linearGradient4340">
+      <stop
+         style="stop-color:#b2becc;stop-opacity:1"
+         offset="0"
+         id="stop4342" />
+      <stop
+         style="stop-color:#c8d6e6;stop-opacity:1"
+         offset="1"
+         id="stop4344" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4317">
+      <stop
+         style="stop-color:#bf8480;stop-opacity:1"
+         offset="0"
+         id="stop4319" />
+      <stop
+         style="stop-color:#da9792;stop-opacity:1"
+         offset="1"
+         id="stop4321" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3327">
+      <stop
+         style="stop-color:#b1bf94;stop-opacity:1"
+         offset="0"
+         id="stop3329" />
+      <stop
+         style="stop-color:#cadaa9;stop-opacity:1"
+         offset="1"
+         id="stop3331" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2282">
+      <stop
+         style="stop-color:#d1d6de;stop-opacity:1"
+         offset="0"
+         id="stop2284" />
+      <stop
+         style="stop-color:#e8eef7;stop-opacity:1"
+         offset="1"
+         id="stop2286" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2265">
+      <stop
+         style="stop-color:#9485a6;stop-opacity:1"
+         offset="0"
+         id="stop2267" />
+      <stop
+         style="stop-color:#ab9ac0;stop-opacity:1"
+         offset="1"
+         id="stop2269" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2233">
+      <stop
+         style="stop-color:#86b8c5;stop-opacity:1"
+         offset="0"
+         id="stop2235" />
+      <stop
+         style="stop-color:#98d0de;stop-opacity:1"
+         offset="1"
+         id="stop2237" />
+    </linearGradient>
+    <linearGradient
+       x1="10.496032"
+       y1="136.90475"
+       x2="249.21509"
+       y2="136.90475"
+       id="linearGradient2239"
+       xlink:href="#linearGradient2233"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       x1="10.496032"
+       y1="136.90475"
+       x2="249.21509"
+       y2="136.90475"
+       id="linearGradient2243"
+       xlink:href="#linearGradient2233"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(294,0)" />
+    <linearGradient
+       x1="9.1269846"
+       y1="339.5238"
+       x2="546.70367"
+       y2="339.5238"
+       id="linearGradient2271"
+       xlink:href="#linearGradient2265"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       x1="28.293652"
+       y1="322.18253"
+       x2="121.8853"
+       y2="322.18253"
+       id="linearGradient2288"
+       xlink:href="#linearGradient2282"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       x1="28.293652"
+       y1="322.18253"
+       x2="121.8853"
+       y2="322.18253"
+       id="linearGradient2300"
+       xlink:href="#linearGradient2282"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(132,0)" />
+    <linearGradient
+       x1="28.293652"
+       y1="322.18253"
+       x2="121.8853"
+       y2="322.18253"
+       id="linearGradient2306"
+       xlink:href="#linearGradient2282"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(264,0)" />
+    <linearGradient
+       x1="28.293652"
+       y1="322.18253"
+       x2="121.8853"
+       y2="322.18253"
+       id="linearGradient2312"
+       xlink:href="#linearGradient2282"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(390,0)" />
+    <linearGradient
+       x1="34.850262"
+       y1="407.97101"
+       x2="512.98065"
+       y2="407.97101"
+       id="linearGradient3333"
+       xlink:href="#linearGradient3327"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       x1="9.1269846"
+       y1="339.5238"
+       x2="546.70367"
+       y2="339.5238"
+       id="linearGradient4315"
+       xlink:href="#linearGradient4317"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,292)" />
+    <linearGradient
+       x1="9.1269846"
+       y1="339.5238"
+       x2="546.70367"
+       y2="339.5238"
+       id="linearGradient4338"
+       xlink:href="#linearGradient4340"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,414)" />
+  </defs>
+  <rect
+     width="241.86508"
+     height="114.54365"
+     x="19.583332"
+     y="83.472221"
+     style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect2246" />
+  <rect
+     width="241.86508"
+     height="114.54365"
+     x="9.583333"
+     y="73.472221"
+     style="opacity:1;fill:url(#linearGradient2239);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect2231" />
+  <rect
+     width="241.86508"
+     height="114.54365"
+     x="313.58331"
+     y="83.472221"
+     style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect2249" />
+  <rect
+     width="241.86508"
+     height="114.54365"
+     x="303.58331"
+     y="73.472221"
+     style="opacity:1;fill:url(#linearGradient2243);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect2241" />
+  <rect
+     width="536.66669"
+     height="95.833344"
+     x="19.126984"
+     y="516.48413"
+     style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect4323" />
+  <rect
+     width="536.66669"
+     height="36.45882"
+     x="19.126984"
+     y="638.48413"
+     style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect4346" />
+  <rect
+     width="536.66669"
+     height="36.45882"
+     x="9.1269846"
+     y="628.48413"
+     style="opacity:1;fill:url(#linearGradient4338);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect4336" />
+  <rect
+     width="536.66669"
+     height="95.833344"
+     x="9.1269846"
+     y="506.48413"
+     style="opacity:1;fill:url(#linearGradient4315);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect4313" />
+  <rect
+     width="536.66669"
+     height="262.85715"
+     x="19.126984"
+     y="224.48413"
+     style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect2273" />
+  <rect
+     width="536.66669"
+     height="262.85715"
+     x="9.1269846"
+     y="214.48413"
+     style="opacity:1;fill:url(#linearGradient2271);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect2263" />
+  <rect
+     width="95.376984"
+     height="49.285713"
+     x="38.293652"
+     y="305.25793"
+     style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect2294" />
+  <rect
+     width="95.376984"
+     height="49.285713"
+     x="28.293652"
+     y="295.25793"
+     style="opacity:1;fill:url(#linearGradient2288);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect2280" />
+  <rect
+     width="95.376984"
+     height="49.285713"
+     x="170.29367"
+     y="305.25793"
+     style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect2296" />
+  <rect
+     width="95.376984"
+     height="49.285713"
+     x="160.29367"
+     y="295.25793"
+     style="opacity:1;fill:url(#linearGradient2300);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect2298" />
+  <rect
+     width="95.376984"
+     height="49.285713"
+     x="302.29367"
+     y="305.25793"
+     style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect2302" />
+  <rect
+     width="95.376984"
+     height="49.285713"
+     x="292.29367"
+     y="295.25793"
+     style="opacity:1;fill:url(#linearGradient2306);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect2304" />
+  <rect
+     width="95.376984"
+     height="49.285713"
+     x="428.29367"
+     y="305.25793"
+     style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect2308" />
+  <rect
+     width="476.28693"
+     height="65.828278"
+     x="46.141014"
+     y="385.70227"
+     style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect4304" />
+  <rect
+     width="95.376984"
+     height="49.285713"
+     x="418.29367"
+     y="295.25793"
+     style="opacity:1;fill:url(#linearGradient2312);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect2310" />
+  <rect
+     width="476.28693"
+     height="65.828278"
+     x="36.141014"
+     y="375.70227"
+     style="opacity:1;fill:url(#linearGradient3333);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect3325" />
+  <text
+     x="158.31744"
+     y="47.460312"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+     id="text2226"
+     xml:space="preserve"><tspan
+       x="158.31744"
+       y="47.460312"
+       id="tspan2228">.NET 3.0 Stack</tspan></text>
+  <text
+     x="16.779757"
+     y="136.26805"
+     style="font-size:22px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+     id="text2252"
+     xml:space="preserve"><tspan
+       x="16.779757"
+       y="136.26805"
+       id="tspan2254">.NET 3.0 Applications</tspan></text>
+  <text
+     x="422.80096"
+     y="123.91775"
+     style="font-size:22px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+     id="text2256"
+     xml:space="preserve"><tspan
+       x="422.80096"
+       y="123.91775"
+       id="tspan2258">.NET Development</tspan><tspan
+       x="422.80096"
+       y="151.41776"
+       id="tspan2260">Tools</tspan></text>
+  <text
+     x="230.45634"
+     y="250.99207"
+     style="font-size:24px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+     id="text2275"
+     xml:space="preserve"><tspan
+       x="230.45634"
+       y="250.99207"
+       id="tspan2277">.NET 3.0</tspan></text>
+  <text
+     x="75.508904"
+     y="313.10086"
+     style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+     id="text3290"
+     xml:space="preserve"><tspan
+       x="75.508904"
+       y="313.10086"
+       id="tspan3292">WCF</tspan><tspan
+       x="75.508904"
+       y="338.10086"
+       id="tspan3294">(Indigo)</tspan></text>
+  <text
+     x="207.16545"
+     y="313.10101"
+     style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+     id="text3297"
+     xml:space="preserve"><tspan
+       x="207.16545"
+       y="313.10101"
+       id="tspan3299">WPF</tspan><tspan
+       x="207.16545"
+       y="338.10101"
+       id="tspan3301">(Avalon)</tspan></text>
+  <text
+     x="466.37192"
+     y="313.10101"
+     style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+     id="text3314"
+     xml:space="preserve"><tspan
+       x="466.37192"
+       y="313.10101"
+       id="tspan3318">WF</tspan><tspan
+       x="466.37192"
+       y="338.10101"
+       id="tspan3322">(Workflow)</tspan></text>
+  <text
+     x="267.83072"
+     y="401.51727"
+     style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+     id="text4306"
+     xml:space="preserve"><tspan
+       x="267.83072"
+       y="401.51727"
+       id="tspan4308">.NET 2.0 CLR, .NET 2.0 Base Class Libraries</tspan><tspan
+       x="267.83072"
+       y="426.51727"
+       id="tspan4310">ASP .NET 2.0, ADO.NET 2.0, WinForms 2.0</tspan></text>
+  <text
+     x="275.63492"
+     y="535.75397"
+     style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+     id="text4327"
+     xml:space="preserve"><tspan
+       x="275.63492"
+       y="535.75397"
+       style="font-size:28px"
+       id="tspan4329">Windows</tspan><tspan
+       x="275.63492"
+       y="564.0694"
+       id="tspan4331">(Windows XP, Windows Server 2003/R2</tspan><tspan
+       x="275.63492"
+       y="589.0694"
+       id="tspan4333">Vista/Longhorn)</tspan></text>
+  <text
+     x="218.13683"
+     y="652.56824"
+     style="font-size:20px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+     id="text4348"
+     xml:space="preserve"><tspan
+       x="218.13683"
+       y="652.56824"
+       id="tspan4350">PC Hardware</tspan></text>
+  <text
+     xml:space="preserve"
+     id="text2379"
+     style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+     y="313.10101"
+     x="339.16547"><tspan
+       id="tspan2381"
+       y="313.10101"
+       x="339.16547"
+       style="font-size:18">CardSpace</tspan></text>
+  <text
+     x="339.16547"
+     y="339.10101"
+     style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+     id="text2389"
+     xml:space="preserve"><tspan
+       style="font-size:20px"
+       x="339.16547"
+       y="339.10101"
+       id="tspan2391">(InfoCard)</tspan></text>
+</svg>

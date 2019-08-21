@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi,\n \nI am using asp.net with VB.net \nI have a column in db which stores the value in svg format\n \neg:<?xml version=\"1.0\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \n\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n \n<svg width=\"100%\" height=\"100%\" version=\"1.1\"\nxmlns=\"http://www.w3.org/2000/svg\">\n \n<rect width=\"300\" height=\"100\"\nstyle=\"fill:rgb(0,0,255);stroke-width:1;\nstroke:rgb(0,0,0)\"/>\n \n</svg>\n \n \nI want to display this as image in webpage.\n \nCan anyone please help me in doing this.\n \nI tried a lot but not working.",
+    "LastUpdatedDate": "2013-02-21T16:26:04.82-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2009-07-03T05:02:26.63-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Display svg file at webpage(ASP.net)",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 10256
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hmmm that's a good question. Looking through the code I haven't made a way to do this without modifying code unfortunately; the HTTP handler you would use will only display an image of an SVG document on disk. For some stupid reason I didn't make it extensible enough to be able to load from any source through inheritance!!\r\n\r\nI've created work item #10260 with some details about this task. If you don't want to wait for this feel free to give me a shout and we can work on a solution to suit you faster.",
+      "PostedDate": "2009-07-03T18:38:17.787-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Can you please help me out in doing this. I don't have to code for SVG.\r\n\r\nPlease help me in doing this.",
+      "PostedDate": "2009-07-05T22:42:26.92-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:04.82-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

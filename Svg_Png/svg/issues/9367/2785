@@ -1,0 +1,266 @@
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.IO;
+using System.Net;
+using FM.Iceflow.Drawing.Svg.Transforms;
+
+namespace FM.Iceflow.Drawing.Svg
+{
+    /// <summary>
+    /// Represents and SVG rectangle that could also have reounded edges.
+    /// </summary>
+    [SvgElement("image")]
+    public class SvgImage : SvgVisualElement
+    {
+        private SvgUnit _height;
+        private GraphicsPath _path;
+        private SvgUnit _width;
+        private SvgUnit _x;
+        private SvgUnit _y;
+        private string _preseveAspectRatio;
+        private string _href;
+        private bool _hrefChanged;
+        private Image _img;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SvgRectangle"/> class.
+        /// </summary>
+        public SvgImage()
+        {
+            _width = new SvgUnit(0.0f);
+            _height = new SvgUnit(0.0f);
+            _preseveAspectRatio = "none";
+        }
+
+        /// <summary>
+        /// Gets an <see cref="SvgPoint"/> representing the top left point of the rectangle.
+        /// </summary>
+        public SvgPoint Location
+        {
+            get { return new SvgPoint(X, Y); }
+        }
+
+        /// <summary>
+        /// Gets or sets the position where the left point of the rectangle should start.
+        /// </summary>
+        [SvgAttribute("x")]
+        public SvgUnit X
+        {
+            get { return _x; }
+            set
+            {
+                _x = value;
+                IsPathDirty = true;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the position where the top point of the rectangle should start.
+        /// </summary>
+        [SvgAttribute("y")]
+        public SvgUnit Y
+        {
+            get { return _y; }
+            set
+            {
+                _y = value;
+                IsPathDirty = true;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the width of the rectangle.
+        /// </summary>
+        [SvgAttribute("width")]
+        public SvgUnit Width
+        {
+            get { return _width; }
+            set
+            {
+                _width = value;
+                IsPathDirty = true;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the height of the rectangle.
+        /// </summary>
+        [SvgAttribute("height")]
+        public SvgUnit Height
+        {
+            get { return _height; }
+            set
+            {
+                _height = value;
+                IsPathDirty = true;
+            }
+        }
+
+
+        /// <summary>
+        /// Gets or sets the url of the image
+        /// </summary>
+        [SvgAttribute("href")]
+        public string Href
+        {
+            get
+            {
+                return _href;
+            }
+            set
+            {
+                _href = value;
+                _hrefChanged = true;
+                IsPathDirty = true;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the Y-radius of the rounded edges of this rectangle.
+        /// </summary>
+        [SvgAttribute("preserveAspectRatio")]
+        public string PreserveAspectRatio
+        {
+            get
+            {
+                return _preseveAspectRatio;
+            }
+            set
+            {
+                _preseveAspectRatio = value;
+                IsPathDirty = true;
+            }
+        }
+
+        /// <summary>
+        /// Gets the image referenced by the href attribute
+        /// </summary>
+        public Image Image
+        {
+            get
+            {
+                if (_hrefChanged && !string.IsNullOrEmpty(Href))
+                {
+                    try
+                    {
+                        HttpWebRequest request = WebRequest.Create(Href) as HttpWebRequest;
+                        if (request != null)
+                        {
+                            HttpWebResponse response = request.GetResponse() as HttpWebResponse;
+                            if (response != null)
+                            {
+                                Stream stream = response.GetResponseStream();
+                                Image img = Image.FromStream(stream);
+
+                                //awesome .netness that causes crappy pixel formatting. this fixes it.
+                                _img = new Bitmap(new Bitmap(img));
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
+                    _hrefChanged = false;
+                }
+                return _img;
+            }
+        }
+
+
+        /// <summary>
+        /// Gets the bounds of the element.
+        /// </summary>
+        /// <value>The bounds.</value>
+        public override RectangleF Bounds
+        {
+            get { return Path.GetBounds(); }
+        }
+
+        /// <summary>
+        /// Gets the transformed bounds
+        /// </summary>
+        /// <value>The transformed bounds</value>
+        public override RectangleF TransformedBounds
+        {
+            get { return this.Path.GetBounds(this.GetRealMatrix()); }
+        }
+
+        /// <summary>
+        /// Gets the <see cref="GraphicsPath"/> for this element.
+        /// </summary>
+        /// <remarks>
+        /// Although this is an image element, we create a transparent rectangle representation in the path so our bounds calculations work
+        /// </remarks>
+        public override GraphicsPath Path
+        {
+            get
+            {
+                if (_path == null || IsPathDirty)
+                {
+                    var rectangle = new RectangleF(Location.ToDeviceValue(),
+                            new SizeF(Width.ToDeviceValue(), Height.ToDeviceValue()));
+
+                    _path = new GraphicsPath();
+                    _path.StartFigure();
+                    _path.AddRectangle(rectangle);
+                    _path.CloseFigure();
+                }
+                return _path;
+            }
+        }
+
+        /// <summary>
+        /// Renders the <see cref="SvgElement"/> and contents to the specified <see cref="Graphics"/> object.
+        /// </summary>
+        protected override void Render(SvgRenderer renderer)
+        {
+            if (Width.Value > 0.0f && Height.Value > 0.0f)
+            {
+                base.Render(renderer);
+            }
+        }
+
+        /// <summary>
+        /// Overrides the fill render so we render the image instead
+        /// </summary>
+        /// <param name="renderer"></param>
+        protected internal override void RenderFill(SvgRenderer renderer)
+        {
+            //set the opacity to zero, since we don't want a rectangle to show
+            FillOpacity = 0;
+            RenderImage(renderer);
+            base.RenderFill(renderer);
+        }
+
+        /// <summary>
+        /// Renders the image
+        /// </summary>
+        /// <param name="renderer"></param>
+        protected internal virtual void RenderImage(SvgRenderer renderer)
+        {
+            if (this.Href != null)
+            {
+                RectangleF r = this.Bounds;
+
+                //resize the image to appropriate width/height
+                Bitmap bmp = new Bitmap((int)this.Width.ToDeviceValue(), (int)this.Height.ToDeviceValue(), Image.PixelFormat);
+
+                //settings
+                Graphics g = Graphics.FromImage(bmp);
+                g.SmoothingMode = SmoothingMode.HighQuality;
+                g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+
+                //perform the resize
+                g.DrawImage(Image, 0, 0, bmp.Width, bmp.Height);
+
+                //TODO: implement preserveAspectRatio
+                //none = no preservation (implemented above as just a straight up resize)
+                //others = see here: http://www.w3.org/TR/SVG11/coords.html#PreserveAspectRatioAttribute
+
+                renderer.DrawImageUnscaled(bmp, new Point((int)this.X.ToDeviceValue(), (int)this.Y.ToDeviceValue()));
+            }
+        }
+    }
+}

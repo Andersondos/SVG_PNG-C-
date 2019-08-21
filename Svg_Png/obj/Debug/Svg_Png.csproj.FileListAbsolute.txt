@@ -1,0 +1,11 @@
+C:\Users\anderson.santos\Documents\Dev\C#\Svg_Png\Svg_Png\bin\Debug\Svg_Png.exe.config
+C:\Users\anderson.santos\Documents\Dev\C#\Svg_Png\Svg_Png\bin\Debug\Svg_Png.exe
+C:\Users\anderson.santos\Documents\Dev\C#\Svg_Png\Svg_Png\bin\Debug\Svg_Png.pdb
+C:\Users\anderson.santos\Documents\Dev\C#\Svg_Png\Svg_Png\bin\Debug\Svg.dll
+C:\Users\anderson.santos\Documents\Dev\C#\Svg_Png\Svg_Png\bin\Debug\Svg.pdb
+C:\Users\anderson.santos\Documents\Dev\C#\Svg_Png\Svg_Png\bin\Debug\Svg.xml
+C:\Users\anderson.santos\Documents\Dev\C#\Svg_Png\Svg_Png\obj\Debug\Svg_Png.csprojAssemblyReference.cache
+C:\Users\anderson.santos\Documents\Dev\C#\Svg_Png\Svg_Png\obj\Debug\Svg_Png.csproj.CoreCompileInputs.cache
+C:\Users\anderson.santos\Documents\Dev\C#\Svg_Png\Svg_Png\obj\Debug\Svg_Png.csproj.CopyComplete
+C:\Users\anderson.santos\Documents\Dev\C#\Svg_Png\Svg_Png\obj\Debug\Svg_Png.exe
+C:\Users\anderson.santos\Documents\Dev\C#\Svg_Png\Svg_Png\obj\Debug\Svg_Png.pdb

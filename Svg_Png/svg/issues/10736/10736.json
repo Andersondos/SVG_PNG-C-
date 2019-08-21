@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi,\nWhen we convert svg images to jpeg format , we get images with blue  background...\nHow to fix this?\nThanks...",
+    "LastUpdatedDate": "2013-02-21T16:26:04.123-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2009-10-08T08:43:32.74-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "svg.Draw() background color problem",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 10736
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I has the same trouble but my background color was Black color ... \r\nIf you obtain a good export to PNG format and not a good JPEG export, it's caused by the transparency ... \r\n\r\nIn this case, you must create another bitmap with the same width et height and clean the background with , for example, Color.White, and draw in it the original bitmap \r\nthen you will obtain (using Save() method) a not transparency image in JPEG ...",
+      "PostedDate": "2011-08-02T01:21:28.097-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:04.123-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

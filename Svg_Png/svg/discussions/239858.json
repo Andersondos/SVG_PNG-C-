@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "541541",
+    "ThreadId": "239858",
+    "Html": "\r\n<p>How can i add an element&nbsp; to svgDocument ? thanks</p>\r\n",
+    "PostedDate": "2010-12-29T00:54:28.57-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "541937",
+    "ThreadId": "239858",
+    "Html": "\r\n<p>mark !&nbsp;</p>\r\n<p>I really want to know this.&nbsp;</p>\r\n",
+    "PostedDate": "2010-12-29T16:15:56.08-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "541938",
+    "ThreadId": "239858",
+    "Html": "\r\n<p>Hi Expert !</p>\r\n<p>I want to use SVG.dll&nbsp;draw a image (Line or Circle)</p>\r\n<p>please see below code:</p>\r\n<p></p>\r\n<div><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"><span style=\"font-size:x-small\">\r\n<p><span style=\"font-size:x-small; color:#2b91af\"><span style=\"font-size:x-small; color:#2b91af\">SvgLine</span></span><span style=\"font-size:x-small\"> a =\r\n</span><span style=\"font-size:x-small; color:#0000ff\"><span style=\"font-size:x-small; color:#0000ff\">new</span></span><span style=\"font-size:x-small\">\r\n</span><span style=\"font-size:x-small; color:#2b91af\"><span style=\"font-size:x-small; color:#2b91af\">SvgLine</span></span><span style=\"font-size:x-small\">();</span></p>\r\n</span></span></span></span></span></div>\r\n<p></p>\r\n<p><span style=\"font-size:x-small\">&nbsp;</span><span style=\"font-size:x-small\"> </p>\r\n<p></p>\r\n<div><span style=\"font-size:x-small\"><span style=\"font-size:x-small\">\r\n<p>a.StrokeWidth = 9;</p>\r\n<p>a.StartX = 1;</p>\r\n<p>a.StartY = 100;</p>\r\n<p>a.EndX = 10;</p>\r\n<p>a.EndY = 140;</p>\r\n<span style=\"font-size:x-small\"><span style=\"font-size:x-small\">\r\n<p>a.Fill = <span style=\"font-size:x-small; color:#0000ff\"><span style=\"font-size:x-small; color:#0000ff\">new</span></span><span style=\"font-size:x-small\">\r\n</span><span style=\"font-size:x-small; color:#2b91af\"><span style=\"font-size:x-small; color:#2b91af\">SvgColourServer</span></span><span style=\"font-size:x-small\">(</span><span style=\"font-size:x-small; color:#2b91af\"><span style=\"font-size:x-small; color:#2b91af\">Color</span></span><span style=\"font-size:x-small\">.Red);</span></p>\r\n</span><span style=\"font-size:x-small\">&nbsp;</span></span><span style=\"font-size:x-small\">&nbsp;</span></span><span style=\"font-size:x-small\">\r\n<p>a.FillOpacity = 1;</p>\r\n<span style=\"font-size:x-small\">\r\n<p><span style=\"font-size:x-small; color:#2b91af\"><span style=\"font-size:x-small; color:#2b91af\">SvgDocument</span></span><span style=\"font-size:x-small\"> sd =\r\n</span><span style=\"font-size:x-small; color:#0000ff\"><span style=\"font-size:x-small; color:#0000ff\">new</span></span><span style=\"font-size:x-small\">\r\n</span><span style=\"font-size:x-small; color:#2b91af\"><span style=\"font-size:x-small; color:#2b91af\">SvgDocument</span></span><span style=\"font-size:x-small\">();</span>\r\n</p>\r\n<div>\r\n<div><span style=\"font-size:x-small\"></span></div>\r\n<p>sd.Width = 400;</p>\r\n<p>sd.Height = 600;</p>\r\n<p><span style=\"font-size:x-small\">sd.Children.add(a);</span></p>\r\n</div>\r\n<p></p>\r\n</span><span style=\"font-size:x-small\">\r\n<p>sd.Width = 400;</p>\r\n<p>sd.Height = 600;</p>\r\n<p><span style=\"font-size:x-small\">sd.Children.add(a);</span></p>\r\n</span></span></span></div>\r\n<p></p>\r\n<span style=\"font-size:x-small\"><span style=\"font-size:x-small\"></span></span>\r\n<p><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"></p>\r\n<p></p>\r\n<p><span style=\"font-size:x-small\"></p>\r\n<p>sd.Draw().Save(<span style=\"font-size:x-small; color:#a31515\"><span style=\"font-size:x-small; color:#a31515\">&quot;D:\\\\123.jpg&quot;</span></span><span style=\"font-size:x-small\">);</span></p>\r\n<p><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"></span></span></span></span></span></p>\r\n<p><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"></span></span></span></span>why I cannot draw the Line to 123.jpg ?&nbsp; Would you please help me to fix it ?</p>\r\n<p><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"></span></span></span></span>thanks !</p>\r\n<p><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"></span></span></span></span></p>\r\n</span>\r\n<p></p>\r\n<p></p>\r\n</span></span></span>\r\n<p></p>\r\n</span>\r\n<p></p>\r\n",
+    "PostedDate": "2010-12-29T16:25:03.573-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "542964",
+    "ThreadId": "239858",
+    "Html": "\r\n<p>I was a little surprised that this didn't work, so had a look at the source code. SvgLine doesn't support the Fill property - I\r\n<em>think </em>this is correct according to the standard.</p>\r\n<p>Anyway, in your example above just change Fill = ... to Stroke = ... and you'll see your red line.</p>\r\n<p>The code should really be throwing a NotSupportedException I suppose.</p>\r\n",
+    "PostedDate": "2011-01-02T14:43:29.243-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "543472",
+    "ThreadId": "239858",
+    "Html": "\r\n<p>thank you :)&nbsp; <br>\r\nI have drawn it .&nbsp;&nbsp;&nbsp;</p>\r\n",
+    "PostedDate": "2011-01-03T17:37:45.143-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1195591",
+    "ThreadId": "524586",
+    "Html": "Hi,\r<br />\n<br />\ni am trying to use SVG Shapes to construct VB.net Controls.\r<br />\nI just dont know how to set the color from SVG.Element to VB.net Control.Backcolor\r<br />\n<br />\nHere is a snippet of my code,\r<br />\n<br />\nDim myelement As Svg.SvgElement = MySVG.GetElementById(Trim(LCase(MyLandscape(0))))<br />\n<pre><code>    If Not IsNothing(myelement) Then\n        Select Case myelement.GetType()\n            Case Is = GetType(Svg.SvgPath)\n                Dim Mypath As Svg.SvgPath = myelement\n                Me.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right Or AnchorStyles.Top\n                Me.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink\n                Me.Size = New Size(Mypath.Bounds.Width * cfX, Mypath.Bounds.Height * cfY)\n                Me.Location = New Point(Mypath.Bounds.Left * cfX, Mypath.Bounds.Top * cfY)\n                Dim Meuse As New Svg.SvgUse\n\n                Dim myattrib As Svg.SvgAttributeCollection = New Svg.SvgAttributeCollection(myelement)\n                Dim Mycolorattrib As SvgAttributeAttribute = myattrib.Item(0)\n                Dim Mycolor As Svg.SvgColourServer = New Svg.SvgColourServer(myattrib.Item(0))\n                Me.BackColor = Mycolor.Colour\n                Me.ForeColor = Mycolor.Colour\n\n</code></pre>\n\ni would Appreciate any help,\r<br />\n<br />\nKind Regards Strom<br />\n",
+    "PostedDate": "2014-01-24T07:40:47.207-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

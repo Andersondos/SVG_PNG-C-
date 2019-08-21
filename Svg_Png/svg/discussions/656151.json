@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1478201",
+    "ThreadId": "656151",
+    "Html": "I've been trying to add some text to my SvgDocument but the text doesn't appear and when I look at the file in a text editor the element hasn't actually been added.\r<br />\n<br />\nI've created the text element like so:<br />\n<pre><code> SvgText title = new SvgText(&quot;Title Goes Here&quot;);\n</code></pre>\n\nI've then set the x and y co-ordinates, font and font size like so:<br />\n<pre><code>           var unitCol = new SvgUnitCollection();\n            unitCol.Add(25);\n\n            var unitCol2 = new SvgUnitCollection();\n            unitCol2.Add(250);\n\n            title.X = unitCol;\n            title.Y = unitCol2;\n            title.FontSize = 8;\n            title.Font = &quot;Arial&quot;;</code></pre>\n\nThen I've added the text element to my document like so:<br />\n<pre><code>svgDoc.Children.Add(title);</code></pre>\n\nAll of the other elements appear but not the text, can anyone tell me what I'm doing wrong?<br />\n",
+    "PostedDate": "2016-07-06T07:00:00.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1479307",
+    "ThreadId": "656151",
+    "Html": "I don't have an answer for you but I'm having the same problem. Even if it is just a blank text element, it won't show up when I write the document to a .svg file. I wish there was more documentation on this library.<br />\n",
+    "PostedDate": "2016-07-19T13:22:23.553-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1479372",
+    "ThreadId": "656151",
+    "Html": "I found the answer on the Issues page on the github for this project (<a href=\"https://github.com/vvvv/SVG/issues/192\" rel=\"nofollow\">https://github.com/vvvv/SVG/issues/192</a>) \r<br />\n<br />\nUser w0q said: The text is not rendered if the tag &lt;text&gt; contains no child elements. The following code displays the text: \r<br />\nsvgText.Nodes.Add(new SvgContentNode(){ Content = &quot;some text&quot; }).\r<br />\n<br />\nI guess the Text property of the &lt;text&gt; element has no functionality.<br />\n",
+    "PostedDate": "2016-07-20T06:52:43.537-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

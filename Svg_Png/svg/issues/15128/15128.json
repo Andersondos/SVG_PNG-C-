@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Line 206 case statement:\nif (_path == null || this.IsPathDirty && !string.IsNullOrEmpty(this.Text))\nshould be\nif ((_path == null || this.IsPathDirty) && !string.IsNullOrEmpty(this.Text))\nso path is always null if the text is null or empty",
+    "LastUpdatedDate": "2013-02-21T16:26:01.387-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2011-01-20T14:26:23.967-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Path of text improper null check",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 5,
+    "Id": 15128
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Changing the code on line 206 as described above causes text elements to fail to render.",
+      "PostedDate": "2011-10-24T06:25:57.703-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Sorry!  Forget the previous comment!!  I left a tspan in my test file, which doesn't render anyway!!",
+      "PostedDate": "2011-10-24T06:37:06.12-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:01.387-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

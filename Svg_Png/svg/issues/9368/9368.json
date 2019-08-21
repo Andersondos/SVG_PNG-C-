@@ -1,0 +1,96 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Adds support for finding the bounds of an element after transformation and for trimming extra space around an image when drawing to an image.",
+    "LastUpdatedDate": "2013-02-21T16:26:05.703-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2009-02-27T06:00:33.577-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Added TransformedBounds and Draw(padding)",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 9368
+  },
+  "FileAttachments": [
+    {
+      "FileId": 2786,
+      "FileName": "SvgVisualElement.cs",
+      "DownloadUrl": ".\\2786"
+    },
+    {
+      "FileId": 2787,
+      "FileName": "SvgDocument.cs",
+      "DownloadUrl": ".\\2787"
+    },
+    {
+      "FileId": 2834,
+      "FileName": "SvgVisualElement.cs",
+      "DownloadUrl": ".\\2834"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Document attachment",
+      "PostedDate": "2009-02-27T06:01:02.343-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-02-27T06:01:03.373-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Fixed a bug in the calculation of transformed bounds...matrices were applied in the wrong order. Also cleaned up the loop.",
+      "PostedDate": "2009-03-10T10:43:42.85-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-03-10T10:43:45.85-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Don't use the first SvgVisualElement.cs...it has a bug. Use the 2nd version.",
+      "PostedDate": "2009-03-10T10:44:33.897-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "There's a bug in svgdocument, line 341... it should just be:\r\n\r\nrect.Bottom = itemRect.Bottom;\r\n\r\n",
+      "PostedDate": "2009-03-20T11:31:12.917-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Using http://www.croczilla.com/bits_and_pieces/svg/samples/rect2/rect2.svg I found that you prepend the matrices on the current level and append as you rise through the parents. i.e. (in SVGVisualElement.cs)\r\n\r\n        /// <summary>\r\n        /// Gets the combined matrix that applies to this shape\r\n        /// </summary>\r\n        /// <returns></returns>\r\n        protected Matrix GetRealMatrix()\r\n        {\r\n            //get this shape's matrix and apply parent matricies\r\n            Matrix originalMatrix = new Matrix();\r\n            Matrix tempMatrix = new Matrix();\r\n            SvgElement parent = this;\r\n            while (parent != null)\r\n            {\r\n                // Return if there are no transforms\r\n                if (parent.Transforms != null && parent.Transforms.Count > 0)\r\n                {\r\n                    tempMatrix = new Matrix();\r\n                    foreach (SvgTransform transformation in parent.Transforms)\r\n                    {\r\n                        tempMatrix.Multiply(transformation.Matrix, MatrixOrder.Prepend);\r\n                    }\r\n                    originalMatrix.Multiply(tempMatrix, MatrixOrder.Append);\r\n                }\r\n                parent = parent.Parent;\r\n            }\r\n            //now we know the total matrix that applies to the current shape\r\n            return originalMatrix;\r\n        }\r\n\r\nAlso you can add the following to SVGVisualElement so each element automatically has a transformed bounds property.\r\n\r\n        /// <summary>\r\n        /// Gets the transformed bounds\r\n        /// </summary>\r\n        /// <value>The transformed bounds</value>\r\n        public virtual RectangleF TransformedBounds \r\n        { \r\n            get\r\n            {\r\n                // Transform the current bounds\r\n                PointF leftTop = new PointF(Bounds.Left, Bounds.Top);\r\n                PointF rightTop = new PointF(Bounds.Right, Bounds.Top);\r\n                PointF leftBottom = new PointF(Bounds.Left, Bounds.Bottom);\r\n                PointF rightBottom = new PointF(Bounds.Right, Bounds.Bottom);\r\n                PointF[] elemBounds = new PointF[] { leftTop, rightTop, leftBottom, rightBottom };\r\n\r\n                GetRealMatrix().TransformPoints(elemBounds);\r\n\r\n                // Work out the minimum and maximum bounds from the four points\r\n                float x = float.MaxValue;\r\n                float y = float.MaxValue;\r\n                float m = float.MinValue;\r\n                float n = float.MinValue;\r\n                foreach (PointF transPoint in elemBounds)\r\n                {\r\n                    x = Math.Min(x, transPoint.X);\r\n                    y = Math.Min(y, transPoint.Y);\r\n                    m = Math.Max(m, transPoint.X);\r\n                    n = Math.Max(n, transPoint.Y);\r\n                }\r\n\r\n                return new RectangleF(x, y, m - x, n - y);\r\n            } \r\n        }\r\n",
+      "PostedDate": "2009-10-05T11:45:31.503-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:05.703-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

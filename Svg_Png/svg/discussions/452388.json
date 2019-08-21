@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "1076585",
+    "ThreadId": "452388",
+    "Html": "Hi,\r<br />\nI've managed to take a svg from my server and save it back to the server as a png using this engine and the code <br />\n<pre><code>    Dim sampleDoc = SvgDocument.Open(filePath)\n    sampleDoc.Draw().Save(exportPath, Drawing.Imaging.ImageFormat.Png)\n</code></pre>\n\nHowever the &lt;image&gt; elements inside the SVG aren't being rendered.\r<br />\nThe images originally had their xmlns:xlink value set to a url of the images. I have also tried converting the images to string so that they are embedded inside the SVG like so\r<br />\nxlink:href=&quot;data:image/png;base64,...&quot;.\r<br />\n<br />\nAm I doing something wrong or are images elements not supported when converting to raster  files?<br />\n",
+    "PostedDate": "2013-08-04T18:38:02.373-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1087241",
+    "ThreadId": "452388",
+    "Html": "I got the same issue too.\r<br />\n<br />\nMy best guess is that this library doesn't support embedding images either through external links or even in base64 format.\r<br />\n<br />\nCan someone who has gone through the code confirm this?<br />\n",
+    "PostedDate": "2013-09-02T00:34:33.647-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1111700",
+    "ThreadId": "452388",
+    "Html": "Can anyone familiar with this library comment on this?  I'm running into the same problem, and find it hard to believe that there is zero support for linked images...<br />\n",
+    "PostedDate": "2013-10-24T09:00:30.76-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1113834",
+    "ThreadId": "452388",
+    "Html": "I am not familiar with this library but I just had a look at the source code <a href=\"https://github.com/vvvv/SVG/blob/master/Source/Basic%20Shapes/SvgImage.cs\" rel=\"nofollow\">https://github.com/vvvv/SVG/blob/master/Source/Basic%20Shapes/SvgImage.cs</a>.\r<br />\n<br />\nOn line 96 it has a comment which says TO DO, in the Render override, therefore I think it's safe to assume that it has not been done yet!<br />\n",
+    "PostedDate": "2013-10-29T14:08:19.72-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1251321",
+    "ThreadId": "452388",
+    "Html": "Actually, the new svg library for 1.6.1 has all the logic inbuilt for rendering the images while converting the svg to image format. We had the same issue for converting the svg to image. Initially we used svg 1.5 library which doesn't support rendering images embedded inside image tag, but svg 1.6.1 does support the same. Hope this helps.<br />\n",
+    "PostedDate": "2014-05-30T09:03:27.517-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1435157",
+    "ThreadId": "452388",
+    "Html": "I am using Svg.dll version 2.0.0.21807 and have added the Svg.dll to the project as a reference.<br />\n<br />\nWhen I try to call:<br />\n<code>try<br />   {<br />   Svg.SvgDocument svgDoc = Svg.SvgDocument.Open(inFile);<br />   SvgDoc.Draw().Save(outFile, System.Drawing.Imaging.ImageFormat.Png);</code><br />\n<br />\nI get prompted to open SvgUnit.cs or other Svg .cs files sicj as SvgDocument.cs.  Any ideas?<br />\n<br />\nand when I click cancel it results in a &quot;Process is terminated due to StackOverflowException&quot;<br />\n",
+    "PostedDate": "2015-07-20T11:42:30.853-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1435413",
+    "ThreadId": "452388",
+    "Html": "To success view the embedded images you have to remove the line 254 (stream.Position = 0) of the file SvgImage.cs because WebResponse doesnt support positioning.<br />\n<pre><code>using (WebResponse webResponse = httpRequest.GetResponse())\n                {\n                    using (var stream = webResponse.GetResponseStream())\n                    {\n                        //stream.Position = 0;\n                        if (uri.LocalPath.EndsWith(&quot;.svg&quot;, StringComparison.InvariantCultureIgnoreCase))\n                        {\n                            var doc = SvgDocument.Open&lt;SvgDocument&gt;(stream);\n                            doc.BaseUri = uri;\n                            return doc;\n                        }\n                        else\n                        {\n                            return Bitmap.FromStream(stream);\n                        }\n                    }\n                }</code></pre>\n\nAfter that the embedded image works correctly.\r<br />\n<br />\nI hope it is useful<br />\n",
+    "PostedDate": "2015-07-21T15:40:27.58-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1435530",
+    "ThreadId": "452388",
+    "Html": "Yota,<br />\nAre you referring to the  Svg.dll version 2.0.0.21807? Here? <a href=\"https://github.com/vvvv/SVG\" rel=\"nofollow\">https://github.com/vvvv/SVG</a><br />\n",
+    "PostedDate": "2015-07-22T06:59:02.32-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1435531",
+    "ThreadId": "452388",
+    "Html": "And now it generates the StackOverflowException error in a different location:<br />\nWhich seems to differ each time:<br />\n<pre><code>       private IFontDefn GetFont(ISvgRenderer renderer, SvgElement owner)\n        {\n            if (owner == null) return null;\n\n            var visual = owner.ParentsAndSelf.OfType&lt;SvgVisualElement&gt;().FirstOrDefault(); &lt;--here once\n            return visual.GetFont(renderer);\n        }\n</code></pre>\n\nand then here:<br />\n<pre><code>        /// &lt;summary&gt;\n        /// Gets the attribute with the specified name and inherits from ancestors if there is no attribute set.\n        /// &lt;/summary&gt;\n        /// &lt;typeparam name=&quot;TAttributeType&quot;&gt;The type of the attribute value.&lt;/typeparam&gt;\n        /// &lt;param name=&quot;attributeName&quot;&gt;A &lt;see cref=&quot;string&quot;/&gt; containing the name of the attribute.&lt;/param&gt;\n        /// &lt;returns&gt;The attribute value if available; otherwise the ancestors value for the same attribute; otherwise the default value of &lt;typeparamref name=&quot;TAttributeType&quot;/&gt;.&lt;/returns&gt;\n        public TAttributeType GetInheritedAttribute&lt;TAttributeType&gt;(string attributeName)\n        { &lt;-- error generated here\n            if (this.ContainsKey(attributeName) &amp;&amp; !IsInheritValue(base[attributeName]))\n            {\n                var result = (TAttributeType)base[attributeName];\n                var deferred = result as SvgDeferredPaintServer;\n                if (deferred != null) deferred.EnsureServer(_owner);\n                return result;\n            }\n\n            if (this._owner.Parent != null)\n            {\n                if (this._owner.Parent.Attributes[attributeName] != null)\n                {\n                    return (TAttributeType)this._owner.Parent.Attributes[attributeName];\n</code></pre>\n\n",
+    "PostedDate": "2015-07-22T07:18:30.913-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1435908",
+    "ThreadId": "452388",
+    "Html": "Sorry, I download for mistake an old version and I suppose was the latest. This fix was already implemented in the last version.<br />\n<br />\nI try this version and it works with linked images.<br />\n<br />\nholzert: I don't have the exceptions you found. Do you try different embedded images ?<br />\n",
+    "PostedDate": "2015-07-24T14:15:48.863-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1435963",
+    "ThreadId": "452388",
+    "Html": "Thanks for testing!  The image I posted worked for you?  These are diagrams where those images need to work.  It produces the same errors even a separate test windows service or app I created outside of our windows service.  I tried in two versions - the earlier version produced black images and the newest version gets into the stackoverflow error everytime - even with smaller images that I did try.<br />\n",
+    "PostedDate": "2015-07-25T09:37:01.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

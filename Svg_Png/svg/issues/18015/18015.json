@@ -1,0 +1,71 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi, I just noticed that in SvgText.cs in method MeasureString(..) there needs to be a null check on \"text\" otherwise\nthe System.Drawing.Drawing2D.GraphicsPath.AddString(..) method throws a null reference exception.\n \nThis is my suggested fix, but I am not really sure if 0 breaks other things that is why I am posting it here:\n \nstatic private int MeasureString(SvgRenderer renderer, string text, Font font)\n        {\n            if (string.IsNullOrEmpty(text))\n                return 0;\n \n            GraphicsPath p = new GraphicsPath();\n            p.AddString(text, font.FontFamily, 0, font.Size, new PointF(0.0f, 0.0f), StringFormat.GenericTypographic);\n            p.Transform(renderer.Transform);\n            return (int)(p.GetBounds().Width + 1.0f);\n        }\n \nThanks,\nErion",
+    "LastUpdatedDate": "2013-05-16T01:49:17.58-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2012-05-09T05:56:59.247-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Fix for SvgText.cs MeasureString(..) throws NullReferenceException on empty <tspan>",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 4,
+    "Id": 18015
+  },
+  "FileAttachments": [
+    {
+      "FileId": 6529,
+      "FileName": "svg-with-simple-text.zip",
+      "DownloadUrl": ".\\6529"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "I was able to trace this problem down a bit further. I used Inkscape (www.inkscape.org) to create a simple SVG document containing a simple string. This SVG file is attached.  The problem is in method \"SvgDocument.Open(Stream stream, Dictionary<string, string> entities)\". \r\n\r\n1. When the reader gets to element \"<dc:format>\" on line 43 (xml), it is not created by SvgElementFactory. 2. The loop continues on line 202 of SvgDocument.cs. \r\n3. The next node read has type of Text.  \r\n4. The switch statement jumps to \"case XmlNodeType.Text:\" and adds the element contents, \"image/svg+xml\" to the value StringBuilder.\r\n5. The next node read is EndElement \"</dc:format>\". \r\n6. The element variable is null, so it skips over the EndElement, leaving \"image/svg+xml\" in the StringBuilder.\r\n7. A few more loops through and the reader advances to the SvgTextSpan element.\r\n8. When the reader is at NodeType = \"Text\" and the value, \"This is some text\", is appended to the value StringBuilder.  Now the string builder has \"image/svg+xmlThis is some text\".\r\n9. Next the EndElement is read.\r\n\r\nEventually, when first SvgText is rendered, the Text (or Content) is null.  When \"p.AddString(text, \" is called, the NullReferenceException is thrown.\r\n",
+      "PostedDate": "2012-07-27T23:18:57.61-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-07-27T23:19:17.99-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-09-09T22:11:20.84-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:25:59.133-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T01:49:17.58-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

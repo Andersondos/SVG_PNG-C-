@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1221266",
+    "ThreadId": "538581",
+    "Html": "hello,<br />\n<pre><code> I  have a svg file that include gausian filter, I use demo page open it and find that there is no gausian blur effect. Does svg rendering engine support gausian blur filter?\n Here is my svg file:\n</code></pre>\n\n&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;\r<br />\n&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; \r<br />\n&quot;<a href=\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\" rel=\"nofollow\">http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd</a>&quot;&gt;\r<br />\n<br />\n&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot;\r<br />\nxmlns=&quot;<a href=\"http://www.w3.org/2000/svg\" rel=\"nofollow\">http://www.w3.org/2000/svg</a>&quot;&gt;\r<br />\n<br />\n&lt;defs&gt;\r<br />\n&lt;filter id=&quot;Gaussian_Blur&quot;&gt;\r<br />\n&lt;feGaussianBlur in=&quot;SourceGraphic&quot; stdDeviation=&quot;20&quot;/&gt;\r<br />\n&lt;/filter&gt;\r<br />\n&lt;/defs&gt;\r<br />\n<br />\n&lt;ellipse cx=&quot;200&quot; cy=&quot;150&quot; rx=&quot;70&quot; ry=&quot;40&quot;\r<br />\nstyle=&quot;fill:#ff0000;stroke:#000000;\r<br />\nstroke-width:2;filter:url(#Gaussian_Blur)&quot;/&gt;\r<br />\n<br />\n&lt;/svg&gt;\r<br />\n<br />\n  Anything will help.\r<br />\n<br />\nthanks<br />\n",
+    "PostedDate": "2014-03-10T19:35:07.61-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

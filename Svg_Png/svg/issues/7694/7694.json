@@ -1,0 +1,61 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Closed - [workitem:6455] was created to better represent this problem.",
+    "ClosedDate": "2008-10-18T04:22:59.683-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The attched Inkscape SVG file does not render properly.",
+    "LastUpdatedDate": "2013-05-16T04:04:28.947-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2008-09-27T16:11:14.407-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Inkscape SVG file does not render properly",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7694
+  },
+  "FileAttachments": [
+    {
+      "FileId": 2133,
+      "FileName": "Test_2.svg",
+      "DownloadUrl": ".\\2133"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Open the Inkscape SVG in Inkscape and save it as \"Plain SVG\". Then this should open.",
+      "PostedDate": "2008-11-24T18:53:36.543-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:08.19-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:28.947-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Trying to convert an svg file to jpg. The jpg file comes out black color. Here is the code I am using\n\n                SvgDocument sample = SvgDocument.Open(@\"c:\\Kyle\\ProcessXml\\test.svg\");\n                 sample.Draw().Save(@\"c:\\Kyle\\ProcessXml\\test4.jpg\", ImageFormat.Jpeg);\n\nIf anybody can help me, it would be appreciated.\n\nThanks\nElliot",
+    "LastUpdatedDate": "2016-11-17T05:53:11.527-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2015-12-07T07:51:20.093-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Svg issue",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 22107
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I included all the source code.",
+      "PostedDate": "2015-12-07T07:54:01.99-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Got it to work. Thanks.",
+      "PostedDate": "2015-12-07T14:32:55.473-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Hey Tony57,\r\n\r\nI'm having the same problem, how did you fix this?\r\n\r\nRegards,\nPeter",
+      "PostedDate": "2016-11-17T05:53:11.527-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

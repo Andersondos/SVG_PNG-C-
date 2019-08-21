@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Gradients that use HREF to link to a gradient definition using its id fail to render if the HREF appears before the definition of the gradient in the defs section.\nThe code is reading the file serially and expects that the id of the linked gradient exists before any HREF definitions. By placing the gradient ids before all the HREFs to them\nthe SVG renders correctly. The attached SVG from the QT site shows this bug, the front cloud is missing the gradients because the HREFs are listed first.\\\nOne solution is to make two passes through the elements, ignoring the HREF ones on the first pass, then only examining the HREFs on the second pass through the defs section.",
+    "LastUpdatedDate": "2013-02-21T16:26:00.177-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2011-08-05T08:49:19.297-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "HREF gradients are order dependent",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 16342
+  },
+  "FileAttachments": [
+    {
+      "FileId": 5797,
+      "FileName": "weatherhreflineargradient.svg",
+      "DownloadUrl": ".\\5797"
+    }
+  ],
+  "Comments": []
+}

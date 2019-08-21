@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "145849",
+    "ThreadId": "43856",
+    "Html": "Hi,<br>\r\n<br>\r\nGreat library. I have been able to render some sample SVG files.<br>\r\n<br>\r\nJust a quick question I can see that you have reference to animationMotion in your library. Do you support animation somehow like generating an animated GIF?<br>\r\n<br>\r\nThanks<br>\r\n<br>\r\nAjay\r\n",
+    "PostedDate": "2009-01-09T15:52:06.347-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "146143",
+    "ThreadId": "43856",
+    "Html": "Hi Ajay,<br>\r\n<br>\r\nI'd love to say yes but unfortuntely there is no support for animation. I had always intended to support basic animation in the form of GIF files but it's unlikely to happen anytime soon.<br>\r\n<br>\r\nCheers,<br>\r\nDave<br>\r\n",
+    "PostedDate": "2009-01-11T16:00:49.417-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

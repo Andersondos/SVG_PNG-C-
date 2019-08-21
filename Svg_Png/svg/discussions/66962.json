@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "227681",
+    "ThreadId": "66962",
+    "Html": "<p>I'm creating a diagramming application which uses SVG. The svg images have been created with Inkscape and already have default colors etc. so they can be viewed in any SVG viewer.</p>\r\n<p>Most of the shapes and symbols that can be put on a diagram need to be configurable in strokeColor, fillColor, and line/path thickness.</p>\r\n<p>&nbsp;</p>\r\n<p>How can I&nbsp; access the SVG elements from within my application so I can dynamically change these properties? I can only think of some equivalent of getElementByID() but any suggestion is welcomed :)</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks in advance,</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-08-25T15:58:12.837-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "227708",
+    "ThreadId": "66962",
+    "Html": "<p>OK, so I figured I could use SVG parameters to handle the configurations... but how can I access the parameters from C#?</p>",
+    "PostedDate": "2009-08-25T17:13:42.523-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "439325",
+    "ThreadId": "66962",
+    "Html": "Hi, did you ever figure the best way to do this? I am trying to do the exact same thing - modify properties at run-time from an SVG file originally created in inkscape.\r\n\r\nThanks!",
+    "PostedDate": "2010-05-05T08:50:20.78-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "439519",
+    "ThreadId": "66962",
+    "Html": "<p>Sadly no. If it's supported by the SVG spec in one way or another I couldn't find it which is lame because if it's supported in SVG it should be trivial to implement.</p>",
+    "PostedDate": "2010-05-05T14:58:11.48-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "439530",
+    "ThreadId": "66962",
+    "Html": "<p>Oh geez, sorry hannson I totally missed this thread! It's so old, too.... I've been pretty rubbish at keeping track up discussions here. I'm very sorry about that.</p>\r\n<p>There is a way of doing what you want using this library using XML entities. For example, you can use &quot;&amp;firstColour;&quot; and another called &quot;&amp;secondColour;&quot; in your code and define these at the top of your SVG file to ensure it will work in Inkscape &amp; other viewers. You can then replace those entity values with your own values at runtime using this library and then render out the updated image.</p>\r\n<p>The other way is to go through the &quot;DOM&quot; after the SVG file has been loaded and use GetElementById to find a specific element and then update its style values (<a href=\"http://svg.codeplex.com/Thread/View.aspx?ThreadId=208026\">there's already another thread on doing this</a>, which I still need to provide a proper example for).</p>\r\n<p>I'll also work on getting you an example of using entities to dynamically replace values. I don't think it requires much work to do.</p>",
+    "PostedDate": "2010-05-05T15:35:38.793-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "439776",
+    "ThreadId": "66962",
+    "Html": "<p>hannson, I've updated <a href=\"http://svg.codeplex.com/Thread/View.aspx?ThreadId=208026\">the thread I mentioned</a> with one method of dynamically changing styles but I did mention another one to do with XML entities if you're interested in another method.</p>\r\n<p><a href=\"http://svg.codeplex.com/SourceControl/changeset/changes/48302\">Changeset 48302</a> has a new Entities sample added that shows how to use entities to quickly and easily change SVG styling at runtime. To sumarise it here all you need to do is create a file that used entities of your own choosing (e.g. &amp;entity1;) in an SVG file like so:</p>\r\n<p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><span style=\"color:blue\">&lt;?</span><span style=\"color:#a31515\">xml</span> <span style=\"color:red\">version</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">1.0</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">?&gt;</span>\r\n<span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">svg</span> <span style=\"color:red\">xmlns</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">http://www.w3.org/2000/svg</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">width</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">800</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">height</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">800</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">&gt;</span>\r\n  <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">g</span> <span style=\"color:red\">style</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">fill-opacity:0.7;</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">&gt;</span>\r\n    <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">circle</span> <span style=\"color:red\">cx</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">6.5cm</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">cy</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">2cm</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">r</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">100</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">style</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><strong><span style=\"color:blue\">&amp;entity1;</span></strong><span style=\"color:black\">&quot;</span> <span style=\"color:red\">transform</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">translate(0,50)</span><span style=\"color:black\">&quot;</span> <span style=\"color:blue\">/&gt;</span>\r\n    <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">circle</span> <span style=\"color:red\">cx</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">6.5cm</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">cy</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">2cm</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">r</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">100</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">style</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><strong><span style=\"color:blue\">&amp;entity2;</span></strong><span style=\"color:black\">&quot;</span> <span style=\"color:red\">transform</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">translate(70,150)</span><span style=\"color:black\">&quot;</span> <span style=\"color:blue\">/&gt;</span>\r\n    <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">circle</span> <span style=\"color:red\">cx</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">6.5cm</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">cy</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">2cm</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">r</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">100</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">style</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">fill:green;</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">transform</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">translate(-70,150)</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">/&gt;</span>\r\n  <span style=\"color:blue\">&lt;/</span><span style=\"color:#a31515\">g</span><span style=\"color:blue\">&gt;</span>\r\n<span style=\"color:blue\">&lt;/</span><span style=\"color:#a31515\">svg</span><span style=\"color:blue\">&gt;</span>\r\n</pre>\r\n</div>\r\n</p>\r\n<p>(Note: Entities must be an entire attribute value. They cannot be mixed in with other strings)</p>\r\n<p>With that done you can specify the entity values in your code at runtime:</p>\r\n<p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre>            <span style=\"color:blue\">string</span> filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, <span style=\"color:#a31515\">@&quot;..\\..\\sample.svg&quot;</span>);\r\n\r\n            <span style=\"color:blue\">var</span> sampleDoc = SvgDocument.Open(filePath, <span style=\"color:blue\">new</span> Dictionary&lt;<span style=\"color:blue\">string</span>, <span style=\"color:blue\">string</span>&gt; \r\n                {\r\n                    {<span style=\"color:#a31515\">&quot;entity1&quot;</span>, <span style=\"color:#a31515\">&quot;fill:red&quot;</span> },\r\n                    {<span style=\"color:#a31515\">&quot;entity2&quot;</span>, <span style=\"color:#a31515\">&quot;fill:yellow&quot;</span> }\r\n                });\r\n\r\n            sampleDoc.Draw().Save(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, <span style=\"color:#a31515\">@&quot;..\\..\\sample.png&quot;</span>));\r\n</pre>\r\n</div>\r\n</p>\r\n<p>&nbsp;</p>\r\n<p>Ultimately I'd probably use the method described in the other thread to update values. This method was developed more for the web (to allow ?entity1=fill:red&amp;entity2=fill:yellow in the querystring).</p>\r\n<p>I can't imagine this is too useful for you now since it's been such a long time since your initial request, but at least others might be able to pick on this. Again, if you're reading this, I apologise for the tardy response times.</p>\r\n<p>Scriv</p>",
+    "PostedDate": "2010-05-06T03:52:23.467-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1455754",
+    "ThreadId": "66962",
+    "Html": "how to fill it by image in code behind ?<br />\n",
+    "PostedDate": "2015-12-13T07:51:34.977-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

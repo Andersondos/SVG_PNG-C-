@@ -1,0 +1,91 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Winston Fassett, was able to render\nsome SVGs as PNodes.\n \nHe had to download the source of C# SVG and tweak it a bit in order to\nget it to work.  It looked like SvgRenderer could render to any\nGraphics, i.e. the one we get in PNode's paint method.  he got it\nworking, but he had to add this method to SvgRenderer:\n \n       public static SvgRenderer FromGraphics(Graphics graphics)\n       {\n           SvgRenderer renderer = new SvgRenderer();\n           renderer._innerGraphics = graphics;\n           return renderer;\n       }\n \nThen, he wrote a PSvgNode:\n \n \n       protected class PSvgNode : PNode\n       {\n           public SvgDocument Svg;\n \n           public PSvgNode(SvgDocument svg)\n           {\n               Svg = svg;\n               try\n               {\n                   RectangleF dims = svg.GetDimensions();\n                   SetBounds(0, 0, dims.X, dims.Y);\n                   InvalidatePaint();\n               }\n               catch (Exception e)\n               {\n                   HandleError(e);\n               }\n           }\n \n           public override void LayoutChildren()\n           {\n               base.LayoutChildren();\n               if (this._errorMessage != null)\n               {\n                   _errorMessage.Bounds = this.Bounds;\n               }\n           }\n \n           protected virtual void HandleError(Exception e)\n           {\n               _errorMessage = new PText(\"Could Not Display SVG\");\n               _errorMessage.TextBrush = Brushes.Red;\n               this.AddChild(_errorMessage);\n           }\n \n \n           private PText _errorMessage;\n \n           protected override void Paint\n(UMD.HCIL.Piccolo.Util.PPaintContext paintContext)\n           {\n               if (_errorMessage != null) return;\n               try\n               {\n                   Svg.Transforms = new\nSvg.Transforms.SvgTransformCollection();\n                   Svg.Transforms.Add(new Svg.Transforms.SvgTranslate\n(X, Y));\n \n                   Graphics g = paintContext.Graphics;\n                   SvgRenderer renderer = SvgRenderer.FromGraphics\n(g);\n                   Svg.Draw(renderer);\n               }\n               catch (Exception e)\n               {\n                   HandleError(e);\n               }\n           }\n       }\n \nThen he copied the HelloWorld sample and added a PSvgNode like this:\n \n           SvgDocument doc = SvgDocument.Open(file);\n           PSvgNode svg = new PSvgNode(doc);\n           svg.X = 50;\n           svg.Y = 50;\n           Canvas.Layer.AddChild(svg);\n \nPerformance seems to be fine rendering straight to the Graphics, and\nthe lines are nice and smooth because it's not rendering to a bitmap.\n \nhe had to fiddle with it to get the scaling and translating to work ok.\nAlso, the SVG lib on Codeplex had trouble with some of the SVG files he \ntested, but it was also able to render some pretty complex ones.\n-----------------------------------------------------------------------------------------------------\n \nNow my question is:\n \nIf we can generate PNode by this code (design-time), we can serialize\nthe PNode (to a file) and when required (at runtime) de-serialize the\nsaved PNode.\n \nIn effect the SVG Rendering code is required to executed only once (at\ndesign-time)\n \nbenefits:\n1) performance of SVG rendering code will not be an issue\n2) the application need not include the SVG Rendering code or its DLL\n \nI have tried this with the following code (but ran into problems:\nPSVGNode cannot be deserialized, because it is not marked\n\"Serializable\")\n \nCan this \"SVG Rendering Engine\" be made Serializable?\n \nRegards\n \n-Mohammad Tanveer",
+    "LastUpdatedDate": "2013-02-21T16:26:06.503-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2008-11-24T21:25:33.483-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Serializable",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8248
+  },
+  "FileAttachments": [
+    {
+      "FileId": 2446,
+      "FileName": "src.zip",
+      "DownloadUrl": ".\\2446"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Hi Mohammad,\r\n\r\nFirst, let me start off by saying I'm certainly not an expert in serialisation/deserialisation so you'll have to forgive my lack of knowledge!\r\n\r\nI've always been under the impression that serialised instances still require the assembly at de-serialisation time - i.e. serialisation doesn't store the Type/Assembly structure but stores the values within an instance. Given that, I'm not sure that what you're after is even possible (benefit 2), anyway).\r\n\r\nThe SVG classes could probably be marked as serialisable though, and if they were serialised to a binary file you'd probably gain some performance (Parsing an SVG file is what takes the most amount of time - rendering is pretty quick. Being able to serialise would avoid the parsing). Is this what you want to do?\r\n\r\nIf so I can mark the types as serialisable but is there anything else I need to do? I don't know enough about serialisation to know what optimisations that may need to be made...\r\n\r\nThanks,\r\nDave",
+      "PostedDate": "2008-11-25T15:37:09.56-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Hi Dave,\r\n\r\nMy application has 19,000 to 20,000 svg icons on a scene graph. So *any* performance gain, however small in the rendering routine would be a big change in overall rendering performance of my application.\r\n\r\nThe SvgDocument.cs as the \"public void Write(Stream stream)\" and \"public void Write(string path)\", but these are not coded as yet. These can be used to write the SvgDocument parsed from a given svg file as a text file. \r\n\r\nThis will also require, corresponding \r\n\"public SvDocument Read (Stream stream)\" and \"public SvDocument Read (string path)\" to construct a SvgDocument.\r\n\r\nALTERNATIVELY,\r\n\r\nAny \"painting\" on the Graphics (g) is a series of FillPaths, DrawPaths, SetClips, TranslateTransforms, scaleTransforms, etc on the (_innerGraphics), as coded in SvgRenderer.cs.\r\n\r\nWhile rendering on *any* _innerGraphics, if we can also \"write\" ONLY ONCE the rendering instructions on a StringBuilder (sb), \r\nfor example: Brush is just a color (At least Piccolo recognizes it as just a color), which can be \"written\" as \r\nsb.AppendLine(\"Brush=\" + brush.Color.ToArgb());\r\n\r\nPen is a bit complex. Piccolo's PUtil has ReadBrush, WriteBrush, ReadPen, WritePen codes.\r\n\r\nGraphicsPath path, is a set of points[] and types[]\r\n\r\nWe can make one method in SvgRenderer.cs as below:\r\n\r\npublic String PI()   //PI stands for processing Instructions\r\n{\r\n    return sb.tostring();\r\n}\r\n\r\nand similar in SvgDocument.cs as:\r\n\r\npublic String PI(SvgRenderer renderer)\r\n{\r\n    return renderer.PI(): \r\n}\r\n\r\nThe string returned from this can be stored and can be used to *fast* render any svg icon\r\n\r\nWe can make a utility which converts a (xxx.svg) file to (xxx.pi) ... both text files. \r\n\r\nPlease comment for this line of thought,\r\n\r\nRegards\r\nMohammad Tanveer\r\n\r\n",
+      "PostedDate": "2008-11-27T23:06:24.24-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I'm glad I stumbled across this after Mohammad cross-posted part of it to the Piccolo mailing list without giving us any context.  \r\n\r\nCan someone please remove my personal email address from the first sentence of the post?  Who does that?  You should never do that.",
+      "PostedDate": "2008-11-29T12:51:13.473-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-11-29T18:29:27.537-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Removed - sorry, I should have removed it earlier.",
+      "PostedDate": "2008-11-29T18:30:31.613-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Hi Dave,\r\n\r\nI have created a crude (Partial, Only Solid Brush serialization) project. I can failthfully serialize and de-serialize the 'birthday_cake.svg' in the attached project. But I am unable to Zoom/Pan it like a Piccolo PNode. \r\n\r\nPlease help!\r\n\r\n-Mohammad Tanveer",
+      "PostedDate": "2008-12-16T03:06:08.52-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-16T03:06:12.85-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Mohammad,\r\n\r\nI would like to help with this one but have absolutely no experience with Piccolo so it's hard to say why it wouldn't zoom or pan.\r\n\r\nI will raise a work item to look into Piccolo support, but I don't know when I'll get to look into this I'm afraid :( It certainly sounds like it might be great to have.\r\n\r\nDave",
+      "PostedDate": "2008-12-19T04:30:23.117-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:06.503-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

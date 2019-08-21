@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The current implementation only allows for SVG files on disk to be viewed on the web but through some minor refactoring this could be easily changed.\n \nIt would make sense to write an ISvgHandlerRenderer (or something with a better name!) in the Svg.Web namespace. The current SvgHandler.SvgAsyncRender should implement this and be renamed to FileSvgHandlerRenderer.\n \nSvgHandler should have a protected virtual method added - CreateHandlerRenderer which can be overwritten to allow a different implementation to be added in (e.g. SqlSvgHandlerRenderer).",
+    "LastUpdatedDate": "2013-02-21T16:26:04.65-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2009-07-03T18:37:01.367-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Refactor SvgHandler to allow extensiblility through inheritance",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 10260
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

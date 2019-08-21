@@ -1,0 +1,71 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "maybe xml reader can be setup to ignor whitespaces.\n \na quick and dirty fix is to add:\n          attributeValue = attributeValue.Replace('\\r', ' ').Replace('\\n', ' ').Replace('\\t', ' ');\nin SvgElementFactory.SetPropertyValue",
+    "LastUpdatedDate": "2013-06-14T00:27:51.463-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2008-09-04T23:53:06.927-07:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "whitespaces \\t \\r \\n in path and points result in exception",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7526
+  },
+  "FileAttachments": [
+    {
+      "FileId": 2092,
+      "FileName": "g-mpbdd-------x.svg",
+      "DownloadUrl": ".\\2092"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Fixed in changeset 18244.",
+      "PostedDate": "2008-10-18T04:49:40.413-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:08.38-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:29.093-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:29.24-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-06-14T00:27:51.463-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

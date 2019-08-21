@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Neither the browsers (IE, Chrome) nor Inkscape render any borders (Expected behavior)\nUnfortunately, this library adds them (Unexpected).\n\nThe wrong gradient fill is acceptable for now.\n\nUsed version: 1.61 from NuGet.",
+    "LastUpdatedDate": "2014-06-04T08:18:27.063-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2014-06-04T08:18:22.32-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Unnecessary borders are rendered",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 21049
+  },
+  "FileAttachments": [
+    {
+      "FileId": 8507,
+      "FileName": "expected&unexpected.zip",
+      "DownloadUrl": ".\\8507"
+    }
+  ],
+  "Comments": []
+}

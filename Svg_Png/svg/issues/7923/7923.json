@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Evaluated and decided that MEF isn't right for the element factory.\n\nInitial impressions of the MEF samples suggested that it could help here, but it's not really suited to what is needed (http://www.codeplex.com/MEF/Thread/View.aspx?ThreadId=41068).",
+    "ClosedDate": "2008-12-10T13:43:42.38-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Using the Managed Extensibility Framework will allow new elements to be supported in a much simpler manner. It will also allow greater extensibility of the SVG rendering functionality potentially allowing other rendering engines (e.g. MathML/ChemML) to be built on top of the basic SVG functionality.",
+    "LastUpdatedDate": "2013-05-16T04:04:28.557-07:00",
+    "PlannedForRelease": "SVG 0.6",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "High",
+      "Severity": 150,
+      "Id": 3
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2008-10-30T08:43:42.217-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Refactor element factory to use MEF",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 7923
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

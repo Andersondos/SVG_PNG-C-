@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I used the latest version of svg.dll. The conversion crash in case set both attribute \"stroke-dasharray\" and style \"stroke\".\ne.g.:\n<rect class=\"extent\" style=\"stroke: #666;\" x=\"283.64550898203595\" width=\"279.9377245508982\" y=\"0\" height=\"123\" stroke-dasharray=\"0,279.9377245508982, 123,279.9377245508982, 123\"></rect>\n\nthe conversion goes well when removing either one.",
+    "LastUpdatedDate": "2014-07-31T08:58:36.443-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2014-07-31T08:58:36.443-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "conversion crash when set both attr \"stroke-dasharray\" and style \"stroke\"",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 21197
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "Id": "685937",
+    "ThreadId": "276345",
+    "Html": "\r\n<p>as it is possible to add svg elements to the DOM on the fly in c#, i wonder if its possible to get the XML string back?</p>\r\n<p>i have seen two write methods in the SvgDocument class. has someone implemented them yet (or partially)? how hard would it be to write them and how would the strategy be?</p>\r\n<p>if i can do it with a reasonable amount of work, i would be grad to contribute it back.</p>\r\n<p>greets!</p>\r\n",
+    "PostedDate": "2011-10-18T11:51:07.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "686073",
+    "ThreadId": "276345",
+    "Html": "<p>Hey tebjan,</p>\r\n<p>I don't think there is any support in the current release, but the source code does have <em>some</em> support for it.</p>\r\n<p>The Write methods on SvgDocument doesn't do anything, but if you create an instance of XmlWriter you should be able to call the <strong>WriteElement</strong> method.</p>\r\n<p>Now, if this does work, there will still be some issues. Essentially for each property that is marked as [SvgAttribute] the TypeConverter for is used to convert the value to a string (which is assumed to be the SVG string). This means that types that don't have a TypeConverter defined won't be written properly. It should be pretty easy to fill in any missing TypeConverters though. Hopefully that would be the only work left to do, but I'm not sure of that.</p>\r\n<p>Let me know how you go with this or if there is something that doesn't make sense.</p>\r\n<p>Cheers,<br />Dave&nbsp;</p>",
+    "PostedDate": "2011-10-18T16:27:02.173-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "686488",
+    "ThreadId": "276345",
+    "Html": "<p>hello dave,</p>\r\n<p>would be nice to have a short example (pseudo code), how the XmlWriter can be used together with the SvgAttributes. how the a class with SvgAttributes can transformed into the xml tag...</p>\r\n<p>thanks for the help!</p>",
+    "PostedDate": "2011-10-19T10:59:53.93-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "686609",
+    "ThreadId": "276345",
+    "Html": "<p>Code similar to the following would write some XML (in a console program):</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre>    <span style=\"color: blue;\">class</span> Program\r\n    {\r\n        <span style=\"color: blue;\">static</span> <span style=\"color: blue;\">void</span> Main(<span style=\"color: blue;\">string</span>[] args)\r\n        {\r\n            <span style=\"color: blue;\">var</span> document = <span style=\"color: blue;\">new</span> SvgDocument\r\n            {\r\n                Width = 50,\r\n                Height = 50\r\n            };\r\n\r\n            document.Children.Add(<span style=\"color: blue;\">new</span> SvgCircle\r\n                {\r\n                    Radius = 20,\r\n                    Fill = <span style=\"color: blue;\">new</span> SvgColourServer(Color.Red),\r\n                    Stroke = <span style=\"color: blue;\">new</span> SvgColourServer(Color.Black),\r\n                    StrokeWidth = 2\r\n                });\r\n\r\n            <span style=\"color: blue;\">var</span> xmlWriter = <span style=\"color: blue;\">new</span> XmlTextWriter(Console.Out);\r\n            document.WriteElement(xmlWriter);\r\n        }\r\n    }\r\n</pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>However, it's NOT correct (sorry!):</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre><span style=\"color: blue;\">&lt;</span><span style=\"color: #a31515;\">svg</span> <span style=\"color: red;\">d1p1:width</span><span style=\"color: blue;\">=</span><span style=\"color: black;\">\"</span><span style=\"color: blue;\">50</span><span style=\"color: black;\">\"</span> <span style=\"color: red;\">d1p1:height</span><span style=\"color: blue;\">=</span><span style=\"color: black;\">\"</span><span style=\"color: blue;\">50</span><span style=\"color: black;\">\"</span> <span style=\"color: red;\">d1p1:viewBox</span><span style=\"color: blue;\">=</span><span style=\"color: black;\">\"</span><span style=\"color: blue;\">0, 0, 0, 0</span><span style=\"color: black;\">\"</span> <span style=\"color: red;\">xmlns:d1p1</span><span style=\"color: blue;\">=</span><span style=\"color: black;\">\"</span><span style=\"color: blue;\">http://www.w3.org/2000/svg</span><span style=\"color: black;\">\"</span><span style=\"color: blue;\">&gt;</span>\r\n  <span style=\"color: blue;\">&lt;</span><span style=\"color: #a31515;\">circle</span> <span style=\"color: red;\">d1p1:cx</span><span style=\"color: blue;\">=</span><span style=\"color: black;\">\"</span><span style=\"color: blue;\">none</span><span style=\"color: black;\">\"</span> <span style=\"color: red;\">d1p1:cy</span><span style=\"color: blue;\">=</span><span style=\"color: black;\">\"</span><span style=\"color: blue;\">none</span><span style=\"color: black;\">\"</span> <span style=\"color: red;\">d1p1:r</span><span style=\"color: blue;\">=</span><span style=\"color: black;\">\"</span><span style=\"color: blue;\">20</span><span style=\"color: black;\">\"</span> <span style=\"color: red;\">d1p1:clip-rule</span><span style=\"color: blue;\">=</span><span style=\"color: black;\">\"</span><span style=\"color: blue;\">NonZero</span><span style=\"color: black;\">\"</span> <span style=\"color: red;\">d1p1:visibility</span><span style=\"color: blue;\">=</span><span style=\"color: black;\">\"</span><span style=\"color: blue;\">True</span><span style=\"color: black;\">\"</span> <span style=\"color: red;\">...</span> <span style=\"color: blue;\">/&gt;</span>\r\n<span style=\"color: blue;\">&lt;/</span><span style=\"color: #a31515;\">svg</span><span style=\"color: blue;\">&gt;</span>\r\n</pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>The most immediate problem is that a dodgy namespace is being used for the attributes (d1p1). I suspect this will be a relatively simple (but not&nbsp;necessarily&nbsp;easy) fix in <strong>SvgElement.cs.WriteAttributes</strong> &amp; other Write* methods. At first glance it appears that the problem is related to the SVG namespace not being written out correctly first. Overriding WriteAttributes in SvgDocument.cs or SvgFragment.cs and writing the XMLNS first could be the correct fix for this.</p>\r\n<p>The second problem is that all attributes are being written out regardless of whether they have been modified. This shouldn't break anything because the default values are all correct according to the SVG spec, but it will create very verbose files.</p>\r\n<p>As to the TypeConverter at work - it's quite easy to spot the issue here in the clip-rule attribute. The valid value would be \"non-zero\" (I think) but the SvgClipRule enum has no TypeConverter so the enum value .ToString() method is used to get a string value (NonZero is how it's represented in code). To fix this issue you'd just need to create a simple TypeConverter for SvgClipRule that overrides the CanConvertTo method to return true for types of string and then override the ConvertTo method to return the correct values. You can see examples of how this is done in SvgUnitConverter.cs and SvgTransformConverter.cs (and see SvgUnit to see how the TypeConverter is registered at the top of the class).</p>\r\n<p>I don't think there is much work left to do here, but it's obviously not in a working state.</p>\r\n<p>Cheers,<br />Dave</p>",
+    "PostedDate": "2011-10-19T16:38:15.28-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "686623",
+    "ThreadId": "276345",
+    "Html": "<p>thanks for the help! will work on it right away.. if i can fix all the issues i'll report back here.</p>",
+    "PostedDate": "2011-10-19T18:06:12.7-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "689364",
+    "ThreadId": "276345",
+    "Html": "<p>hey, just a short note. i have very promising results.. but still working on it.</p>\r\n<p>how should i send you the code? as a patch upload or something?</p>",
+    "PostedDate": "2011-10-25T17:20:44.75-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "689403",
+    "ThreadId": "276345",
+    "Html": "<p>I think a Codeplex patch should be alright.</p>\r\n<p>If you have trouble with that, perhaps create an Issue with the zipped up code attached.&nbsp;</p>",
+    "PostedDate": "2011-10-25T21:17:47.703-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "697085",
+    "ThreadId": "276345",
+    "Html": "<p>alright, its getting bigger.. besides some type converters, i did many more bug fixes regarding viewbox, text element and other small things here and there. we decided to import the svn into a private repository on github to have my fixes and additions version controlled. i will send you a big patch in the next weeks. if you don't want to include this patch into the public svn here, we would like to ask you, if we could host some kind of 'fork' on github?</p>\r\n<p><a href=\"https://github.com/organizations/vvvv\">https://github.com/organizations/vvvv</a></p>\r\n<p>vvvv is a visual programming environment for realtime media.</p>\r\n<p>but i hope you will like what i did so far anyways...&nbsp;</p>",
+    "PostedDate": "2011-11-11T08:36:15.883-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "724425",
+    "ThreadId": "276345",
+    "Html": "<p>Tebjan, we are looking to do exactly the same thing as what you describe above. We have just started using svg in our application and we need the ability to export the lot to an svg file that can be rendered by the browser. This SVG Rendering engine seems perfect apart from the missing functionality as stated above.</p>\r\n<p>Rather than re-inventing the wheel and making all these changes ourselves, is the work you have done available in the codeplex codebase as a patch? Where can I find it? (I cannot see the vvvv organisation on github).</p>\r\n<p>Thanks</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2012-01-12T12:06:48.72-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "728518",
+    "ThreadId": "276345",
+    "Html": "<p>hello,</p>\n<p>i have sent you a message with contact information over codeplex. there is no patch yet, but i can give you a .dll to test the functionality. would also be a good way to find bugs. so feel free to contact me.</p>\n<p>greets!</p>",
+    "PostedDate": "2012-01-20T17:49:33.5-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1026221",
+    "ThreadId": "276345",
+    "Html": "hello tebjan,\r<br />\n<br />\ncan u send me dll too? \r<br />\n<br />\ngreets!<br />\n",
+    "PostedDate": "2013-04-05T09:47:06.85-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1052805",
+    "ThreadId": "276345",
+    "Html": "<strong>reg4ltip wrote:</strong><br />\n<blockquote>\ncan u send me dll too? <br />\n</blockquote>\nwe made a forl on github, just head over to: <a href=\"https://github.com/vvvv/SVG\" rel=\"nofollow\">https://github.com/vvvv/SVG</a><br />\n",
+    "PostedDate": "2013-06-04T13:40:15.397-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

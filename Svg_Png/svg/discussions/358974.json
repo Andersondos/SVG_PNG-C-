@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "846901",
+    "ThreadId": "358974",
+    "Html": "\r\n<p>Current release does not appear to implement these elements yet. To make the rendering engineer more useful, tried to enable basic textPath and Tref rendering. Also by the way change x, y, dx, dy properties to coordinates list to compliant with svg 1.1 spec,\r\n and add rotate property to enrich it. Still far away from complete svg 1.1 spec but should be more useful... have a try (down load from&nbsp;patch ID: 12378)&nbsp;if you are interested and let me know in case of problems (the examples in svg 1.1 spec were\r\n tested, but still quite limited tests, might have bugs still...)</p>\r\n<p>Vincent</p>\r\n",
+    "PostedDate": "2012-06-09T06:43:14.433-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1047093",
+    "ThreadId": "358974",
+    "Html": "Hello Vincent,\r<br />\n<br />\n  I have the same problem (need textPath), but could not see it working in the latest version from repository. Has your patch been removed? Is there an other way, to get your changes, to test by myself?\r<br />\n<br />\nGreetings\r<br />\n  Thomas<br />\n",
+    "PostedDate": "2013-05-22T06:21:04.227-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1048840",
+    "ThreadId": "358974",
+    "Html": "Hello Thomas,\r<br />\n<br />\nThe patch is still there. You may go to &quot;SOURCE CODE&quot;, then &quot;Patches&quot; where you may find it, and download...\r<br />\n<br />\nI had actually stopped playing with the code for almost a year since that patch. Not sure if I can be of further help in case of problems. Anyway, try it. GOOD LUCK.\r<br />\n<br />\nVincent.<br />\n",
+    "PostedDate": "2013-05-26T06:34:08.607-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

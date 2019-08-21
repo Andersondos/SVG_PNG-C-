@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "512475",
+    "ThreadId": "232296",
+    "Html": "\r\n<p>Hi how to make the dll support svg 1.1?</p>\r\n<p>the following line do cause exceptions</p>\r\n<p>&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot;&nbsp;&nbsp;&quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-flat.dtd&quot;&gt;</p>\r\n<p>&nbsp;</p>\r\n<p>cheers</p>\r\n<p>&nbsp;</p>\r\n<p>cooper</p>\r\n",
+    "PostedDate": "2010-10-25T19:08:06.24-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

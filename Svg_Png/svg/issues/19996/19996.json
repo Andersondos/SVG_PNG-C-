@@ -1,0 +1,61 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi Team Codeplex,\nWe are using Highcharts to show our reports in the form of charts.\nWe are taking the SVG from Highchart directly and converting it into images by using SVG.dll which we downloaded from below URL:\nhttps://github.com/imclem/Highcharts-export-module-asp.net\nBut in this conversion we are facing few issues:\nA.\tWhenever we wrapped the text on X-Axis or Y-Axis the same text display on reports properly as shown in Highchart.png\n\nWhen we are taking the SVG of above chart it showing the wrapped text in SVG:\n__<g class=\"highcharts-axis-labels\" ><text style=\"color: rgb(0, 0, 0); line-height: 14px; font-family: arial, helvetica, sans-serif; font-size: 12px; font-weight: bold; cursor: default; fill: #000;\" text-anchor=\"end\" transform=\"rotate(-65 83.75 223)\" x=\"83.75\" y=\"223\"><tspan x=\"83.75\">Washington</tspan><tspan x=\"83.75\" dy=\"14px\">Adventist</tspan><tspan x=\"83.75\" dy=\"14px\">Hospital</tspan></text>__\n\ncomplete SVG file is attached here with (SVG_From_Highchart.txt).\n\nBut when we are converting the same SVG to image by using of SVG.dll then in images we are not getting the wrapped text properly. It removed the second row and onwards of the wrapped text as shown in Image_From_SVG.png\n\n \nNote: Due to some restrictions we can’t use the Export Server of Highcharts so please provide any appropriate solution except using of Highchart export server.",
+    "LastUpdatedDate": "2013-10-21T00:44:56.707-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2013-07-23T00:53:05.533-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "SVG.dll not converting wrapped text",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 19996
+  },
+  "FileAttachments": [
+    {
+      "FileId": 7077,
+      "FileName": "Highchart.png",
+      "DownloadUrl": ".\\7077"
+    },
+    {
+      "FileId": 7078,
+      "FileName": "Image_From_SVG.png",
+      "DownloadUrl": ".\\7078"
+    },
+    {
+      "FileId": 7079,
+      "FileName": "SVG_From_Highchart.txt",
+      "DownloadUrl": ".\\7079"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "is this issue is fixed cause i am too facing this. SVG engine does not get the wrapped text from highchart",
+      "PostedDate": "2013-10-21T00:44:56.707-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

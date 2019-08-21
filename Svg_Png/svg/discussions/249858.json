@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "581105",
+    "ThreadId": "249858",
+    "Html": "\r\n<p>Is it currently possible to give the library a string containing valid XML / SVG data, then convert it to an image format, like a PNG or JPEG, all in memory?</p>\r\n<p>For example (pseudo code):</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:blue\">using</span> (<span style=\"color:blue\">var</span> stream = <span style=\"color:blue\">new</span> MemoryStream())\r\n{\r\n    <span style=\"color:blue\">string</span> svgText = <span style=\"color:#a31515\">&quot;data here&quot;</span>;\r\n    <span style=\"color:blue\">var</span> sampleDoc = SvgDocument.OpenFromMemoryStream(stream);\r\n    \r\n    <span style=\"color:blue\">var</span> Image = sampleDoc.Draw().ToPng();\r\n}\r\n</pre>\r\n</div>\r\n<p></p>\r\n<p>If it's not possible, are there any plans to support this functionality? I ask because we're receiving data from a user, and i hesitate to write user generated data to the file system. Sure, I can write it to a local directory of my project, like ~/Content/Volatile\r\n or something, but I'd prefer to use a memory stream that can be garbage collected as soon as the conversion is done.</p>\r\n",
+    "PostedDate": "2011-03-15T17:56:34.42-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "581868",
+    "ThreadId": "249858",
+    "Html": "<p>Yes, it is possible. There is an SvgDocument.Open overload that accepts a Stream object, so the MemoryStream should work just fine.</p>",
+    "PostedDate": "2011-03-16T20:35:01.803-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

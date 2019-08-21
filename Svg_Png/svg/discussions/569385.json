@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1311799",
+    "ThreadId": "569385",
+    "Html": "Hello, \r<br />\n<br />\nI just spent a lot of time trying to figure out why I cannot draw my SVG files with other than 1:1 aspect ratio with the latest version of SVG Rendering Engine. I had exactly the same code in 2 projects, only difference being that the other one used version 1.6.1, and the other one 1.7.0. \r<br />\n<br />\nThe code: <br />\n<pre><code>Bitmap target = new Bitmap(400, 400);\n\nusing (var g = Graphics.FromImage(target))\n{\n     g.Clear(Color.Black);\n     Svg.SvgDocument svgDoc = Svg.SvgDocument.Open(@&quot;C:\\\\button.svg&quot;);\n     int x = 100;\n     int y = 200;\n     svgDoc.Width = x;\n     svgDoc.Height = y;\n     g.DrawImage(svgDoc.Draw(), 0, 0, x, y); \n}\n\nthis.pictureBox1.Image = target;</code></pre>\n\nSo what this code is doing is it renders the button.svg to the top left corner of 400x400 bitmap with width of 100 and height of 200. But the thing is, with the newer 1.7.0 version the result is not as expected  - the image is translated rather than stretched. With version 1.6.1 the result is as expected.\r<br />\n<br />\nThe reason is that the default value for AspectRatio member is &quot;xMidYMid&quot;, when in the version 1.6.1 it was &quot;none&quot;. \r<br />\n<br />\nThe workaround is to do svgDoc.AspectRatio = new SvgAspectRatio(); after instantiating the svgDoc.\r<br />\n<br />\nBut is this a known bug, or a feature?<br />\n",
+    "PostedDate": "2014-10-09T02:38:24.267-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1330778",
+    "ThreadId": "569385",
+    "Html": "the codeplex repo is over 2 years old, please use this fork now: <a href=\"https://github.com/vvvv/SVG\" rel=\"nofollow\">https://github.com/vvvv/SVG</a><br />\n",
+    "PostedDate": "2014-12-10T14:11:46.877-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

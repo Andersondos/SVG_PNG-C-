@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Any <svg> elements without a width or height set will throw null reference exceptions during render. The bounds of an <svg> element must be worked out by examining the element child tree.",
+    "LastUpdatedDate": "2013-02-21T16:26:12.027-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "High",
+      "Severity": 150,
+      "Id": 3
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2008-03-08T16:33:21.003-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Files without a width/height defined throw an exception when rendered.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 5653
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

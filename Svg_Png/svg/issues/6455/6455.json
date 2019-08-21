@@ -1,0 +1,90 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The SvgPathBuilder throws a NotImplementedException for arc segments.  It's the only command type that's not implemented so I'm wondering was it just not done yet or is there some hidden gotya's in this one?  I'd really like to have this working for the SVG files I have, happy to contribute if work is required....",
+    "LastUpdatedDate": "2013-06-14T00:27:52.157-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2008-06-23T20:20:31.367-07:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Arc Segments in SvgPathBuilder",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 6455
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Arc just hasn't been done yet - it's pretty complex code and although there is code available (the Mozilla SVG Arc implementation can easily be converted to C#) I never understood it very well and wanted to avoid throwing in code I didn't understand ;)\r\n\r\nI never thought it was used that much, but I have noticed that Inkscape and other programs tend to use them so I'll try to get this implemented soon.",
+      "PostedDate": "2008-07-23T16:40:05.117-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-07-23T16:40:05.68-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-10-15T16:23:26.993-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-10-16T05:09:58.23-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-10-18T04:06:47.473-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Arc paths supported in changeset 18243.",
+      "PostedDate": "2008-10-18T04:24:32.793-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:09.307-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:30.18-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:30.29-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-06-14T00:27:52.157-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

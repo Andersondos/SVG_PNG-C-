@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1276622",
+    "ThreadId": "553443",
+    "Html": "I'm wanting to use SVG images for toolbar/menu icons in the application base I'm working on.  As envisioned, one SVG file might provide several different sizes, say 16x16 and 24x24.  But I need a way to scale the image correctly.  As is, I don't know how large the SVG is.  (Not something I can control.)  So without that, I have no way to specify a scale transform.\r<br />\n<br />\nBTW: It would be cool if the image was able to animate on mouse over.  Imagine a File Open icon that looks like a folder.  With the mouse overhead, the folder opens some.  With the mouse gone, it closes.  Or perhaps the icons would glow.  I don't know if this library supports anything more than a static render though.<br />\n",
+    "PostedDate": "2014-07-23T22:02:28.65-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1276936",
+    "ThreadId": "553443",
+    "Html": "I thought I'd expand on what I'm working on:<br />\n<ol>\n<li>I'm creating a Windows Forms project to provide an alternate UI platform.</li>\n<li>Animations could be either CSS based or SVG based.  For security reasons, it might be best if Javascript wasn't supported.</li>\n<li>My code will handle all clicks.  I could also provide hooks that trigger something inside the SVG.</li>\n<li>Any app built on my platform would have use of the SvgDocument class for it's own use.</li>\n</ol>\n",
+    "PostedDate": "2014-07-23T23:46:40.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

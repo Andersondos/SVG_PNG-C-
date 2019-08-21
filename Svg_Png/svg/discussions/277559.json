@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "690805",
+    "ThreadId": "277559",
+    "Html": "\r\n<p>Hi all - not sure how active this project is - just found it today - very cool.</p>\r\n<p>The projects I mainly work on use the .Net 4 client profile when possible. It seems that only the&nbsp;SvgHandler class requires the full .Net framework. So for me, I've made an SvgLight project with all the original code except the&nbsp;SvgHandler.&nbsp;</p>\r\n<p>I'm also looking at writing some custom controls that will let me bring in an SVG at runtime (from file or more likely an embedded resource) and render them. (SVG conversion done once only, unless the control size is changed).</p>\r\n<p>I get the impression this project was geared for Web developers, but for me it is non-Web only.</p>\r\n<p>So am wondering if there are many other people around using this, and if they've done anything similar, or are interested in anything similar.&nbsp;</p>\r\n<p>I'm also using Inkscape to generate my SVG images - anyone else using that alongside this project?&nbsp;</p>\r\n<p>Any thoughts appreciated.</p>\r\n<p>Thanks, Jon.</p>\r\n",
+    "PostedDate": "2011-10-28T06:53:03.187-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "709342",
+    "ThreadId": "277559",
+    "Html": "<p>Jon,</p>\r\n<p>My project is pretty much the same as yours - I use Inkscape to draw the images and this library to render in a .NET 4 application.</p>\r\n<p>The only difference is that I'm using the full profile, for some reason I can't remember off-hand...</p>\r\n<p>The thing I'd like to see added to this library is an option to <em>not</em> scale the StrokeWidth properties when rendering a resized image (i.e. not drawing at 100%).&nbsp; This is available within Inkscape from the 'Tool Controls Bar' --&gt; Affect: --&gt; [first button] stroke width scaling option.&nbsp; I've been tracing through the source code for hours now, and I don't think I can see an easy way to implement it.</p>\r\n<p>Regards,</p>\r\n<p>Grim</p>",
+    "PostedDate": "2011-12-08T07:26:24.407-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

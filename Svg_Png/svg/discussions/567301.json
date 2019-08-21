@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1304229",
+    "ThreadId": "567301",
+    "Html": "Hi,\r<br />\n<br />\nIs it possible to set the unit globally to a specific type? I calculate with mm values, so I always have to set the unit value like this:<br />\n<pre><code>CenterX = new SvgUnit(SvgUnitType.Millimeter, 10),</code></pre>\n\nBut this is somehow cumbersome. Is it possible to tell the engine that all unit values are treated e.g. as &quot;mm&quot;, so that\r<br />\n<br />\n<code>CenterX = 10;</code>  is the same as new SvgUnit(SvgUnitType.Millimeter, 10),\r<br />\n<br />\nI'm new to the SVG Rendering Engine and I appreciate any adwise!\r<br />\n<br />\nThanx.<br />\n",
+    "PostedDate": "2014-09-12T13:56:03.58-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

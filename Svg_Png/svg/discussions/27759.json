@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "92620",
+    "ThreadId": "27759",
+    "Html": "G'Day<br>\r\n<br>\r\nI am completely new to SVG (today), but stumbled across the Pom downunder's example of using your dll to render a button in an href.<br>\r\nThat all works fine for me, but what I would really like to do is use an SVG image on an image button (or as the background of a .Net button).<br>\r\nIs this meant to work? If not is it something you plan to do?<br>\r\n<br>\r\nAdding an ImageButton with ImageUrl set to an svg image causes just the bottom right corner of the image to appear.<br>\r\n<br>\r\nCheers<br>\r\n<br>\r\nRob<br>\r\n<br>\r\n",
+    "PostedDate": "2008-05-14T23:46:05.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

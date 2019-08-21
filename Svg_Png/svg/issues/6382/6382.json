@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "There is currently no support for EM font sizes yet these are commonly used.\n \nhttp://www.w3.org/TR/CSS21/fonts.html#propdef-font-size has documentation on how this could be calculated (the default font-size of medium is used as the base which could work out to be around 8pt).",
+    "LastUpdatedDate": "2013-10-06T06:07:41.71-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2008-06-17T06:36:55.527-07:00",
+    "Status": {
+      "Name": "Active",
+      "Id": 2
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Support EM font sizes",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 6382
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,80 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The code is currently not implemented.  I think the following will work:\n \n        public static SvgDocument Open(XmlDocument document)\n        {\n            StringWriter sw = new StringWriter();\n            XmlTextWriter xw = new XmlTextWriter(sw);\n            document.WriteTo(xw);\n            Stream stream = new MemoryStream(ASCIIEncoding.Default.GetBytes(sw.ToString()));\n            return Open(stream, null);\n        }",
+    "LastUpdatedDate": "2013-06-14T00:27:51.107-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2008-11-07T08:45:01.487-08:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "public static SvgDocument Open(XmlDocument document) returns null",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7986
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This should work, too.  Avoids the needless complexity.\r\n\r\n        public static SvgDocument Open(XmlDocument document)\r\n        {\r\n            Stream stream = new MemoryStream(ASCIIEncoding.Default.GetBytes(document.InnerXml));\r\n            return Open(stream, null);\r\n        }",
+      "PostedDate": "2008-11-07T10:34:49.457-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I'd probably recommend you use UTF8Encoding though. Might prevent some problems in the future and its a good direction to end toward.",
+      "PostedDate": "2008-11-07T13:04:38.277-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "- Fixed in changeset #23564.\r\n\r\nThanks for the help with this one guys.\r\n\r\nI'd like to say though, that using an XmlDocument isn't recommended if you're concerned with performance. The SVG parser is optimised for reading straight from XML. If an XmlDocument is used there are two issues:\r\n\r\n1) The XmlDocument has already parsed the XML and so the Svg library isn't going to parse it again (i.e. Parsing already parsed XML).\r\n2) XmlDocument is pretty slow. I'm not saying the SVG implementation is faster but it only parses what it understands rather than everything.",
+      "PostedDate": "2008-12-21T05:45:43.097-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-21T05:45:43.86-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:07.007-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:28.093-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:28.24-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-06-14T00:27:51.107-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "476714",
+    "ThreadId": "222538",
+    "Html": "<p>Hi, does this engine supports styles inside SVG files?</p>\r\n<p>For example (from http://tutorials.jenkov.com/svg/svg-and-css.html) this doesn't work</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">svg</span> <span style=\"color:red\">xmlns</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">http://www.w3.org/2000/svg</span><span style=\"color:black\">&quot;</span>\r\n    <span style=\"color:red\">xmlns:xlink</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">http://www.w3.org/1999/xlink</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">&gt;</span>\r\n    \r\n    <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">style</span> <span style=\"color:red\">type</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">text/css</span><span style=\"color:black\">&quot;</span> <span style=\"color:blue\">&gt;</span>\r\n      <span style=\"color:blue\">&lt;![CDATA[</span><span style=\"color:gray\">\r\n\r\n        circle {\r\n           stroke: #006600;\r\n           fill:   #00cc00;\r\n        }\r\n\r\n      </span><span style=\"color:blue\">]]&gt;</span>\r\n    <span style=\"color:blue\">&lt;/</span><span style=\"color:#a31515\">style</span><span style=\"color:blue\">&gt;</span>\r\n    \r\n    <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">circle</span>  <span style=\"color:red\">cx</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">40</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">cy</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">40</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">r</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">24</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">/&gt;</span>\r\n<span style=\"color:blue\">&lt;/</span><span style=\"color:#a31515\">svg</span><span style=\"color:blue\">&gt;</span>\r\n\r\n</pre>\r\n</div>\r\n<p>Thanks</p>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow:hidden\">\r\n<pre>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;<br>    xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;<br>    <br>    &lt;style type=&quot;text/css&quot; &gt;<br>      &lt;![CDATA[<br><br>        circle {<br>           stroke: #006600;<br>           fill:   #00cc00;<br>        }<br><br>      ]]&gt;<br>    &lt;/style&gt;<br>    <br>    &lt;circle  cx=&quot;40&quot; cy=&quot;40&quot; r=&quot;24&quot;/&gt;<br>&lt;/svg&gt;<br></pre>\r\n</div>",
+    "PostedDate": "2010-08-04T23:33:47.557-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "476731",
+    "ThreadId": "222538",
+    "Html": "<p>I've added the SGV api to the <a href=\"http://o2platform.com\">OWASP O2 Platform</a> projet and you can read more details about it here: <a href=\"http://www.o2platform.com/index.php/O2 Script/Tool - SVG Viewer and Editor.h2\">http://www.o2platform.com/index.php/O2 Script/Tool - SVG Viewer and Editor.h2</a></p>",
+    "PostedDate": "2010-08-05T00:17:36.417-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "477134",
+    "ThreadId": "222538",
+    "Html": "<p>Hey,</p>\r\n<p>Styles should work inside a document, although thinking about it now it might be the case that the &lt;![CDATA[ block is stopping them from working. If possible try to remove the CDATA and see how you go?</p>\r\n<p>The real-time editor you've created there looks great! I'll have to give it download soon :)</p>\r\n<p>Cheers,<br>Scriv</p>",
+    "PostedDate": "2010-08-05T14:41:16.74-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "690698",
+    "ThreadId": "222538",
+    "Html": "<p>Started new thread regarding my question</p>",
+    "PostedDate": "2011-10-28T02:40:08.16-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

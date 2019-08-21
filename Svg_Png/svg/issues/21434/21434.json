@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Trying to generate a svg image from a WebBrowser control in a PC with IE11, I see an error :\n\"Value of '0' is not valid for 'emSize'. 'emSize' should be greater than 0 and less than or equal to System.Single.MaxValue\"\nThe same code works with PC that have IE10 installed!\n\nin SvgVisualElementStyle.GetFont(SvgRenderer renderer) I've fixed line 320 with:\n```\nif (fontSizeUnit == SvgUnit.None || fontSizeUnit == SvgUnit.Empty)\n```\nand now code works well in both PC.",
+    "LastUpdatedDate": "2014-12-10T14:11:14.7-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2014-10-09T07:41:28.81-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Error drawing svg from IE11",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 21434
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "the codeplex repo is over 2 years old, please use this fork now: https://github.com/vvvv/SVG",
+      "PostedDate": "2014-12-10T14:11:14.7-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

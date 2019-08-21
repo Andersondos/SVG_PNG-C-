@@ -1,0 +1,432 @@
+[
+  {
+    "Id": "27759",
+    "Title": "Use with .Net ImageButton?",
+    "LatestDate": "2008-05-14T23:46:05.86-07:00"
+  },
+  {
+    "Id": "36547",
+    "Title": "Simple way to render an SVG file?",
+    "LatestDate": "2008-11-07T07:16:10.737-08:00"
+  },
+  {
+    "Id": "37743",
+    "Title": "Filter Effects",
+    "LatestDate": "2008-10-15T16:47:40.263-07:00"
+  },
+  {
+    "Id": "39178",
+    "Title": "Thanks!",
+    "LatestDate": "2008-11-04T13:49:15.133-08:00"
+  },
+  {
+    "Id": "42546",
+    "Title": "Help with example",
+    "LatestDate": "2010-04-06T16:35:01.897-07:00"
+  },
+  {
+    "Id": "43855",
+    "Title": "SVG Animation",
+    "LatestDate": "2009-01-09T15:52:03.333-08:00"
+  },
+  {
+    "Id": "43856",
+    "Title": "SVG Animation",
+    "LatestDate": "2009-01-11T16:00:49.417-08:00"
+  },
+  {
+    "Id": "46741",
+    "Title": "Image elements",
+    "LatestDate": "2012-10-26T05:53:00.43-07:00"
+  },
+  {
+    "Id": "57230",
+    "Title": "using it in XNA?",
+    "LatestDate": "2009-06-05T09:04:54.463-07:00"
+  },
+  {
+    "Id": "63311",
+    "Title": "How to resize an SVG document?",
+    "LatestDate": "2009-07-23T06:08:09.68-07:00"
+  },
+  {
+    "Id": "63472",
+    "Title": "Create SVG from XmlDocument",
+    "LatestDate": "2009-07-24T20:42:00.363-07:00"
+  },
+  {
+    "Id": "66962",
+    "Title": "How to dynamically render paths in different colors",
+    "LatestDate": "2015-12-13T07:51:34.977-08:00"
+  },
+  {
+    "Id": "83946",
+    "Title": "Save SvgDocument back to Svg file",
+    "LatestDate": "2010-06-09T00:50:22.707-07:00"
+  },
+  {
+    "Id": "207279",
+    "Title": "How to render text?",
+    "LatestDate": "2010-04-12T04:19:54.66-07:00"
+  },
+  {
+    "Id": "208026",
+    "Title": "Change the style dynamically from C#",
+    "LatestDate": "2010-05-07T11:28:15.98-07:00"
+  },
+  {
+    "Id": "208590",
+    "Title": ".net framework version",
+    "LatestDate": "2010-04-08T06:02:01.473-07:00"
+  },
+  {
+    "Id": "211950",
+    "Title": "Cannot fill closed polylines but polygons ",
+    "LatestDate": "2010-05-08T11:39:54.84-07:00"
+  },
+  {
+    "Id": "215914",
+    "Title": "save svg to pdf?",
+    "LatestDate": "2010-12-29T07:15:13.72-08:00"
+  },
+  {
+    "Id": "222538",
+    "Title": "Styles inside SVG",
+    "LatestDate": "2011-10-28T02:40:08.16-07:00"
+  },
+  {
+    "Id": "223309",
+    "Title": "Issue with Points in scientific notation",
+    "LatestDate": "2010-08-11T23:10:14.87-07:00"
+  },
+  {
+    "Id": "223310",
+    "Title": "Issue with relative move in a multisegment path",
+    "LatestDate": "2010-08-11T23:30:17.447-07:00"
+  },
+  {
+    "Id": "226448",
+    "Title": "Better handling of unknown/unhandled node types in SVG document",
+    "LatestDate": "2010-09-08T04:25:58-07:00"
+  },
+  {
+    "Id": "232296",
+    "Title": "support svg 1.1",
+    "LatestDate": "2010-10-25T19:08:06.24-07:00"
+  },
+  {
+    "Id": "232946",
+    "Title": "Are Patches still being applied to this project?",
+    "LatestDate": "2010-10-31T18:14:21.91-07:00"
+  },
+  {
+    "Id": "237566",
+    "Title": "Hoe to convert svg to jpeg or PNG",
+    "LatestDate": "2011-01-02T14:46:54.72-08:00"
+  },
+  {
+    "Id": "239610",
+    "Title": "Binaries are ancient",
+    "LatestDate": "2010-12-26T14:12:17.373-08:00"
+  },
+  {
+    "Id": "239858",
+    "Title": "How can i add an element  to svgDocument?",
+    "LatestDate": "2011-01-03T17:37:45.143-08:00"
+  },
+  {
+    "Id": "240252",
+    "Title": "Svg zoom-in and zoom-out how?",
+    "LatestDate": "2012-04-23T14:52:11.833-07:00"
+  },
+  {
+    "Id": "249858",
+    "Title": "In memory SVG to image conversion?",
+    "LatestDate": "2011-03-16T20:35:01.803-07:00"
+  },
+  {
+    "Id": "250307",
+    "Title": "Strange results",
+    "LatestDate": "2011-03-25T17:54:20.907-07:00"
+  },
+  {
+    "Id": "252744",
+    "Title": "Had SvgGaussianBlur been applied in the project?",
+    "LatestDate": "2011-04-06T03:43:12.443-07:00"
+  },
+  {
+    "Id": "262065",
+    "Title": "Font and text",
+    "LatestDate": "2013-11-25T23:27:45.187-08:00"
+  },
+  {
+    "Id": "264698",
+    "Title": "Reading Node Title and Description",
+    "LatestDate": "2011-07-11T09:40:36.393-07:00"
+  },
+  {
+    "Id": "275411",
+    "Title": "Converting SVG to other formats",
+    "LatestDate": "2011-10-11T01:33:00.27-07:00"
+  },
+  {
+    "Id": "275726",
+    "Title": "SVGPATH",
+    "LatestDate": "2011-10-13T03:59:41.113-07:00"
+  },
+  {
+    "Id": "276180",
+    "Title": "Unable to render SVG",
+    "LatestDate": "2011-10-17T11:36:56.103-07:00"
+  },
+  {
+    "Id": "276345",
+    "Title": "Get XML string back from SvgDocument class",
+    "LatestDate": "2013-06-04T13:40:15.397-07:00"
+  },
+  {
+    "Id": "277532",
+    "Title": "Styles for SVG",
+    "LatestDate": "2011-10-28T08:57:24.58-07:00"
+  },
+  {
+    "Id": "277559",
+    "Title": ".Net 4 client profile and other thoughts",
+    "LatestDate": "2011-12-08T07:26:24.407-08:00"
+  },
+  {
+    "Id": "279981",
+    "Title": "Fix for drawing strokes properly",
+    "LatestDate": "2011-11-18T03:10:38.3-08:00"
+  },
+  {
+    "Id": "282324",
+    "Title": "Save as PNG with Transparent Background",
+    "LatestDate": "2011-12-08T15:37:49.227-08:00"
+  },
+  {
+    "Id": "284540",
+    "Title": "xlink:href",
+    "LatestDate": "2012-02-04T23:39:49.297-08:00"
+  },
+  {
+    "Id": "343171",
+    "Title": "Svg to PNG Gradient Issue",
+    "LatestDate": "2012-02-23T07:10:36.917-08:00"
+  },
+  {
+    "Id": "344744",
+    "Title": "is this project dead?",
+    "LatestDate": "2012-11-06T18:47:22.5-08:00"
+  },
+  {
+    "Id": "347927",
+    "Title": "Text Wont Convert",
+    "LatestDate": "2012-03-08T17:17:09.493-08:00"
+  },
+  {
+    "Id": "349300",
+    "Title": "ClipPath and System.Uri",
+    "LatestDate": "2012-03-22T01:30:43.723-07:00"
+  },
+  {
+    "Id": "351565",
+    "Title": "Add filters and improved gradient functions",
+    "LatestDate": "2012-04-22T04:05:02.93-07:00"
+  },
+  {
+    "Id": "354011",
+    "Title": "SvgDocument.Draw() gives a null reference exception",
+    "LatestDate": "2012-09-09T20:19:27.83-07:00"
+  },
+  {
+    "Id": "358974",
+    "Title": "Add textPath and Tref elements",
+    "LatestDate": "2013-05-26T06:34:08.607-07:00"
+  },
+  {
+    "Id": "360155",
+    "Title": "foreignObject",
+    "LatestDate": "2012-06-19T08:24:38.057-07:00"
+  },
+  {
+    "Id": "390457",
+    "Title": "Save what is displayed in the viewbox",
+    "LatestDate": "2013-04-25T04:03:04.837-07:00"
+  },
+  {
+    "Id": "390859",
+    "Title": "Resize image to 30px height, and keep aspect ratio",
+    "LatestDate": "2012-08-09T05:56:36.127-07:00"
+  },
+  {
+    "Id": "406320",
+    "Title": "SVGDOCUMENT.OPEN throws invalid xml exception",
+    "LatestDate": "2013-11-12T00:56:09.323-08:00"
+  },
+  {
+    "Id": "436660",
+    "Title": " System.OutOfMemoryException: Out of memory",
+    "LatestDate": "2013-03-14T09:40:12.807-07:00"
+  },
+  {
+    "Id": "441233",
+    "Title": "Getting the wpf samples working or where are the controls \"http://sharpvectors.codeplex.com/runtime/\"",
+    "LatestDate": "2013-04-22T22:08:33.88-07:00"
+  },
+  {
+    "Id": "442279",
+    "Title": "How do I set the DPI for generated images?",
+    "LatestDate": "2015-02-26T03:26:30.033-08:00"
+  },
+  {
+    "Id": "445996",
+    "Title": "Fork on GitHub",
+    "LatestDate": "2013-06-04T13:39:18.61-07:00"
+  },
+  {
+    "Id": "446735",
+    "Title": "Convert svg to png , NullReferenceException",
+    "LatestDate": "2013-06-12T03:19:15.957-07:00"
+  },
+  {
+    "Id": "452388",
+    "Title": "Convert SVG to PNG with Images Embeded",
+    "LatestDate": "2015-07-25T09:37:01.35-07:00"
+  },
+  {
+    "Id": "454786",
+    "Title": "Does this support adding custom elements and attributes ?",
+    "LatestDate": "2013-08-28T10:04:26.727-07:00"
+  },
+  {
+    "Id": "524586",
+    "Title": "svg Path group Color",
+    "LatestDate": "2014-01-24T07:40:47.207-08:00"
+  },
+  {
+    "Id": "538581",
+    "Title": "Does svg rendering engine support gausian blur filter?",
+    "LatestDate": "2014-03-10T19:35:07.61-07:00"
+  },
+  {
+    "Id": "539722",
+    "Title": " How to cut a svg file into small images to other formats (jpeg, bmp ...)",
+    "LatestDate": "2014-03-21T05:51:39.917-07:00"
+  },
+  {
+    "Id": "553443",
+    "Title": "How do I get an SvgDocument to render at a specific size?",
+    "LatestDate": "2014-07-23T23:46:40.3-07:00"
+  },
+  {
+    "Id": "567301",
+    "Title": "Is it possible to set the Unit globally?",
+    "LatestDate": "2014-09-12T13:56:03.58-07:00"
+  },
+  {
+    "Id": "567586",
+    "Title": "Elements in Defs - generic SvgElement",
+    "LatestDate": "2014-12-10T14:12:16.173-08:00"
+  },
+  {
+    "Id": "569385",
+    "Title": "Aspect ratio quirk/bug in version 1.7.0",
+    "LatestDate": "2014-12-10T14:11:46.877-08:00"
+  },
+  {
+    "Id": "570810",
+    "Title": "svg To png, text not exported correctly",
+    "LatestDate": "2014-12-10T14:11:00.093-08:00"
+  },
+  {
+    "Id": "571404",
+    "Title": "Can someone help me in editing text in an SVG using this rendering engine",
+    "LatestDate": "2014-12-10T14:10:43.873-08:00"
+  },
+  {
+    "Id": "584640",
+    "Title": "Conversation issue",
+    "LatestDate": "2015-03-04T19:49:31.693-08:00"
+  },
+  {
+    "Id": "632031",
+    "Title": "svgDocument.Draw always fails",
+    "LatestDate": "2015-04-22T12:43:22.02-07:00"
+  },
+  {
+    "Id": "633824",
+    "Title": "Create JPEG",
+    "LatestDate": "2015-04-27T05:27:46.707-07:00"
+  },
+  {
+    "Id": "641340",
+    "Title": "How to create SVG image from BMP/JPEG",
+    "LatestDate": "2015-07-14T04:39:33.767-07:00"
+  },
+  {
+    "Id": "641889",
+    "Title": "Create an SVG file for the output",
+    "LatestDate": "2015-07-24T05:47:35.117-07:00"
+  },
+  {
+    "Id": "645962",
+    "Title": "How do I create SVG?",
+    "LatestDate": "2015-10-22T15:08:49.047-07:00"
+  },
+  {
+    "Id": "648565",
+    "Title": "how to fill svg path with image ?",
+    "LatestDate": "2015-12-09T10:00:30.223-08:00"
+  },
+  {
+    "Id": "648616",
+    "Title": "Get Bounding information of an SVG Element",
+    "LatestDate": "2015-12-10T11:32:21.93-08:00"
+  },
+  {
+    "Id": "649326",
+    "Title": "background color when transforming from svg to jpeg",
+    "LatestDate": "2017-10-18T06:03:14.967-07:00"
+  },
+  {
+    "Id": "652025",
+    "Title": "SVG implementation with WPF",
+    "LatestDate": "2016-03-03T00:21:24.063-08:00"
+  },
+  {
+    "Id": "655346",
+    "Title": "how to save jpg image as .svg image",
+    "LatestDate": "2016-06-08T12:18:06.277-07:00"
+  },
+  {
+    "Id": "655602",
+    "Title": "Problem adding <radialGradient> to <defs>",
+    "LatestDate": "2016-06-15T12:32:40.643-07:00"
+  },
+  {
+    "Id": "655604",
+    "Title": "Setting 'Fill' to a gradient",
+    "LatestDate": "2016-06-15T12:42:05.52-07:00"
+  },
+  {
+    "Id": "656151",
+    "Title": "SvgText element isn't added to the file",
+    "LatestDate": "2016-07-20T06:52:43.537-07:00"
+  },
+  {
+    "Id": "657297",
+    "Title": "Is it possible to get out line of image from a svg file",
+    "LatestDate": "2016-08-19T12:04:12.54-07:00"
+  },
+  {
+    "Id": "658667",
+    "Title": "SvgDocument.Open(xmlStream) prints out file structure information",
+    "LatestDate": "2016-10-12T01:45:57.283-07:00"
+  },
+  {
+    "Id": "659207",
+    "Title": "Improving the Entities sample",
+    "LatestDate": "2016-11-05T14:00:27.76-07:00"
+  }
+]

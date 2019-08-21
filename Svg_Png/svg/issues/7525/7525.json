@@ -1,0 +1,76 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "path isn't flipped as supposed when transform=\"matrix(-1 0 0 1 310 0)\"\nsee attached file.",
+    "LastUpdatedDate": "2013-06-14T00:27:51.653-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2008-09-04T23:47:39.223-07:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "matrix problem, path not flipped",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7525
+  },
+  "FileAttachments": [
+    {
+      "FileId": 2091,
+      "FileName": "sfgpiue---h----.svg",
+      "DownloadUrl": ".\\2091"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Fixed by applied patch 1944.",
+      "PostedDate": "2008-10-18T04:52:31.1-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-10-18T04:52:44.337-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:08.56-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:29.39-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:29.51-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-06-14T00:27:51.653-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

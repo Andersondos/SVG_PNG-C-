@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1037" height="400">
+	<defs>
+		<clipPath id="highcharts-2">
+			<rect x="0" y="0" fill="none" width="973" height="298"></rect>
+		</clipPath>
+	</defs>
+	<rect x="0" y="0" fill="#FFFFFF" width="1037" height="400" rx="5" ry="5" stroke-width="0" stroke="#4572A7"></rect>
+	<text style="font-family: Arial; color: #3e576f; font-size: 16px; fill: #3e576f" class="highcharts-title" x="518.5" y="25" text-anchor="middle">
+		Title
+	</text>
+	<text style="font-family: Arial; color: #6d869f; font-size: 12px; fill: #6d869f" class="highcharts-subtitle" x="518.5" y="40" text-anchor="middle">
+		<tspan x="518.5">Count</tspan>
+	</text>
+	<g class="highcharts-grid"></g>
+	<g class="highcharts-grid">
+		<path fill="none" stroke-width="1" stroke="#C0C0C0" d="M 54 353.5 L 1027 353.5"></path>
+		<path fill="none" stroke-width="1" stroke="#C0C0C0" d="M 54 279.5 L 1027 279.5"></path>
+		<path fill="none" stroke-width="1" stroke="#C0C0C0" d="M 54 204.5 L 1027 204.5"></path>
+		<path fill="none" stroke-width="1" stroke="#C0C0C0" d="M 54 130.5 L 1027 130.5"></path>
+		<path fill="none" stroke-width="1" stroke="#C0C0C0" d="M 54 55.5 L 1027 55.5"></path>
+	</g>
+	<g class="highcharts-series-group">
+		<g class="highcharts-series" transform="translate(54,55)" visibility="visible" clip-path="url(#highcharts-2)">
+			<rect x="252.98" y="153" fill="none" width="175" height="145" rx="0" ry="0" stroke-width="5" stroke="rgb(0, 0, 0)" stroke-opacity="0.05" transform="translate(1,1)" r="0"></rect>
+			<rect x="252.98" y="153" fill="none" width="175" height="145" rx="0" ry="0" stroke-width="3" stroke="rgb(0, 0, 0)" stroke-opacity="0.1" transform="translate(1,1)" r="0"></rect>
+			<rect x="252.98" y="153" fill="none" width="175" height="145" rx="0" ry="0" stroke-width="1" stroke="rgb(0, 0, 0)" stroke-opacity="0.15" transform="translate(1,1)" r="0"></rect>
+			<rect x="252.98" y="153" fill="#4572A7" width="175" height="145" rx="0" ry="0" stroke-width="0" stroke="#FFFFFF" r="0"></rect>
+		</g>
+		<g class="highcharts-series" transform="translate(54,55)" visibility="visible" clip-path="url(#highcharts-2)">
+			<rect x="544.88" y="73" fill="none" width="175" height="225" rx="0" ry="0" stroke-width="5" stroke="rgb(0, 0, 0)" stroke-opacity="0.05" transform="translate(1,1)" r="0"></rect>
+			<rect x="544.88" y="73" fill="none" width="175" height="225" rx="0" ry="0" stroke-width="3" stroke="rgb(0, 0, 0)" stroke-opacity="0.1" transform="translate(1,1)" r="0"></rect>
+			<rect x="544.88" y="73" fill="none" width="175" height="225" rx="0" ry="0" stroke-width="1" stroke="rgb(0, 0, 0)" stroke-opacity="0.15" transform="translate(1,1)" r="0"></rect>
+			<rect x="544.88" y="73" fill="#AA4643" width="175" height="225" rx="0" ry="0" stroke-width="0" stroke="#FFFFFF" r="0"></rect>
+		</g>
+	</g>
+	<g class="highcharts-highcharts-data-labels" transform="translate(54,55)" visibility="visible">
+		<text style="font-family: Arial; color: #4572a7; font-size: 11px; fill: #4572a7" x="341" y="147" text-anchor="middle">
+			<tspan x="341">9.75</tspan>
+		</text>
+	</g>
+	<g class="highcharts-highcharts-data-labels" transform="translate(54,55)" visibility="visible">
+		<text style="font-family: Arial; color: #aa4643; font-size: 11px; fill: #aa4643" x="632" y="67" text-anchor="middle">
+			<tspan x="632">15.12</tspan>
+		</text>
+	</g>
+	<g class="highcharts-legend" transform="translate(753,80)">
+		<rect x="0.5" y="0.5" fill="none" width="173" height="23" rx="5" ry="5" stroke-width="5" stroke="rgb(0, 0, 0)" stroke-opacity="0.05" transform="translate(1,1)" visibility="visible"></rect>
+		<rect x="0.5" y="0.5" fill="none" width="173" height="23" rx="5" ry="5" stroke-width="3" stroke="rgb(0, 0, 0)" stroke-opacity="0.1" transform="translate(1,1)" visibility="visible"></rect>
+		<rect x="0.5" y="0.5" fill="none" width="173" height="23" rx="5" ry="5" stroke-width="1" stroke="rgb(0, 0, 0)" stroke-opacity="0.15" transform="translate(1,1)" visibility="visible"></rect>
+		<rect x="0.5" y="0.5" fill="#FFFFFF" width="173" height="23" rx="5" ry="5" stroke-width="1" stroke="#909090" visibility="visible"></rect>
+		<text style="position: absolute; font-family: Arial; color: #3e576f; font-size: 12px; cursor: pointer; fill: #3e576f" x="30" y="18">
+			<tspan x="30">mapsdmMZ[asd</tspan>
+		</text>
+		<text style="position: absolute; font-family: Arial; color: #3e576f; font-size: 12px; cursor: pointer; fill: #3e576f" x="107" y="18">
+			<tspan x="107">nasduuqwe</tspan>
+		</text>
+		<rect x="9" y="7" fill="#4572A7" width="16" height="12" rx="2" ry="2" stroke-width="0" stroke="#4572A7"></rect>
+		<rect x="86" y="7" fill="#AA4643" width="16" height="12" rx="2" ry="2" stroke-width="0" stroke="#AA4643"></rect>
+	</g>
+	<g class="highcharts-axis">
+		<text style="position: absolute; font-family: Arial; color: #666; font-size: 11px; fill: #666" x="540.5" y="367" text-anchor="middle">
+			<tspan x="540.5">xyz</tspan>
+		</text>
+		<path fill="none" stroke-width="1" stroke="#C0D0E0" d="M 1027.5 353 L 1027.5 358"></path>
+	</g>
+	<text style="position: absolute; font-family: Arial; color: #6d869f; font-size: 12px; font-weight: bold; fill: #6d869f" x="540.5" y="383" text-anchor="middle">
+		<tspan x="540.5">ABC</tspan>
+	</text>
+	<g class="highcharts-axis">
+		<text style="position: absolute; font-family: Arial; color: #666; font-size: 11px; fill: #666" x="46" y="356" text-anchor="end">
+			<tspan x="46">0</tspan>
+		</text>
+		<text style="position: absolute; font-family: Arial; color: #666; font-size: 11px; fill: #666" x="46" y="281.5" text-anchor="end">
+			<tspan x="46">5</tspan>
+		</text>
+		<text style="position: absolute; font-family: Arial; color: #666; font-size: 11px; fill: #666" x="46" y="207" text-anchor="end">
+			<tspan x="46">10</tspan>
+		</text>
+		<text style="position: absolute; font-family: Arial; color: #666; font-size: 11px; fill: #666" x="46" y="132.5" text-anchor="end">
+			<tspan x="46">15</tspan>
+		</text>
+		<text style="position: absolute; font-family: Arial; color: #666; font-size: 11px; fill: #666" x="46" y="58" text-anchor="end">
+			<tspan x="46">20</tspan>
+		</text>
+	</g>
+	<text style="position: absolute; font-family: Arial; color: #6d869f; font-size: 12px; font-weight: bold; fill: #6d869f" x="24" y="204" transform="rotate(270 24 204)" text-anchor="middle">
+		<tspan x="24">XXXX</tspan>
+	</text>
+	<path fill="none" stroke-width="1" stroke="#C0D0E0" d="M 54 353.5 L 1027 353.5"></path>
+	<g class="highcharts-tooltip" visibility="hidden">
+		<rect x="2" y="2" fill="none" width="0" height="0" rx="5" ry="5" fill-opacity="0.85" stroke-width="5" stroke="rgb(0, 0, 0)" stroke-opacity="0.05" transform="translate(1,1)"></rect>
+		<rect x="2" y="2" fill="none" width="0" height="0" rx="5" ry="5" fill-opacity="0.85" stroke-width="3" stroke="rgb(0, 0, 0)" stroke-opacity="0.1" transform="translate(1,1)"></rect>
+		<rect x="2" y="2" fill="none" width="0" height="0" rx="5" ry="5" fill-opacity="0.85" stroke-width="1" stroke="rgb(0, 0, 0)" stroke-opacity="0.15" transform="translate(1,1)"></rect>
+		<rect x="2" y="2" fill="rgb(255,255,255)" width="0" height="0" rx="5" ry="5" fill-opacity="0.85" stroke-width="2"></rect>
+		<text style="padding-bottom: 0px; padding-left: 0px; padding-right: 0px; font-family: Arial; white-space: nowrap; color: #333333; font-size: 12px; padding-top: 0px; fill: #333333" x="2" y="14">
+			<tspan x="2"> </tspan>
+		</text>
+	</g>
+	<g class="highcharts-tracker" transform="translate(54,55)">
+		<rect x="252.98" y="153" fill="rgb(192,192,192)" width="175" height="145" rx="0" ry="0" fill-opacity="0.002" visibility="visible" r="0"></rect>
+		<rect x="544.88" y="73" fill="rgb(192,192,192)" width="175" height="225" rx="0" ry="0" fill-opacity="0.002" visibility="visible" r="0"></rect>
+	</g>
+</svg>

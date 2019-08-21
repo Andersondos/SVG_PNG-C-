@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "288265",
+    "ThreadId": "83946",
+    "Html": "<p>Hi.</p>\r\n<p>This engine is very good. Very simple to use. I found all i need : Create, Onen, render, Edit, Combine, Transform svg. But i cant't find out how to Save edited SvgDocument to svg file. Maybe there are some way to get back edited XML ? Write didnt help me. MAybe because SvgDocument c# code contains</p>\r\n<p>public void Write(Stream stream)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>\r\n<p>public void Write(string path)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>\r\n<p>&nbsp;</p>\r\n<p>I try SvgElement&nbsp; WriteElement bot i got totally empty file.</p>\r\n<p>Please help me.</p>",
+    "PostedDate": "2010-02-10T07:38:15.153-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "288578",
+    "ThreadId": "83946",
+    "Html": "<p>Hi Sparks,</p>\r\n<p>I'm sorry to say that there is no support for Write at the moment (I added it in there hoping to get it implemented but never did...)</p>\r\n<p>Looking at the code, it wouldn't take much to get it working if you wanted to have a go at it yourself?</p>\r\n<p>WriteAttributes in SvgElement.cs appears to be the only method that hasn't been implemented. It could quite possibly just be a case of iterating though the Attributes dictionary and using TypeConverter to convert the types to System.String before writing them to the XmlTextWriter.</p>\r\n<p>Hmmm, I see why WriteElement is currently returning nothing. The problem is that ElementName is null and this only gets set during a Load and it sounds like you might be using something like 'new SvgCircle()'?</p>\r\n<p>I'll have a think about how to best solve this issue and get back to you.</p>\r\n<p>Cheers,<br>Scriv</p>",
+    "PostedDate": "2010-02-10T21:02:21.177-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "288775",
+    "ThreadId": "83946",
+    "Html": "<p>Hi Scriv,</p>\r\n<p>thx for answering.</p>\r\n<p>Ok, i make it work. It's writing to the svg file now but there are some problems...</p>\r\n<p>Width and Height in SvgFragment is not attribues. its just class variables...</p>\r\n<pre style=\"padding-left:30px\"><span style=\"color:Gray\">///</span> <span style=\"color:Gray\">&lt;summary&gt;</span><br><span style=\"color:Gray\">///</span><span style=\"color:Green\"> Gets or sets the width of the fragment.</span><br><span style=\"color:Gray\">///</span> <span style=\"color:Gray\">&lt;/summary&gt;</span><br><span style=\"color:Gray\">///</span> <span style=\"color:Gray\">&lt;value&gt;</span><span style=\"color:Green\">The width.&lt;/value&gt;</span><br>[SvgAttribute(<span style=\"color:#a31515\">&quot;width&quot;</span>)]<br><span style=\"color:Blue\">public</span> SvgUnit Width<br>{<br>   <span style=\"color:Blue\">get</span> { <span style=\"color:Blue\">return</span> <span style=\"color:Blue\">this</span>._width; }<br>   <span style=\"color:Blue\">set</span> { <span style=\"color:Blue\">this</span>._width = value; }<br>}<br><br><br>like in SvgCircle &quot;cx&quot; attribute<br><br><pre>        <span style=\"color:gray\">///</span> <span style=\"color:gray\">&lt;summary&gt;</span><br>        <span style=\"color:gray\">///</span><span style=\"color:green\"> Gets or sets the center X co-ordinate.</span><br>        <span style=\"color:gray\">///</span> <span style=\"color:gray\">&lt;/summary&gt;</span><br>        <span style=\"color:gray\">///</span> <span style=\"color:gray\">&lt;value&gt;</span><span style=\"color:green\">The center X.&lt;/value&gt;</span><br>        [SvgAttribute(<span style=\"color:#a31515\">&quot;cx&quot;</span>)]<br>        <span style=\"color:blue\">public</span> SvgUnit CenterX<br>        {<br>            <span style=\"color:blue\">get</span> { <span style=\"color:blue\">return</span> <span style=\"color:blue\">this</span>.Attributes.GetAttribute&lt;SvgUnit&gt;(<span style=\"color:#a31515\">&quot;cx&quot;</span>); }<br>            <span style=\"color:blue\">set</span><br>            {<br>                <span style=\"color:blue\">if</span> (<span style=\"color:blue\">this</span>.Attributes.GetAttribute&lt;SvgUnit&gt;(<span style=\"color:#a31515\">&quot;cx&quot;</span>) != value)<br>                {<br>                    <span style=\"color:blue\">this</span>.Attributes[<span style=\"color:#a31515\">&quot;cx&quot;</span>] = value;<br>                    <span style=\"color:blue\">this</span>.IsPathDirty = <span style=\"color:blue\">true</span>;<br>                }<br>            }<br>        }<br><br>Also i have found that svg document looses its xmlns and xlink attributes. Maybe other tags looses something too. <br>So i will try to fix it. When it will work, if you wish, I can send updated code to you.<br><br>This is a short report about what i found i what i'm doing.<br></pre>\r\n<br></pre>",
+    "PostedDate": "2010-02-11T01:18:15.047-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "448213",
+    "ThreadId": "83946",
+    "Html": "<p>Hi Sparks.</p>\r\n<p>Did you manage writing the SVG back to file? Is there a plan to include this in the SVG source code.?</p>\r\n<p>Regards</p>\r\n<p>Atilla.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-05-27T08:24:16.597-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "449398",
+    "ThreadId": "83946",
+    "Html": "<p>AtillaMalas,</p>\r\n<p><em>Better </em>writing support was added to the source code recently (the issue Sparks has above is not an issue in the source drop). That support will be enhanced as time goes on.</p>\r\n<p>I haven't recieved any code from Sparks unfortunately (I'd be more than happy to add his code to the project).</p>\r\n<p>Scriv</p>",
+    "PostedDate": "2010-05-30T15:55:21.4-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "453378",
+    "ThreadId": "83946",
+    "Html": "<p>Mark!</p>\r\n<p>Waiting Scirv Update....</p>",
+    "PostedDate": "2010-06-09T00:50:22.707-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

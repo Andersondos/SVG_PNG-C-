@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1319499",
+    "ThreadId": "571404",
+    "Html": "Hi,\r<br />\n<br />\nCan someone please help me in editing a text field of an SVG Image using this tool. Am looking for a basic code<br />\n",
+    "PostedDate": "2014-11-05T16:22:36.567-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1330776",
+    "ThreadId": "571404",
+    "Html": "the codeplex repo is over 2 years old, please use this fork now: <a href=\"https://github.com/vvvv/SVG\" rel=\"nofollow\">https://github.com/vvvv/SVG</a><br />\n",
+    "PostedDate": "2014-12-10T14:10:43.873-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

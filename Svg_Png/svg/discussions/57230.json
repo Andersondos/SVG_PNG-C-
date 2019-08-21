@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "193383",
+    "ThreadId": "57230",
+    "Html": "<p>hi, it is possible to use this in XNA?</p>\r\n<p>SvgRenderer svgRenderer = SvgRenderer.FromGraphics(this.GraphicsDevice);</p>\r\n<p>svgRenderer.ScaleTransform(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.GraphicsDevice.Viewport.Width / 1280,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.GraphicsDevice.Viewport.Height / 720);</p>\r\n<p>&nbsp;</p>\r\n<p>SvgDocument sd = new SvgDocument();<br> sd = SvgDocument.Open(@&quot;C:\\temp\\svg.svg&quot;);</p>\r\n<p>&nbsp;</p>\r\n<p>then render a svg to a specific position on screen by attaching some scale/ rotate / position transforms or to Texture2D object</p>\r\n<p>greets aruss</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-05-22T14:18:23.047-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "196242",
+    "ThreadId": "57230",
+    "Html": "<p>Hi Aruss,</p>\r\n<p>Sorry for taking so long to get back to you. I actually don't have any experience with XNA so really can't say unfortunately. The XNA GraphicsDevice class doesn't seem to even slightly resemble the Graphics class so I'm not sure an easy port would even be possible.</p>\r\n<p>There must be some 2D based XNA APIs that can be used but again, I don't know about that.</p>\r\n<p>Sorry about that!</p>\r\n<p>Cheers<br>Scriv</p>",
+    "PostedDate": "2009-05-31T21:44:32.75-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "198288",
+    "ThreadId": "57230",
+    "Html": "<p>Hi,</p>\r\n<p>it would be possible to pass through a xna primitive batch or something if a SvgRenderer would use a Iterface for drawing primitives instead of winforms graphics.</p>\r\n<p>I have to look deeply at it all, it was just a quick try.</p>\r\n<p>cheers<br>aruss</p>",
+    "PostedDate": "2009-06-05T09:04:54.463-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

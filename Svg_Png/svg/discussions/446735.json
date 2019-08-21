@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1055579",
+    "ThreadId": "446735",
+    "Html": "Hello guys,\r<br />\n<br />\nI try to convert .svg to .png. Here is my code : <br />\n<pre><code>   var sample = SvgDocument.Open(@&quot;D:\\DATA\\test0.svg&quot;);\n   sample.Draw().Save(@&quot;D:\\DATA\\Projet LPIE\\WebApplication1\\WebApplication1\\sample.png&quot;);         </code></pre>\n\nBut it generate NullReferenceException on the sample.Draw() function. \r<br />\nMy .svg file is created manually and work well when i open it with Google Chrome.\r<br />\nThanks.<br />\n",
+    "PostedDate": "2013-06-11T14:03:53.37-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1055738",
+    "ThreadId": "446735",
+    "Html": "Hi again, \r<br />\n<br />\nAfter verification, the problem comes from my .svg file. Its a very simple, file here is the code : <br />\n<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;\n&lt;svg\n    xmlns=&quot;http://www.w3.org/2000/svg&quot;\n    xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;\n   \n&lt;circle cx=&quot;350&quot; cy=&quot;350&quot; r=&quot;2&quot; stroke=&quot;red&quot; stroke-width=&quot;2&quot; fill=&quot;red&quot;/&gt;\n&lt;line x1=&quot;350&quot; y1=&quot;350&quot; x2=&quot;420&quot; y2=&quot;280&quot; stroke=&quot;blue&quot; stroke-width=&quot;2&quot;/&gt;\n\n&lt;line x1=&quot;420&quot; y1=&quot;280&quot; x2=&quot;517&quot; y2=&quot;256&quot; stroke=&quot;blue&quot; stroke-width=&quot;2&quot;/&gt;\n\n&lt;line x1=&quot;517&quot; y1=&quot;256&quot; x2=&quot;517&quot; y2=&quot;356&quot; stroke=&quot;blue&quot; stroke-width=&quot;2&quot;/&gt;\n\n&lt;line x1=&quot;517&quot; y1=&quot;356&quot; x2=&quot;428&quot; y2=&quot;401&quot; stroke=&quot;blue&quot; stroke-width=&quot;2&quot;/&gt;\n\n&lt;circle cx=&quot;428&quot; cy=&quot;401&quot; r=&quot;2&quot; stroke=&quot;yellow&quot; stroke-width=&quot;2&quot; fill=&quot;yellow&quot;/&gt;\n&lt;/svg&gt;\n</code></pre>\n\nWhat is wrong on this svg file ?\r<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2013-06-12T02:53:40.323-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1055754",
+    "ThreadId": "446735",
+    "Html": "OK problem solved i forgot width and height declaration on the &lt;svg&gt; header.\r<br />\nBut the resulting image doesnt display the text on my svg file. Is that normal ?<br />\n",
+    "PostedDate": "2013-06-12T03:19:15.957-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

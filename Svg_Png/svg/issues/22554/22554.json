@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "As shown in the image, spline are very thick which are not drawn as expected.\n\nPlease check\n\nThank you",
+    "LastUpdatedDate": "2017-10-15T05:09:20.56-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2017-10-15T05:09:18.837-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Spline chart is not getting rendered properly",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 22554
+  },
+  "FileAttachments": [
+    {
+      "FileId": 9997,
+      "FileName": "Error.PNG",
+      "DownloadUrl": ".\\9997"
+    }
+  ],
+  "Comments": []
+}

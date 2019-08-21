@@ -1,0 +1,80 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Admittedly, I'm not that adept with graphics, and I only spent about 30 minutes on this, so I'm not sure if this is the *right* way to do this.\n \nI just prototyped a way to embed SVG graphics in WinForms application via the Piccolo.NET toolkit (http://www.cs.umd.edu/hcil/jazz/).  I explained what I did here: http://groups.google.com/group/piccolo2d-users/browse_thread/thread/4332fc25c1109e7d?hl=en\n \nIt seemed like the renderer was primarily geared towards images, so I added this method to SvgRenderer.  \n \n        public static SvgRenderer FromGraphics(Graphics graphics) \n        { \n            SvgRenderer renderer = new SvgRenderer(); \n            renderer._innerGraphics = graphics; \n            return renderer; \n        }",
+    "LastUpdatedDate": "2013-06-14T00:27:50.927-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2008-11-21T13:58:35.51-08:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Enable Rendering to WinForms via System.Drawing.Graphics",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 8184
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Thanks for raising this. You're right that this is the only way to do this. It was previously possible 'til I made some refactoring and didn't pick up that this was no longer when it really should be.\r\n\r\nCHeers,\r\nDave",
+      "PostedDate": "2008-11-22T15:31:39.967-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-11-22T16:23:47.717-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "- Fixed in changeset #23463.\r\n\r\nThanks for raising this and providing a solution. I really didn't intend on removing this functionality so thanks for picking it up and letting me know.",
+      "PostedDate": "2008-12-19T04:23:52.947-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-19T04:23:53.867-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:06.667-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:27.66-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:27.797-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-06-14T00:27:50.927-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

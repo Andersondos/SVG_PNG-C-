@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The attached documents work great in Firefox, but when rendered via this library, the fill in MenuRight1.svg is black, not the specified gradient. Thus,it seems that url(Colors.svg#MyGradient) is not working as a fill attribute.",
+    "LastUpdatedDate": "2013-02-21T16:26:03.603-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2010-05-06T02:17:35.027-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Cannot reference other documents via URLs",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 12949
+  },
+  "FileAttachments": [
+    {
+      "FileId": 4325,
+      "FileName": "MenuRight1.svg",
+      "DownloadUrl": ".\\4325"
+    },
+    {
+      "FileId": 4326,
+      "FileName": "Colors.svg",
+      "DownloadUrl": ".\\4326"
+    }
+  ],
+  "Comments": []
+}

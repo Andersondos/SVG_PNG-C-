@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Resolved with Patch &#35;2897",
+    "ClosedDate": "2009-08-03T08:42:12.377-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "As of version 23714 the \"rotate\" case has:\nif (args.Length == 0)\n{\n    transformList.Add(new SvgRotate(angle));\n}\nelse\n{\n    float cx = float.Parse(args[1], NumberStyles.Float, CultureInfo.InvariantCulture);\n    float cy = float.Parse(args[2], NumberStyles.Float, CultureInfo.InvariantCulture);\n \n    transformList.Add(new SvgRotate(angle, cx, cy));\n}\n \nThat first line should be:\nif (args.Length == 1)",
+    "LastUpdatedDate": "2013-05-16T04:04:27.19-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2009-03-16T17:41:39.04-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Minor bug in SvgTransformConverter.ConvertFrom rotate handling",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 9525
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

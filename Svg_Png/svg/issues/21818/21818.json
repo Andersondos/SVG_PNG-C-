@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello, I am trying to convert an SVG to a bitmap object all through streaming in a vb.net VS2010 web project targeting DOT.NET 4 with the following code, however, I noticed that no matter how simple the SVG is, the svgDocument.GetDimensions().Width and Height always returns 0 (zero).  I have inspected to make sure that the xmldoc.innerXml property does in fact contain the SVG xml content. No matter how I load the SVG using svgDocument.Open() its always the same result: width and height are zero and the .Draw() call fails with a bad parameter exception.  Please help - I have tried every permutation but I must be missing something... here is my code...\n\n                Dim xmldoc As New System.Xml.XmlDocument\n                Dim strSVG As String = \"<?xml version=\"\"1.0\"\" encoding=\"\"UTF-8\"\"?>\" _\n                        + \"<svg xmlns=\"\"http://www.w3.org/2000/svg\"\"\" _\n                        + \" xmlns:xlink=\"\"http://www.w3.org/1999/xlink\"\" version=\"\"1.1\"\"\" _\n                        + \" width=\"\"100\"\" height=\"\"100\"\" viewBox=\"\"0 0 100 100\"\">\" _\n                        + \" <rect x=\"\"10\"\" y=\"\"10\"\" height=\"\"100\"\" width=\"\"100\"\"\" _\n                        + \"  style=\"\"stroke:#ff0000; fill: #0000ff\"\"/>\" _\n                        + \"</svg>\"\n\n                xmldoc.LoadXml(strSVG)\n                'xmldoc.Load(msOrigSvg)\n\n                Dim svgDocument As New SvgDocument\n                svgDocument.Open(xmldoc)\n\n                Dim wdth As Integer = svgDocument.GetDimensions().Width\n                Dim hght As Integer = svgDocument.GetDimensions().Height\n\n                Dim tmpBitmap As New System.Drawing.Bitmap(wdth, hght,\n                                                           System.Drawing.Imaging.PixelFormat.Format32bppArgb)\n                svgDocument.Draw(tmpBitmap)\n                'Dim tmpBitmap As System.Drawing.Bitmap = svgDocument.Draw()",
+    "LastUpdatedDate": "2015-04-22T12:44:50.137-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2015-04-21T16:45:11.58-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "svgDocument.Draw fails always",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 21818
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I used NuGet to get your version 2.0.0 and this would be the ideal solution if I could get it to work.\nThanks",
+      "PostedDate": "2015-04-21T16:54:58.323-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Never Mind - I found the problem - nothing new to add to this thread.",
+      "PostedDate": "2015-04-22T12:44:50.137-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

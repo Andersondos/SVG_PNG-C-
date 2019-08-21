@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "807816",
+    "ThreadId": "347927",
+    "Html": "<p>Could someone please help me as to why the SVG file located here - http://www.dominoswizard.com/register/Test.zip does not convert the text labels in the chart?</p>\n<p>(Sorry had to zip it. Server wouldn't \"serve\" the SVG file.)</p>\n<p>I'm using just a simple&nbsp;</p>\n<p>svg.Draw().Save(\"File Location\")</p>\n<p>and the result is this -&nbsp;http://www.dominoswizard.com/register/Test.bmp</p>\n<p>TIA - Shawn</p>",
+    "PostedDate": "2012-03-08T16:42:11.35-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "807828",
+    "ThreadId": "347927",
+    "Html": "<p>Hey Shawn,</p>\r\n<p>It appears to be that the library doesn't support the 'complex' font syntax in the style attribute. I can't work out why, because the standard <a href=\"http://msdn.microsoft.com/en-us/library/system.drawing.fontconverter.aspx\">FontConverter </a>class <em>should</em> support that syntax (or at least similar ones).</p>\r\n<p>If possible, change:</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre><span style=\"color: blue;\">&lt;</span><span style=\"color: #a31515;\">text</span>  <span style=\"color: red;\">x</span><span style=\"color: blue;\">=</span><span style=\"color: black;\">'</span><span style=\"color: blue;\">33</span><span style=\"color: black;\">'</span> <span style=\"color: red;\">y</span><span style=\"color: blue;\">=</span><span style=\"color: black;\">'</span><span style=\"color: blue;\">301</span><span style=\"color: black;\">'</span> <span style=\"color: red;\">style</span><span style=\"color: blue;\">=</span><span style=\"color: black;\">'</span><span style=\"color: blue;\">font: 12px Arial</span><span style=\"color: black;\">'</span> <span style=\"color: red;\">fill</span><span style=\"color: blue;\">=</span><span style=\"color: black;\">'</span><span style=\"color: blue;\">#232323</span><span style=\"color: black;\">'</span><span style=\"color: blue;\">&gt;</span>$0<span style=\"color: blue;\">&lt;/</span><span style=\"color: #a31515;\">text</span><span style=\"color: blue;\">&gt;</span></pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>To:</p>\r\n<p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre><span style=\"color: blue;\">&lt;</span><span style=\"color: #a31515;\">text</span>  <span style=\"color: red;\">x</span><span style=\"color: blue;\">=</span><span style=\"color: black;\">'</span><span style=\"color: blue;\">33</span><span style=\"color: black;\">'</span> <span style=\"color: red;\">y</span><span style=\"color: blue;\">=</span><span style=\"color: black;\">'</span><span style=\"color: blue;\">301</span><span style=\"color: black;\">'</span> <span style=\"color: red;\">font-size</span><span style=\"color: blue;\">=</span><span style=\"color: black;\">'</span><span style=\"color: blue;\">12px</span><span style=\"color: black;\">'</span> <span style=\"color: red;\">font-family</span><span style=\"color: blue;\">=</span><span style=\"color: black;\">'</span><span style=\"color: blue;\">Arial</span><span style=\"color: black;\">'</span> <span style=\"color: red;\">fill</span><span style=\"color: blue;\">=</span><span style=\"color: black;\">'</span><span style=\"color: blue;\">#232323</span><span style=\"color: black;\">'</span><span style=\"color: blue;\">&gt;</span>$0<span style=\"color: blue;\">&lt;/</span><span style=\"color: #a31515;\">text</span><span style=\"color: blue;\">&gt;</span>\r\n</pre>\r\n</div>\r\n</p>\r\n<p>If that isn't possible, another option would be to pull down the source code and create a TypeConverter that can change your existing format into a Font type. Then you can register it on the SvgText.Font property using TypeConverterAttribute.</p>\r\n<p>Cheers,<br />Dave&nbsp;</p>",
+    "PostedDate": "2012-03-08T17:15:05.57-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "807831",
+    "ThreadId": "347927",
+    "Html": "<p>Thanks I did:</p>\r\n<p>strSVG = strSVG.Replace(\"style='font: 12px Arial,Helvetica,sans-serif'\", \"font-family='Arial,Helvetica,sans-serif' font-size='12'\")</p>\r\n<p>strSVG = strSVG.Replace(\"style='font: 16px Arial,Helvetica,sans-serif'\", \"font-family='Arial,Helvetica,sans-serif' font-size='16'\")</p>\r\n<p>&nbsp;</p>\r\n<p>And it worked like a charm!</p>\r\n<p>&nbsp;</p>\r\n<p>Shawn</p>",
+    "PostedDate": "2012-03-08T17:17:09.493-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

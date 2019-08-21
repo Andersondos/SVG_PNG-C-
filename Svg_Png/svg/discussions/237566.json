@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "532785",
+    "ThreadId": "237566",
+    "Html": "\r\n<p>Hi friends,</p>\r\n<p>using svg rendering engine how to convert an exsisting svg image to a jpeg or png.</p>\r\n<p>Thanks in advance</p>\r\n<p>Kiran</p>\r\n",
+    "PostedDate": "2010-12-08T02:49:48.883-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "542966",
+    "ThreadId": "237566",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>This should really be in the documentation, eh!</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:blue\">var</span> sampleDoc = SvgDocument.Open(<span style=\"color:#a31515\">@&quot;C:\\sample.svg&quot;</span>);\r\nsampleDoc.Draw().Save(<span style=\"color:#a31515\">@&quot;C:\\sample.png&quot;</span>);\r\n</pre>\r\n</div>\r\n<p></p>\r\n<p>There shouldn't be much more to it than that.</p>\r\n<p>Scriv</p>\r\n",
+    "PostedDate": "2011-01-02T14:46:54.72-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

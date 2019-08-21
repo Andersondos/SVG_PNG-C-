@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello, I am trying to save a bitmap of the following svg file but all I get is a black / blank image.  I am using the Svg.dll in C# 4.0.\n \nThis same file could be converted just fine with Batik through command line with this command: \n \njava -jar batik-rasterizer.jar -m image/png  test.svg\n \n \n \n<?xml version=\"1.0\" standalone=\"no\"?>\n<svg \n  width=\"1200px\" \n  height=\"1200px\" \n  contentStyleType=\"text/css\"  \n  preserveAspectRatio=\"xMidYMid meet\" \n  zoomAndPan=\"magnify\" \n  xmlns=\"http://www.w3.org/2000/svg\" \n  xmlns:svg=\"http://www.w3.org/2000/svg\" \n  xmlns:xlink=\"http://www.w3.org/1999/xlink\" >\n \n  <g transform=\"translate(600,600)\">\n \n    <text x=\"0\" y=\"-250\" fill=\"black\" font-family=\"Verdana\" text-anchor=\"middle\" font-size=\"30\">\n      <tspan id=\"TopStraightText\">test</tspan>\n    </text>\n \n    <path id=\"topOutterCircle\" d=\"M -400,0 A 400,400 00 0 1 400,0\"  fill=\"none\"/>\n    <text text-anchor=\"middle\" font-size=\"40\">\n      <textPath xlink:href=\"#topOutterCircle\" startOffset=\"50%\">\n        <tspan id=\"OutterTopCircularText\">test</tspan>\n      </textPath>\n    </text>\n \n    <text x=\"0\" y=\"-280\" fill=\"black\" font-family=\"Verdana\" dy=\"0\" font-size=\"80\" text-anchor=\"middle\" >\n      <tspan id=\"TopStraightBarcode\">test</tspan>\n    </text>\n \n    <path id=\"bottomInnerCircle\" d=\"M -270,0 A 100,100 00 0 0 270,0\"  fill=\"none\"/>\n    <text text-anchor=\"middle\" font-size=\"40\">\n      <textPath xlink:href=\"#bottomInnerCircle\" startOffset=\"50%\">\n        <tspan id=\"InnerBottomCircularText\">test</tspan>\n      </textPath>\n    </text>\n \n    <path id=\"bottomOutterCircle\" d=\"M -400,0 A 400,400 00 0 0 400,0\"  fill=\"none\"/>\n    <text text-anchor=\"middle\" font-size=\"40\">\n      <textPath xlink:href=\"#bottomOutterCircle\" startOffset=\"50%\">\n        <tspan id=\"OutterBottomCircularText\">test</tspan>\n      </textPath>\n    </text>\n \n  </g>\n</svg>",
+    "LastUpdatedDate": "2013-09-06T03:27:32.697-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2012-05-09T06:14:54.86-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Getting a black/blank Bitmap on file with textPath tags",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 18017
+  },
+  "FileAttachments": [
+    {
+      "FileId": 7159,
+      "FileName": "Test.png",
+      "DownloadUrl": ".\\7159"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Did you ever find a solution for this problem? As i am facing the same issue. Any help would be appreciated.",
+      "PostedDate": "2013-09-06T03:27:32.697-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

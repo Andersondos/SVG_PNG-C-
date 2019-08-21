@@ -1,0 +1,101 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "No text is shown with the attached svg document.\nIf I remove the tspan SVG tags, the texts are visible.",
+    "LastUpdatedDate": "2013-02-21T16:26:01.65-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2011-01-11T19:43:21.047-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Tspan content within text can not be displayed",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 8,
+    "Id": 15085
+  },
+  "FileAttachments": [
+    {
+      "FileId": 5268,
+      "FileName": "sample.svg",
+      "DownloadUrl": ".\\5268"
+    },
+    {
+      "FileId": 5701,
+      "FileName": "DotNet3.0.svg",
+      "DownloadUrl": ".\\5701"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Temporary solution is to remove tspan tag from svg data and then render svg:\r\n-------------------------\r\nRegex objRegExp = new Regex(\"<tspan(.|\\n)*?>|</tspan>\");\r\nm_sSVGXML = objRegExp.Replace(m_sSVGXML, String.Empty);\r\n-------------------------\r\n\r\nRegards,\r\nTomazZ",
+      "PostedDate": "2011-04-23T12:10:49.437-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-09T12:39:56.21-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-09T12:42:27.263-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Here's another sample containing several <text> elements with multiple <tspan> elements.",
+      "PostedDate": "2011-06-09T12:42:29.157-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-17T06:53:56.247-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-09-16T11:49:34.1-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-10-24T05:24:13.357-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "My SVG files are all output by InkScape (which brings other problems!), so removing tspan tags isn't an option.  I have however managed to come up with the following slightly-more-permanent fix for anyone else wanting to avoid regex deletions.\r\nIn SvgText.cs, add the following routine (grafted from SvgGroup object, compacted for easier copying);\r\n----------------------------------------------------------------------------------------------------------\r\n/// <summary>Renders the <see cref=\"SvgElement\"/> and contents to the specified <see cref=\"Graphics\"/> object.</summary>\r\n/// <param name=\"graphics\">The <see cref=\"Graphics\"/> object to render to.</param>\r\nprotected override void Render(SvgRenderer renderer)\r\n{\tbase.Render(renderer);\r\n\tthis.PushTransforms(renderer);\r\n\tthis.SetClip(renderer);\r\n\tbase.RenderChildren(renderer);\r\n\tthis.ResetClip(renderer);\r\n\tthis.PopTransforms(renderer);                       }\r\n----------------------------------------------------------------------------------------------------------\r\nThis simply overrides the text render routine to add a call to RenderChildren (i.e. any tspans).  Then add the following fix to SvgDocument.cs to avoid dumping InkScape metadata to your first tspan object's text...\r\n----------------------------------------------------------------------------------------------------------\r\n220 [ish]\tcase XmlNodeType.EndElement:\r\n221\t\t// Skip if no element was created and is not the closing tag for the last known element\r\n222\t\tif (element == null && reader.LocalName != elementStack.Peek().ElementName)\r\n223\t\t{\t// Clear the value string builder, since the element has ended!\r\netc\t\t\tvalue = new StringBuilder();          // THIS IS THE NEW LINE!!!\r\n\t\t\tcontinue;\t\t}\r\n----------------------------------------------------------------------------------------------------------\r\nHope that helps the problem get fixed permanently in the future.  Oh - and excuse my bad C#, I'm a VB.NET coder [  :((  ]",
+      "PostedDate": "2011-10-24T07:48:38.86-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-06-25T19:09:31.287-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:01.65-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

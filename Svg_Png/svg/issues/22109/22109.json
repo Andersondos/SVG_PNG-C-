@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I am working on a project in which I am developing a web application where artist can upload there artwork which will be printed on various smartphone phone cases(A small version of websites like RedBubble.com or Society6.com).\n\nSo as one of its module, what I want to achieve is:\n\n1- Admin can upload the phone case shapes(just the back of the case with transparent camera hole) from admin panel.\n\n2- Artist can upload the artwork and which will be displayed on all available phone cases as final product to the customer.\n\nI have searched a lot about this and came out with the following idea but now I am totally lost:\n\n1- Admin can create shapes using software like InkScape which will give them SVG files and its code.\n\n2- These files can be stored in the database(content of the file or the file name, I was unable to figure out).\n\n3- Artist will upload his/her artwork and will be stored in the database as jpg file.\n\nSo now, I have both, the shape(SVG) and the artwork(JPG) stored in the database.\n\nI just cannot figure out how to display the final product which will be the selected artwork on the selected phone case shaped SVG. Or am I going totally wrong?",
+    "LastUpdatedDate": "2015-12-09T08:00:14.717-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2015-12-09T08:00:14.717-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "How to show an image inside shapes like back of an phone case(with transparent hole for camera) in the webpage?",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 22109
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

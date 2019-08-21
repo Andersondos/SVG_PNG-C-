@@ -1,0 +1,62 @@
+[
+  {
+    "Id": "0",
+    "Name": "SVG 0.5.1",
+    "DevelopmentStatus": "None",
+    "Description": "This release fixes some rendering issues, particularly related to text elements.",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2008-04-08T04:17:10.203-07:00",
+    "Files": [
+      {
+        "Id": "bec46bf8-4173-41f4-a802-a8c7bd763838",
+        "FileName": "Svg.dll",
+        "Url": "./0/bec46bf8-4173-41f4-a802-a8c7bd763838",
+        "Type": "Application",
+        "UploadDate": "2008-04-08T04:16:14.593-07:00"
+      }
+    ]
+  },
+  {
+    "Id": "1",
+    "Name": "SVG 0.5",
+    "DevelopmentStatus": "None",
+    "Description": "The first 'alpha' version of this project with support for many SVG elements.",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2008-03-08T15:06:39.693-08:00",
+    "Files": [
+      {
+        "Id": "e094c610-e2da-4bb6-a82f-ac09b57bc89b",
+        "FileName": "Svg.dll",
+        "Url": "./1/e094c610-e2da-4bb6-a82f-ac09b57bc89b",
+        "Type": "Application",
+        "UploadDate": "2008-03-08T15:06:39.71-08:00"
+      }
+    ]
+  },
+  {
+    "Id": "2",
+    "Name": "SVG 0.6",
+    "DevelopmentStatus": "Planning",
+    "Description": "Ideally this release would bring several new features to the project:\n\n* Remove the SVG element factory and replace with a more pluggable model using the Managed Extensibility Framework. That easily allows new element support to be added. This could also give the ability to create a MathML or ChemML rendering engine ontop of the SVG rendering engine using the basic SVG types.\n* ClipPath support.\n* RadialGradient support.\n* Basic filter effects.",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2008-10-29T14:21:11.193-07:00",
+    "Files": []
+  },
+  {
+    "Id": "3",
+    "Name": "SVG 0.5.2",
+    "DevelopmentStatus": "Stable",
+    "Description": "This minor release is a grouping of several important changesets that include support for <path> arc segments, stroke dash array support and several bug fixes.\n\n*Update* - Updated the assembly to be version 0.5.2 instead of 1.0.",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2008-10-30T08:54:58.633-07:00",
+    "Files": [
+      {
+        "Id": "76ba6b2b-cdfa-467b-9745-a7ca102b1737",
+        "FileName": "Svg.dll",
+        "Url": "./3/76ba6b2b-cdfa-467b-9745-a7ca102b1737",
+        "Type": "Application",
+        "UploadDate": "2008-10-30T08:54:58.007-07:00"
+      }
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello,\n \nThere is an issue when a path has multiple segments, and there is a relative move after a close segment.\n \nIn SvgPathBuilder.cs:\n \nThe method ToAbsolute on the line\n \n                var lastSegment = segments.Last;\nwill return a pointer to SvgClosePathSegment, which has 0 values for points, this is bad for a relative move.\n \nAs a workaround, I've modified the property Last in the file SvgSegmentList.cs from\n \n        public SvgPathSegment Last\n        {\n            get { return this._segments[this._segments.Count - 1]; }\n        }\nto\n \n        public SvgPathSegment Last\n        {\n            get {\n                // TODO : If last entry is SvgClosePathSegment, then return 2nd last entry\n                // Otherwise Start and End are 0s - not good for a relative move.\n                if (this._segments[this._segments.Count-1].GetType() != typeof(SvgClosePathSegment))\n                    return this._segments[this._segments.Count-1]; \n                else\n                    return this._segments[this._segments.Count - 2]; \n            }\n        }",
+    "LastUpdatedDate": "2013-02-21T16:26:03.103-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2010-08-11T23:29:20.34-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Issue with relative move in a multisegment path",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 13987
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I ran into this issue today too.   Your fix will work most of the time, but it really needs to return to the initial point of the subpath (which may not be the same as the end point of the command prior to closepath) See the info here for \"closepath\"\r\n\r\nhttp://www.w3.org/TR/SVG/paths.html#PathDataClosePathCommand\r\n\r\n",
+      "PostedDate": "2011-04-28T18:27:14.403-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:03.103-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<svg width="174px" height="54px" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <g transform="translate(2,2)">
+      <path fill="url(Colors.svg#MyGradient)" stroke="rgb(68,160,160)" stroke-width="2" d="M 0,0 A 400,400 0 0 1 24.4,50 L 164.4,50 A 400,400 0 0 0 140,0 L 0,0" />
+  </g>
+</svg>

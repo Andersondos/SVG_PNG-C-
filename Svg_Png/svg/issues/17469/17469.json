@@ -1,0 +1,66 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "First of Thanks alot for this software its epic! love it!\nTook me 5 mins to get started rendering resizing and using it..\n \nBut it does not render the attached file correctly",
+    "LastUpdatedDate": "2013-02-21T16:25:59.62-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2012-02-23T09:58:57.213-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Rendered incorrectly",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 17469
+  },
+  "FileAttachments": [
+    {
+      "FileId": 6258,
+      "FileName": "appbar.base.svg",
+      "DownloadUrl": ".\\6258"
+    },
+    {
+      "FileId": 6259,
+      "FileName": "appbar.nyan.svg",
+      "DownloadUrl": ".\\6259"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Same error in this svg file",
+      "PostedDate": "2012-02-23T14:06:12.097-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "By using the description of the bug below this one i was able to fix it...\r\n\r\nIn the file SvgPathBuilder.cs replace the following lines\r\n  case 'm': // relative moveto\r\n  case 'M': // moveto\r\nWith\r\n  case 'm': // relative moveto\r\n  case 'M': // moveto\r\n    if (segments.Count > 1 && segments.Last.GetType() == typeof(SvgClosePathSegment))\r\n    {\r\n      segments.Add(new SvgMoveToSegment(segments[segments.Count - 2].End));\r\n    }",
+      "PostedDate": "2012-02-27T11:22:18.507-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:25:59.62-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

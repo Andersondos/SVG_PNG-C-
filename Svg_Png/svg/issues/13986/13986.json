@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello,\n \nOccasionally, a point within a path gets stored in the svg file in scientific notation ie (72.6261,6.5e-4) - Seems to happen a lot when converting Text to Paths.\n \nThis breaks the SplitCommands and ParseCoordinates methods in SvgPathBuilder.cs\n \nI've made the following changes as a work around, I'm sure someone can come up with a more elegant solution.\n \nIn SplitCommands, I've modified the line:\n \nif (char.IsLetter(path[i]))\nto be\n \nif (char.IsLetter(path[i]) && path[i]!='e')\nand in ParseCoordinates, I've modified the line:\n \nvar parts = coords.Remove(0, 1).Replace(\"-\", \" -\").Split(new[] { ',', ' ', '\\r', '\\n' },\n      StringSplitOptions.RemoveEmptyEntries);\nto be\n \nvar parts = coords.Remove(0, 1).Split(new[] { ',', ' ', '\\r', '\\n' }, StringSplitOptions.RemoveEmptyEntries);",
+    "LastUpdatedDate": "2013-02-21T16:26:03.26-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2010-08-11T23:28:36.673-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Issue with Points in scientific notation",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 13986
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

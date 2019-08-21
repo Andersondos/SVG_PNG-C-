@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "709593",
+    "ThreadId": "282324",
+    "Html": "<pre>I can scale and convert from svg to png fine.  But it saves the image with a white background.  Any ideas how to make this transparent when saving?</pre>\n<pre>var svg = SvgDocument.Open(inputImage);            \r\n\r\nvar maxSide = Math.Max(svg.Width, svg.Height);\r\nvar scale = (float)_maxSize / maxSide;\r\n\r\nsvg.Width = new SvgUnit(svg.Width.Type, svg.Width * scale);\r\nsvg.Height = new SvgUnit(svg.Height.Type, svg.Height * scale);\r\n\r\nsvg.Draw().Save(outputPath);            </pre>\n<pre>[update] disregard, i had another filter that was clearing the background as white after going through this filter.</pre>",
+    "PostedDate": "2011-12-08T15:37:49.227-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

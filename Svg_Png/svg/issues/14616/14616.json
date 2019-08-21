@@ -1,0 +1,76 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I am getting the following error while converting a 3.5 MB sized SVg file to png file.\n\"System.OutOfMemoryException: Out of memory. \"\n \nLine 65:         public void DrawPath(Pen pen, GraphicsPath path)\nLine 66:         {\nLine 67:             this._innerGraphics.DrawPath(pen, path);\nLine 68:         }\nLine 69: \n \nCan somebody please tell me hoe can i over come this error\n \nThanks in advance",
+    "LastUpdatedDate": "2014-10-20T19:50:26.27-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2010-11-06T03:08:28.697-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "System.OutOfMemoryException: Out of memory.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 14616
+  },
+  "FileAttachments": [
+    {
+      "FileId": 8709,
+      "FileName": "chart.svg",
+      "DownloadUrl": ".\\8709"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "If you attach the SVG I will be happy to look at it. I did fix a similar problem to this in the trunk code. Are you downloading the latest version?",
+      "PostedDate": "2010-11-08T08:18:35.11-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:02.067-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-04-09T05:32:07.34-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-10-20T17:46:49.24-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-10-20T19:50:25.803-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I have the same problem with the latest version,please check my SVG file and help me,Thanks",
+      "PostedDate": "2014-10-20T19:50:26.27-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

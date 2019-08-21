@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I am rendering a svg file using this library, but the image created by SvgDocument.Open(myFileName).Draw() is different from the one I created in the web browser, seems the Fill with RadialGradient is not correctly rendered... Please see the attached example svg file.",
+    "LastUpdatedDate": "2014-05-20T01:00:17.393-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2014-05-20T01:00:12.34-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "The image rendered by the library is different from the one displayed on the browser",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 21003
+  },
+  "FileAttachments": [
+    {
+      "FileId": 8497,
+      "FileName": "Pipe.svg",
+      "DownloadUrl": ".\\8497"
+    }
+  ],
+  "Comments": []
+}

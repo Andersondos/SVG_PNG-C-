@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1487442",
+    "ThreadId": "659207",
+    "Html": "The Entities sample saves the drawn image. I think that showing the image directly is more gratifying. The following will do that; just replace the call to SvgDocument.Draw with the following:<br />\n<pre><code>Form f = new Form();\nf.Size = new Size(600, 600);\nPictureBox Box = new PictureBox();\nBox.Image = sampleDoc.Draw();\nBox.Location = new Point(0, 0);\nBox.Size = f.ClientSize;\nf.Controls.Add(Box);\nf.ShowDialog();</code></pre>\n\nAnd if you want to add the following after that then it would be a useful demonstration for some:<br />\n<pre><code>// Now resize\nsampleDoc.Transforms = new Svg.Transforms.SvgTransformCollection();\nsampleDoc.Transforms.Add(new Svg.Transforms.SvgScale(.5f));\nBox.Image = sampleDoc.Draw();\nf.ShowDialog();</code></pre>\n\n",
+    "PostedDate": "2016-11-05T14:00:27.76-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

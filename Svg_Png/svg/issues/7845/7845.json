@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "As of Revision 18247, the example svg document given at http://www.w3.org/TR/SVG/paths.html#PathDataEllipticalArcCommands fails to render correctly.\nThe offending code in Paths\\SvgArcSegment.cs is:\n102:\troot = (this.Size == SvgArcSize.Large && this.Sweep == SvgArcSweep.Positive ? -1.0 : 1.0) * Math.Sqrt(numerator / (this.RadiusX * this.RadiusX * y1dash * y1dash + this.RadiusY * this.RadiusY * x1dash * x1dash));\nIt should be:\n102:\troot = ((this.Size == SvgArcSize.Large && this.Sweep == SvgArcSweep.Positive) || (this.Size == SvgArcSize.Small && this.Sweep == SvgArcSweep.Negative) ? -1.0 : 1.0) * Math.Sqrt(numerator / (this.RadiusX * this.RadiusX * y1dash * y1dash + this.RadiusY * this.RadiusY * x1dash * x1dash));\nThe specs say that the negative root be taken if large-arc-flag == sweep-flag.\n \nAlso, for better adherence to the SVG 1.1 spec, the lines in Paths\\SvgPathBuilder.cs:\n60:\tsize = (coords[i + 3] == 1.0f) ? SvgArcSize.Large : SvgArcSize.Small;\n61:\tsweep = (coords[i + 4] == 1.0f) ? SvgArcSweep.Positive : SvgArcSweep.Negative;\nCould be changed to\n60:\tsize = (coords[i + 3] != 0.0f) ? SvgArcSize.Large : SvgArcSize.Small;\n61:\tsweep = (coords[i + 4] != 0.0f) ? SvgArcSweep.Positive : SvgArcSweep.Negative;\nThe specs say that non-zero values for the large-arc-flag and sweep-flag should be treated as being a 1.",
+    "LastUpdatedDate": "2013-06-14T00:27:51.29-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2008-10-18T08:06:27.833-07:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Arc Path Renders incorrectly",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7845
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "You are a genius! I had been using the example SVG document there while testing but couldn't for the life of me work out why the first arc wasn't rendering correctly. However, I see exactly what I did wrong now (code was heavily based on some found at http://www.croczilla.com/~alex/doxygen/rendering_backend/html/ and I didn't 'translate' properly and I see exactly why).\r\n\r\nAlso, thanks for the code enhancement there - it's much safer than what I'm currently doing.\r\n\r\n",
+      "PostedDate": "2008-10-18T16:24:58.057-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Applied fixes in changeset 18256. Arc sample now renders correctly.",
+      "PostedDate": "2008-10-18T16:29:45.247-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-10-18T16:30:02.323-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:07.803-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:28.69-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:28.81-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-06-14T00:27:51.29-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

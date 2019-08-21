@@ -1,0 +1,66 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The attached SVG file renders correctly for the most part*, but only if the viewBox attribute is left unspecified and the width and height are increased. It's likely that the view box transforms are incorrectly applied in this project and that so far they've only appeared to work correctly or it may be that the transform is only correct in certain scenarios.\n \n* - There are are occasional anomalies in the final rendering also - some simple shapes are not rendered for some reason. Oddly enough, Firefox doesn't render all shapes either (although, always renders the shapes that this project does not). Opera appears to render the image correctly.",
+    "LastUpdatedDate": "2013-02-21T16:26:07.607-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2008-10-29T14:02:59.04-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "ViewBox transforms are incorrectly applied causing image distortion",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7914
+  },
+  "FileAttachments": [
+    {
+      "FileId": 2230,
+      "FileName": "Airbus_A380_seatmap.svg",
+      "DownloadUrl": ".\\2230"
+    },
+    {
+      "FileId": 3417,
+      "FileName": "SvgTextReader.cs",
+      "DownloadUrl": ".\\3417"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "I think there were occasions when the code would encounter a (trivial) issue and then stop rendering. I improved the rendering by adding some null checking (and similar) \r\n\r\ne.g. Checking for xlink exceptions in SVGTextReader.Read checking for null point units in SVGUnitCollection.ConvertFrom, adding CSS font sizes to SVGUnitConverter.ConvertFrom, null checking in SVGUse.Children and SVGUse.Render, checking blend colors in SVGRadialGradientServer.GetBrush, checking the Stops count in SVGGradientServer",
+      "PostedDate": "2009-10-05T12:10:52.563-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-10-05T12:10:55.307-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:07.607-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

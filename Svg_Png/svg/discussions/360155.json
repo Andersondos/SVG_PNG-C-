@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "850943",
+    "ThreadId": "360155",
+    "Html": "\r\n<p>Hi. I have an SvgDocument that looks like this</p>\r\n<p>&lt;svg&gt;</p>\r\n<p>&nbsp; &lt;svg&gt;&nbsp;&nbsp; &lt;g&gt;...&lt;/g&gt;&lt;/svg&gt;</p>\r\n<p>&nbsp;&nbsp; &lt;svg&gt;</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;switch&gt;</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;foreignObject ...&gt;&lt;p xmlns=&quot;...xhtml&quot; style=&quot;font-size: 12&quot;&gt;text here&lt;/p&gt;&lt;/foreignObject&gt;</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;text&gt;foreignObject not supported&nbsp;&lt;/text&gt;</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/switch&gt;</p>\r\n<p>&lt;svg&gt;&nbsp;</p>\r\n<p>When I view the document in&nbsp;a browser (Chrome, FireFox) the document renders fine and I see the text&nbsp;in the position at the correct size.</p>\r\n<p>If I try&nbsp;to use&nbsp;SvgDocument.Draw() to render this to a bitmap the text appears very very small.</p>\r\n<p>Is there a way to get the Draw() method output to look like my browser output?</p>\r\n",
+    "PostedDate": "2012-06-19T08:24:38.057-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

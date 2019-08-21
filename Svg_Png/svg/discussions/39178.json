@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "129948",
+    "ThreadId": "39178",
+    "Html": "I've been looking for a good SVG implementation I could use in my various games. The last time I tried it, it was some horrible hack with Cairo+Rsvg+Gdk+OpenGL (worked better in Linux, barely worked on Windows). I managed to drop your library in as a replacement in less than an hour and it worked perfectly (haven't tried Linux though).<br>\r\n<br>\r\nHad a few minor issues with clipipng paths and gradient fills. I saw clipping was on the issue list, so I voted for it, not sure of gradient fills qualify as a filter though. Regardless, I can get around them, so I wasn't too worried. But, just wanted to say thank you.<br>\r\n",
+    "PostedDate": "2008-11-04T07:57:48.927-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "130051",
+    "ThreadId": "39178",
+    "Html": "Wow, that's great that you've been able to use it! I don't know how you'd get on with Linux... from what I've read this should run fine in Mono though.<br>\r\n<br>\r\nClipping paths are being worked on for the next release, but gradient fills are already supported. It's likely that you've come across a bug in the implementation if you're having problems. If at all possible raise a work item with an example svg file (if you have one that can be shared)?<br>\r\n<br>\r\nThanks for the feedback, and be sure to let me know if you have issues!<br>\r\n<br>\r\nCheers,<br>\r\nDave<br>\r\n",
+    "PostedDate": "2008-11-04T13:18:59.943-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "130058",
+    "ThreadId": "39178",
+    "Html": "I submitted the example file I was using. It's pretty small mainly because I have my sprites pulled apart to do some filter effects on them (mainly tinting). I don't mind sharing examples, I had a web comic for a short while that used the same graphic style I am for this game contest (tigsource.com, Lovecraft Commonplace Book competition). I also tried this with Gamedev's contest last year, but that bombed because it was so hard to get SVG into OpenGL.<br>\r\n<br>\r\nI'll know a lot more on Thursday, that is when I start messing around with much more complicated layers and loading. I'm trying to do a parallax layering with the game, but keeping everything in the same Inkscape file. :)<br>\r\n",
+    "PostedDate": "2008-11-04T13:49:15.133-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

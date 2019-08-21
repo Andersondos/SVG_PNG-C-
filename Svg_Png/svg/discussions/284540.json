@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "718535",
+    "ThreadId": "284540",
+    "Html": "<p>With reference to all discussion to correct issues, I have been using the SVG engine with great satisfaction. Thanks to all the contributors. There are only 2 things I would appreciate very much if some ones can fix them:</p>\n<p>- feGaussianBlur: the code is there, however it does not seem to work so far</p>\n<p>- xlink:href for Gradient does not seem to work. Below is an example:</p>\n<p>&lt;radialGradient&nbsp; &nbsp; &nbsp; &nbsp;cx=\"200.99496\"&nbsp; &nbsp; &nbsp; &nbsp;cy=\"183.04042\"&nbsp; &nbsp; &nbsp; &nbsp;r=\"86.833374\"&nbsp; &nbsp; &nbsp; &nbsp;fx=\"200.99496\"&nbsp; &nbsp; &nbsp; &nbsp;fy=\"183.04042\"&nbsp; &nbsp; &nbsp; &nbsp;id=\"radialGradient7485\"&nbsp; &nbsp; &nbsp; &nbsp;<span style=\"color: #ff0000;\">xlink:href=\"#linearGradient3959\"</span>&nbsp; &nbsp; &nbsp; &nbsp;gradientUnits=\"userSpaceOnUse\"&nbsp;  &nbsp; &nbsp; &nbsp;gradientTransform=\"matrix(-0.01247785,-0.77362204,0.9051095,-0.01459876,14.306029,334.58889)\" /&gt;</p>\n<p>&lt;linearGradient&nbsp; &nbsp; &nbsp; &nbsp;id=\"linearGradient3959\"&gt;&nbsp; &nbsp; &nbsp; &lt;stop&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;id=\"stop3961\"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;style=\"stop-color:#00ffff;stop-opacity:1\"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;offset=\"0\" /&gt;&nbsp; &nbsp; &nbsp; &lt;stop&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;id=\"stop3963\"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;style=\"stop-color:#00ffff;stop-opacity:0\"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;offset=\"1\"  /&gt;&nbsp; &nbsp; &lt;/linearGradient&gt;</p>\n<p>An warning message shows:</p>\n<p>Svg.vshost.exe Warning: 0 : Attribute 'href' cannot be set - type 'Svg.SvgGradientServer' cannot convert from string '#linearGradient3959'</p>\n<p>Appreciated if some one can tackle the issues :-)</p>\n<p>Vincent</p>",
+    "PostedDate": "2011-12-29T19:51:45.473-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "740820",
+    "ThreadId": "284540",
+    "Html": "<p>Solved the href issue by a 2nd pass. Had also implemented feGaussianBlur, looks very good. Has also by the way resolved radial gradient as well as linear gradient, which did not work properly, especially for the spread methods. After modification they work pretty well... below svg files from open clipart were tested:</p>\r\n<p><a href=\"http://openclipart.org/detail/166913/old-clocks-by-gustavorezende\">http://openclipart.org/detail/166913/old-clocks-by-gustavorezende</a></p>\r\n<p><a href=\"http://openclipart.org/detail/167027/trilby-hat-by-pomprint\">http://openclipart.org/detail/167027/trilby-hat-by-pomprint</a></p>\r\n<p><a href=\"http://openclipart.org/detail/167422/fire-extinguisher-by-rones\">http://openclipart.org/detail/167422/fire-extinguisher-by-rones</a></p>\r\n<p><a href=\"http://openclipart.org/detail/116785/yellow-convertible-sports-car-by-netalloy\">http://openclipart.org/detail/116785/yellow-convertible-sports-car-by-netalloy</a></p>\r\n<p><a href=\"http://openclipart.org/detail/5636/knife-by-kobo\">http://openclipart.org/detail/5636/knife-by-kobo</a></p>\r\n<p>....</p>\r\n<p>yet still a few nice graphs can't be displayed properly, still some way to go, but promising so far.</p>\r\n<p>Vincent&nbsp;</p>",
+    "PostedDate": "2012-02-04T23:39:49.297-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

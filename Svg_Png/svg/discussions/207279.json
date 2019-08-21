@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "423535",
+    "ThreadId": "207279",
+    "Html": "<p>I want to render some styled text from SVG to PNG, the svg code works in inkscape or firefox but the output in PNG is a black box. I use the sourcecode from svn.</p>\r\n<p>&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; &quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;<br>&lt;svg width=&quot;29&quot; height=&quot;18&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot;&gt;&lt;g font-family=&quot;Times New Roman&quot; font-size=&quot;18&quot;&nbsp; title=&quot;&quot; &gt;<br>&lt;text y=&quot;18&quot;&gt;<br>&lt;tspan font-style=&quot;normal&quot; font-weight=&quot;bold&quot; dy=&quot;0&quot; fill=&quot;Black&quot;&gt;<br>*<br>&lt;/tspan&gt;<br>&lt;tspan font-style=&quot;normal&quot; font-weight=&quot;bold&quot; dy=&quot;0&quot; fill=&quot;Black&quot;&gt;<br>+<br>&lt;/tspan&gt;<br>&lt;/text&gt;<br>&lt;/g&gt;<br>&lt;/svg&gt;</p>\r\n<p>or</p>\r\n<p>&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;&lt;!DOCTYPE svg PUBLIC  &quot;-//W3C//DTD SVG 1.1//EN&quot;  &quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;<br> &lt;svg width=&quot;29&quot; height=&quot;18&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;  version=&quot;1.1&quot;&gt;&lt;g font-family=&quot;Times New Roman&quot; font-size=&quot;18&quot;&nbsp;  title=&quot;&quot; &gt;<br> &lt;text y=&quot;18&quot; fill=&quot;black&quot;&gt;<br> &lt;tspan font-style=&quot;normal&quot; font-weight=&quot;bold&quot; dy=&quot;0&quot; &quot;&gt;<br> *<br> &lt;/tspan&gt;<br> &lt;tspan font-style=&quot;normal&quot; font-weight=&quot;bold&quot; dy=&quot;0&quot;&gt;<br> +<br> &lt;/tspan&gt;<br> &lt;/text&gt;<br> &lt;/g&gt;<br> &lt;/svg&gt;</p>\r\n<p>I tried the SvgDocument.Open(XmlDocument) and SvgDocument.Open(Stream)</p>",
+    "PostedDate": "2010-03-25T05:47:07.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "427840",
+    "ThreadId": "207279",
+    "Html": "<p>Hmmm I'm looking into this. As far as I can tell it should work (there is basic support for text) so there must be a bug somewhere. I'll let you know what I find.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-04-06T06:29:32.823-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "428366",
+    "ThreadId": "207279",
+    "Html": "<p>Thanks it would help really us if we could use this feature.</p>\r\n<p>It's a very useful lib you create here.</p>",
+    "PostedDate": "2010-04-07T09:26:30.92-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "429965",
+    "ThreadId": "207279",
+    "Html": "<p>Ok, here is some new hints. The tspan tag is ignored when i leave it out and use multiple text-tag it's nearly fine. Only thing is, that font-size is not allowed there and i need to superscript a letter then i need it smaller and higher. I could use y to put it up as a workaround but how set it smaller?</p>\r\n<p>My file looks like this right now(in this example there is no need to superscript or multiple text-tags, it would work fine with one):</p>\r\n<p>&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; &quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;<br>&lt;svg width=&quot;50&quot; height=&quot;18&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot;&gt;<br>&lt;g&nbsp; font-size=&quot;18&quot; title=&quot;&quot; &gt;&lt;text x=&quot;0&quot; y=&quot;18&quot; font-family=&quot;Times New Roman&quot; font-style=&quot;normal&quot; font-weight=&quot;normal&quot; fill=&quot;black&quot; font-size=&quot;18&quot;&gt;Y&lt;/text&gt;<br>&lt;text x=&quot;19&quot; y=&quot;18&quot; font-family=&quot;Times New Roman&quot; font-style=&quot;normal&quot; font-weight=&quot;normal&quot; fill=&quot;black&quot; font-size=&quot;18&quot;&gt;&amp;amp;&lt;/text&gt;<br>&lt;text x=&quot;30&quot; y=&quot;18&quot; font-family=&quot;Times New Roman&quot; font-style=&quot;normal&quot; font-weight=&quot;normal&quot; fill=&quot;black&quot; font-size=&quot;18&quot;&gt;i&lt;/text&gt;<br>&lt;/g&gt;<br>&lt;/svg&gt;</p>",
+    "PostedDate": "2010-04-12T04:19:54.66-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

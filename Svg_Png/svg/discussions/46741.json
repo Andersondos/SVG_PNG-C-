@@ -1,0 +1,114 @@
+[
+  {
+    "Id": "156268",
+    "ThreadId": "46741",
+    "Html": "I was wondering if there is/is planned support for the SVG &lt;image&gt; tag?<br>\r\n",
+    "PostedDate": "2009-02-10T08:27:54.723-08:00",
+    "UserRole": "Coordinator",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "156475",
+    "ThreadId": "46741",
+    "Html": "I'd like to get support in there, and I don't imagine it will be overly difficult either. I can't say when it will be there but <em>hopefully</em> soon.<br>\r\n<br>\r\nCheers,<br>\r\nDave<br>\r\n",
+    "PostedDate": "2009-02-10T17:12:34.467-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "162052",
+    "ThreadId": "46741",
+    "Html": "Hey Dave!<br>\r\n<br>\r\nThanks for the reply. The project I'm working on is going to need this functionality, so if you are thinking you might not have time for awhile yet, if you can give me a quick pointer in the right direction, I'll work on implementing it and send the patch your way!<br>\r\n<br>\r\nAll I'd need is a basic &quot;I'd create the basic shape here, and add this decoration to the file there to make it show up in the serialize/deserialize process&quot; and I should be able to take it from there.<br>\r\n<br>\r\nYou can contact me off the forum at jvenema at gmail dot com if you want.<br>\r\n<br>\r\n-Jerod<br>\r\n",
+    "PostedDate": "2009-02-25T12:24:10.33-08:00",
+    "UserRole": "Coordinator",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "162370",
+    "ThreadId": "46741",
+    "Html": "Hey Dave,<br>\r\n<br>\r\nI've just added (basic) image support (I haven't added the &quot;preserveAspectRatio&quot; option, but everything else is in). I'll be adding the &quot;path&quot; element as well. What do you think about perhaps working together on this? I'll send you what I've got now if you're interested in taking a look at my code first.<br>\r\n<br>\r\n-Jerod<br>\r\n",
+    "PostedDate": "2009-02-26T08:33:46.557-08:00",
+    "UserRole": "Coordinator",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "162559",
+    "ThreadId": "46741",
+    "Html": "Hi Jerod!<br>\r\n<br>\r\nIt's good you got the &lt;image/&gt; element going - I didn't imagine it to be too much work to get a basic version going. Send in a patch or raise a work item with an attachment and we'll see about getting it into the code-base ASAP. It's a good one to have.<br>\r\n<br>\r\nRe. the &lt;path/&gt; element there is already some really decent support there for it - are you having issues with it?<br>\r\n<br>\r\nCheers,<br>\r\nDave<br>\r\n",
+    "PostedDate": "2009-02-26T17:00:22.643-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "162737",
+    "ThreadId": "46741",
+    "Html": "Hey Dave,<br>\r\n<br>\r\nNope, that was my mistake, paths looks good :). I just didn't see them at first.<br>\r\n<br>\r\nI'll send along the &lt;image/&gt; support, and also a couple other minor additions; I've added support for &quot;TransformedBounds&quot; on all elements, which allowed me to get the transformed bounds on the document, which in turn means you can &quot;trim&quot; the image to remove any excess space. Handy for what I'm working on, I bet others could use it as well. It's implemented as Draw(int padding) which draws the image trimmed, with a [padding] width of spacing (so you don't have to trim right to the edge).<br>\r\n<br>\r\nTwo new work items:<br>\r\n<span id=\"ctl00_ctl00_MasterContent_RightSideBar_WorkItemDetailsControl_DetailsSidebar_IssueIdLabel\">#9367</span> - image element<br>\r\n#<span id=\"ctl00_ctl00_MasterContent_RightSideBar_WorkItemDetailsControl_DetailsSidebar_IssueIdLabel\">9368</span> - support for getting the transformed element sizes and trimming the document on draw<br>\r\n<br>\r\nThanks for the work Dave, great library :)<br>\r\n<br>\r\n-Jerod<br>\r\n",
+    "PostedDate": "2009-02-27T06:02:31.017-08:00",
+    "UserRole": "Coordinator",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "235197",
+    "ThreadId": "46741",
+    "Html": "<p>Any updates on incorporating the image element in the main project? &nbsp;</p>",
+    "PostedDate": "2009-09-16T08:47:59.533-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "689107",
+    "ThreadId": "46741",
+    "Html": "<p>Any news on image element support yet? I've been trying out this library and it's really great but image support would add a useful extra.</p>\r\n<p>I use dynamic svg elements created using .net handler files in web pages for charting and GIS applications and I'm looking for a way to offer raster image file alternatives and even incorporate them into PDF exports. &nbsp;The lack of image element support has meant I've hit a stumbling block when I try to convert SVG files containing map tile raster images.</p>\r\n<p>I've looked at the code posted in the work item #9367 but, at first viewing, it would appear a transforms library is missing (FM.Iceflow.Drawing.Svg.Transforms).</p>\r\n<p>Many thanks.</p>\r\n<p>Triss</p>",
+    "PostedDate": "2011-10-25T09:37:04.58-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "689347",
+    "ThreadId": "46741",
+    "Html": "<p>You should be able to use #9367; ignore the fact that it's got the FM.Iceflow.Drawing prefix on the namespace for Transforms, I renamespaced it for consistency with the rest of the project. You should be able to just use Svg.Transforms\"</p>",
+    "PostedDate": "2011-10-25T16:40:11.16-07:00",
+    "UserRole": "Coordinator",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "691839",
+    "ThreadId": "46741",
+    "Html": "<p>Managed to get #9367 added to source, re-compiled and working very quickly without the transforms and the results are great. &nbsp;I'll have a go at what you suggest re SvgTransforms but it's not an immediate requirement.</p>\r\n<p>Many thanks for getting back to me.</p>\r\n<p>Triss</p>",
+    "PostedDate": "2011-10-31T14:30:04.143-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "703408",
+    "ThreadId": "46741",
+    "Html": "<p>could you please detail the steps you took to get SvgImage.cs added to the source code, recompiled, and working.</p>",
+    "PostedDate": "2011-11-25T08:23:06.3-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "804815",
+    "ThreadId": "46741",
+    "Html": "<blockquote style=\"padding-bottom: 0px; font-style: italic; margin: 0.25em 1em 0px; padding-left: 0.25em; padding-right: 0.25em; padding-top: 0px; border: #ccc 0.1em solid;\"><strong>trisskenny wrote:</strong><br />\r\n<p>Managed to get #9367 added to source, re-compiled and working very quickly without the transforms and the results are great. &nbsp;I'll have a go at what you suggest re SvgTransforms but it's not an immediate requirement.</p>\r\n<p>Many thanks for getting back to me.</p>\r\n<p>Triss</p>\r\n</blockquote>\r\n<p><br />Hi Triss,</p>\r\n<p>&nbsp;</p>\r\n<p>Could you tell me where you got #9367 patch? somehow I do not see it in the patches of the source code.</p>\r\n<p>Thanks in advance, Vincent.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2012-03-03T00:31:53.383-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "931804",
+    "ThreadId": "46741",
+    "Html": "<p>+1 to Vincent's request, my project needs the Image tag handling as well and it isn't available in the current codebase, how can we get access to that change?</p>\r\n<p>George</p>",
+    "PostedDate": "2012-10-24T08:51:08.193-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "932965",
+    "ThreadId": "46741",
+    "Html": "<p>It's actually a work item:</p>\r\n<p><a href=\"http://svg.codeplex.com/workitem/9367\">http://svg.codeplex.com/workitem/9367</a></p>\r\n<p>I'll try and pull in some of the outstanding patches/work items this weekend.</p>",
+    "PostedDate": "2012-10-26T05:53:00.43-07:00",
+    "UserRole": "Coordinator",
+    "MarkedAsAnswerDate": null
+  }
+]

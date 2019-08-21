@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2008-05-31T21:38:38.417-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "It seems that float parsing code does not work in cultures that have decimal separator different from '.' symbol. (for example russian). Affected files are:\n \nPaths\\SvgPathBuilder.cs\nTransforms\\SvgTransformConverter.cs\nDataTypes\\SvgUnitConverter.cs\nDataTypes\\SvgViewBox.cs\n \nYou need to specify IFormatProvider explicitly like this: float.Parse(coords[0], NumberStyles.Float, CultureInfo.InvariantCulture) instead of float.Parse(coords[0]).",
+    "LastUpdatedDate": "2013-05-16T04:04:31.673-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2008-04-18T02:13:22.44-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Float parsing culture dependent errors",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6018
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I had no idea that float.Parse was culture sensitive, although it does make sense!",
+      "PostedDate": "2008-04-18T22:29:27.557-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-04-18T22:29:29.15-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-04-18T22:52:26.9-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-05-31T21:38:38.417-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:11.113-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:31.673-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

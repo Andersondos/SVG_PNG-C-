@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi all. I have issue with saving svg to png.\nMy code:\n```\n1. XmlDocument xml = new XmlDocument();\n2. xml.LoadXml(svgText);\n                \n3. SvgDocument svgDocument = SvgDocument.Open(xml);\n\n4. Bitmap bitmap = svgDocument.Draw();\n\n5. bitmap.Save(currentSettings.OutputFilePath, ImageFormat.Png);\n```\n\nsvgText is svg from telerik rad chart.\nbut in line 4 I have exception:\n```\nColorBlend object that was set is not valid.Position's last element must be equal to 1.0. ColorBlend objects must be constructed with the same number of positions and color values. Positions must be between 0.0 and 1.0, 1.0 indicating the last element in the array.\n```\n\nPlease, help me to resolve this issue.",
+    "LastUpdatedDate": "2017-08-09T05:44:45.267-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2017-08-09T05:44:45.267-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "svgDocument.Draw() exception",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 22548
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

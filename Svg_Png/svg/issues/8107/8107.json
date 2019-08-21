@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Duplicate issue, closed with patch &#35;2897",
+    "ClosedDate": "2009-08-03T08:42:58.567-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I'm trying to load a SVG file into memory while rotating it at the same time. I try this fragment:\n \n\t\t\tSvgRenderer renderer = SvgRenderer.FromImage(bitmap);\n\t\t\trenderer.Transform.Rotate(45);\n\t\t\tsvg.Draw(renderer);\n \nBut it doesn't actually produce a rotated image.",
+    "LastUpdatedDate": "2013-05-16T04:04:27.933-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2008-11-16T12:21:28.113-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Support SvgRenderer.Transform.Rotate()",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8107
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "On bottom you see the Bug. The Application was the \"SVGViewer\" - Sample. I have also attached the SVG File.\n\nRegards\nDojo90\n\n__Version 2.0__\n![Image](http://fs5.directupload.net/images/160311/qvfccbhn.png)\n\n__Version 2.1__\n![Image](http://fs5.directupload.net/images/160311/zh5g8q5f.png)\n\n```\n                SvgDocument svgDoc = SvgDocument.Open(openSvgFile.FileName);\n                svgDoc.Transforms = new SvgTransformCollection();\n                svgDoc.Transforms.Add(new SvgScale(2, 2));\n                svgDoc.Width = new SvgUnit(svgDoc.Width.Type, svgDoc.Width * 2);\n                svgDoc.Height = new SvgUnit(svgDoc.Height.Type, svgDoc.Height * 2);\n                svgImage.Image = svgDoc.Draw();\n```",
+    "LastUpdatedDate": "2016-05-10T02:30:19.23-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2016-03-11T01:46:45.617-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Bug in v2.1 Render Issue",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 22200
+  },
+  "FileAttachments": [
+    {
+      "FileId": 9921,
+      "FileName": "relais.svg",
+      "DownloadUrl": ".\\9921"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "You have to recompile the DLL yourself and do not use the NuGet DLL.\r\n\r\nThere is also a convert Bug. Here I wrote a Extension.\r\n\r\n```\n        private static SvgUnit Bugfix(this SvgUnit value)\n        {\n            float tempFloat;\r\n\r\n            switch (value.Type)\n            {\n                case SvgUnitType.Point:\n                    tempFloat = value.Value * 1.25f;\n                    break;\r\n\r\n                case SvgUnitType.Pica:\n                    tempFloat = value.Value * 15.0f;\n                    break;\r\n\r\n                case SvgUnitType.Millimeter:\n                    tempFloat = value.Value * 3.543307f;\n                    break;\r\n\r\n                case SvgUnitType.Centimeter:\n                    tempFloat = value.Value * 35.43307f;\n                    break;\r\n\r\n                case SvgUnitType.Inch:\n                    tempFloat = value.Value * 90.0f;\n                    break;\r\n\r\n                case SvgUnitType.User:\n                case SvgUnitType.Pixel:\n                    tempFloat = value.Value;\n                    break;\r\n\r\n                default:\n                    tempFloat = value.Value;\n                    MessageBox.Show(\"Format not supported!\");\n                    break;\n            }\r\n\r\n            return new SvgUnit(SvgUnitType.Pixel, tempFloat);\n        }\n```",
+      "PostedDate": "2016-05-10T02:30:19.23-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

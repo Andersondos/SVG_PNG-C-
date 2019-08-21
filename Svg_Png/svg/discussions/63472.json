@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "215831",
+    "ThreadId": "63472",
+    "Html": "<p>Hi,</p>\r\n<p>at the moment, I try to load an XmlDocument using the Resources class, and open this XmlDocument as SVG. My code looks like this:</p>\r\n<p>&nbsp;</p>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">XmlDocument xmlDocument = new XmlDocument();</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">xmlDocument.LoadXml(Resources.ErrorImage);</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">SvgDocument svg =</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">&nbsp;&nbsp; &nbsp;SvgDocument.Open(xmlDocument);</div>\r\n<p>\r\n<p>XmlDocument xmlDocument = new XmlDocument();<br>xmlDocument.LoadXml(Resources.ErrorImage);<br>SvgDocument svg =&nbsp;SvgDocument.Open(xmlDocument);</p>\r\n<div>Basically, the XmlDocument is loaded correctly, and it contains SVG content. But the Open method returns null. Any idea, what might be wrong?</div>\r\n<div></div>\r\n<div>Cheerio,</div>\r\n<div></div>\r\n<div>Golo</div>\r\n</p>",
+    "PostedDate": "2009-07-24T12:30:46.857-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "215851",
+    "ThreadId": "63472",
+    "Html": "<p>BTW: If I load exactly the same file directly from disk instead of loading it as a resource, everything works fine. So it's obviously no problem with the file's content.</p>",
+    "PostedDate": "2009-07-24T13:19:18.92-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "215891",
+    "ThreadId": "63472",
+    "Html": "<p>You know, it sounds like you've used the latest version from the releases page where the Open(XmlDocument) method wasn't implemented yet unfortunately.</p>\r\n<p>If you download the latest source code and compile it the Open(XmlDocument) method will be implemented.</p>\r\n<p>If you don't want to do that there is another option:</p>\r\n<p>var doc = SvgDocument.Open(Resources.ResourceManager.GetStream(&quot;My.Full.Namespace.ErrorImage.svg&quot;))*</p>\r\n<p>It's not as pretty as the current option but it should work.</p>\r\n<p>Let me know how you get on.</p>\r\n<p>Cheers,<br>Scriv</p>\r\n<p>* - I think you'll need the full namespace plus the name of the file (&amp; extension) in there but it might work with just the file name &amp; extension; I don't think I've used that particular API before.</p>",
+    "PostedDate": "2009-07-24T16:05:36.873-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "215935",
+    "ThreadId": "63472",
+    "Html": "\r\n<span style=\"font-size:10pt;font-family:Arial;font-weight:Normal\">Hi Dave,<br>\r\n<br>\r\nthanks again for helping that fast! It works using your approach, I have used the GetStream variant.<br>\r\n<br>\r\nCheerio,<br>\r\n<br>\r\n<br>\r\nGolo<br>\r\n<br>\r\n<hr>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">Von: </span><span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">davescriven &lt;notifications@codeplex.com&gt;</span><br>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">Gesendet: </span>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">Samstag, 25. Juli 2009 01:04</span><br>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">An: </span><span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">Golo Roden &lt;webmaster@goloroden.de&gt;</span><br>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">Betreff: </span>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">Re: Create SVG from XmlDocument [svg:63472]</span><br>\r\n<br>\r\n</span>\r\n<div>\r\n<p>From: davescriven</p>\r\n<div id=ThreadNotificationPostBody>\r\n<p>You know, it sounds like you've used the latest version from the releases page where the Open(XmlDocument) method wasn't implemented yet unfortunately.</p>\r\n<p>If you download the latest source code and compile it the Open(XmlDocument) method will be implemented.</p>\r\n<p>If you don't want to do that there is another option:</p>\r\n<p>var doc = SvgDocument.Open(Resources.ResourceManager.GetStream(&quot;My.Full.Namespace.ErrorImage.svg&quot;))*</p>\r\n<p>It's not as pretty as the current option but it should work.</p>\r\n<p>Let me know how you get on.</p>\r\n<p>Cheers,<br>\r\nScriv</p>\r\n<p>* - I think you'll need the full namespace plus the name of the file (& extension) in there but it might work with just the file name & extension; I don't think I've used that particular API before.</p>\r\n</div>\r\n\r\n</div>\r\n",
+    "PostedDate": "2009-07-24T20:42:00.363-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

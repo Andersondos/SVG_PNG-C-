@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "821267",
+    "ThreadId": "351565",
+    "Html": "<p>I had included the renderer in one of my projects. It had been a pity no filter functions, and the gradient with Gdi+ does not seem to be compliant with svg. With limited time available, in the past months I had built up the filter functions gradually and created work arounds to improve the gradient display, and by the way fixed some bugs. It is uploaded now (ID: 11924). I am not the co-worker for this project. It is just to share if someone may want to continue the work...</p>\n<p>Most of the functions are tested&nbsp;and work well for&nbsp;&gt;95% of svg cliparts from Open ClipArt library, except below functions do not yet work properly, or are not yet implemented:</p>\n<p>- Lighting filters - works for the example in SVG 1.1 spec, but does not work properly for some other examples</p>\n<p>- BackgroundImage - not yet implemented but tentatively use device canvas as work around, still works well for most of examples</p>\n<p>- FillPaint and StrokePaint - do not quick understand them, not yet implemented</p>\n<p>- Minor color difference for ConvolveMatrix and ColorMatrix</p>\n<p>Since pixel operations with managed codes for filter functions may be slow, I had used LockBit&nbsp;in unsafe way to access bitmap. It can be much faster though not recommended in general. You may change it&nbsp;to managed code if your project does not allow it, but take care of the speed (could be very&nbsp;slow)</p>\n<p>I will still have very limited time for further work on this. If you are interested in the codes, feel free to improve it and share back....</p>\n<p>By the way, a viewer is included in the patch. It is more convient for debug. There are 2 display windows: the left one displays the rendered image, the right one displays selected&nbsp;intermediate result out from filter. Read the codes in Svgfilter.sc, you will see how to do...</p>\n<p>Vincent</p>",
+    "PostedDate": "2012-04-08T03:07:34.853-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "823805",
+    "ThreadId": "351565",
+    "Html": "<p>Small change uploaded (ID: 11959), the changes are:</p>\r\n<p>In SvgDocument.cs, prevent reading external DTD: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>\r\n<p><span style=\"white-space: pre;\"> </span>[Add]: settings.XmlResolver = null; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>\r\n<p><span style=\"white-space: pre;\"> </span>[Org]: using (var reader = XmlTextReader.Create(stream, settings, parserContext))&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p><span style=\"white-space: pre;\"> </span>[New]: using (XmlReader reader = XmlReader.Create(stream, settings, parserContext))&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>In feGaussianBlur.cs, fix bug to read/write in protected memory (outside locked bits)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p><span style=\"white-space: pre;\"> </span>[Org]: else if (r &gt; s0 + src.Stride) p = s0 + src.Stride;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p><span style=\"white-space: pre;\"> </span>[New]: else if (r &gt; s0 + src.Stride - 4) p = s0 + src.Stride - 4;</p>",
+    "PostedDate": "2012-04-14T03:52:03.727-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "827007",
+    "ThreadId": "351565",
+    "Html": "<p>Further update (patch ID: 12027), previous implementation applied filters before transforms, that might encounter problems when the document size is big in user coordinate system (use up too much memory resource and slow...). This implementation change to perform transforms before applying filters. Also some other enhancement. See the revision history in SvgDocument.cs</p>\r\n<p>Vincent</p>",
+    "PostedDate": "2012-04-22T04:05:02.93-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

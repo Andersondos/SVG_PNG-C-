@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1455479",
+    "ThreadId": "648616",
+    "Html": "Hi there,\r<br />\n<br />\nI'm new to the SVG library (and coding in general) and am trying to find out the bounding information of an SVG text element so I can display a highlight rectangle client side in a browser Canvas element.\r<br />\n<br />\nMy project previously did this via the getBBox method in the JavaScript. This wasn't perfect though as it didn't return the post-transform coordinates, but it got most of the way for what I needed.\r<br />\n<br />\nI moved the SVG (and manipulation of it) server-side via c# to avoid the user needing to download the whole SVG into their browser, and found this project while searching which looks like it is quite interesting for what I am doing. \r<br />\n<br />\nIs there a way of getting the bounding coordinates of an SVG text element using this project? If so, please could someone point me in the right direction with a couple of examples?\r<br />\n<br />\nThanks!\r<br />\nDavid<br />\n",
+    "PostedDate": "2015-12-10T11:32:21.93-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

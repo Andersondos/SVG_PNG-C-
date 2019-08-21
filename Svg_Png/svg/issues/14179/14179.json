@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I'm trying to render the playing cards found on wikipedia (http://upload.wikimedia.org/wikipedia/commons/b/bd/Playing_card_spade_J.svg)\nStable version (0.5.2) does render them, but the colors are wrong\nLatest version (57272) throws an error because of the \"tspan\" elements in the svg file. If I disable SVGTextSpan.cs, the file renders, and the colors are better, but still not correct, and the value of my card (witch was in the tspan) is missing...",
+    "LastUpdatedDate": "2013-02-21T16:26:02.77-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2010-09-04T00:01:48.307-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "rendering errors...",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 14179
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "A little update : the tspan problem is solved in issue Id #10725\r\nThe svg is still not rendered correctly though...\r\n",
+      "PostedDate": "2010-09-29T02:25:29.607-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "The linked file contains invalid xml. The xlink:href attribute values are not correctly formed with url().",
+      "PostedDate": "2010-11-02T03:24:17.467-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:02.77-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The problem occur when having \"C/c\" (shorthand/smooth curveto) command in a path.\nAnd if either (or both) X or Y value of calculated first control point falls to negative value,\nthe program fails to parse and render the path correctly.\n \nThe problem could be solved by modifying Reflect() method in SvgPathBuilder.cs:\n \nprivate static PointF Reflect(PointF point, PointF mirror)\n        {\n            // TODO: Only works left to right???\n            var x = mirror.X + (mirror.X - point.X);\n            var y = mirror.Y + (mirror.Y - point.Y);\n \n            return new PointF(x, y);\n            //return new PointF(Math.Abs(x), Math.Abs(y)); do not call Abs()\n        }\n \nAttached file shows a result between exact result and expected result form drawing curve\n<path stroke=\"#FF0000\" d=\"M100,100 C120,80 80,120 150,50 S170,70 200,100\"/>",
+    "LastUpdatedDate": "2013-02-21T16:26:04.487-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2009-08-20T03:56:38.403-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "The cubic Bézier curve path parsing/rendering incorrectly.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 10487
+  },
+  "FileAttachments": [
+    {
+      "FileId": 3293,
+      "FileName": "codeplex_svg.PNG",
+      "DownloadUrl": ".\\3293"
+    }
+  ],
+  "Comments": []
+}

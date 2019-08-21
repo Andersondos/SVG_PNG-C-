@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi, \n  I am using this SVG.dll to convert SVG image to PNG to later insert the image to Powerpoint presentation. I am getting very good results with text rendering but graph in the image is blurred.  Attached image resulted from conversion. When I open the SVG file in IE/FF/Chrome it looks good.  But Safari also shows svg with graph blurred. \n  Is that an issue with original SVG image or the svg.dll library? Any ideas how I can fix this? \n\n\nCode:\nSvgDocument svg = SvgDocument.Open(imagePath);\nsvg.Draw().Save(imagePath + \".jpg\", ImageFormat.Jpeg);\n\nthanks",
+    "LastUpdatedDate": "2013-07-03T04:57:22.75-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2013-02-11T12:53:28.627-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "image parts blurred on converting from svg to PNG/GIF/JPEG",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 19341
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi,\r\n\r\nI have same problem when i am converting SVG to PNG  , Error NullReferenceException  throwing.\r\n\r\nSvgDocument svg = SvgDocument.Open(imagePath);  //NullReferenceException  \nsvg.Draw().Save(imagePath + \".jpg\", ImageFormat.Jpeg);\r\n\r\nPls, suggest how to fix, even i am using SVG 5.2 dll.\r\n\r\nThanks\n",
+      "PostedDate": "2013-07-03T04:57:22.75-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

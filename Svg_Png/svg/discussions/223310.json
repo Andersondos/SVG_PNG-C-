@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "479512",
+    "ThreadId": "223310",
+    "Html": "<p>Hello,</p>\r\n<p>There is an issue&nbsp;when a path has multiple segments, and there is a relative move after a close segment.</p>\r\n<p>In SvgPathBuilder.cs:</p>\r\n<p>The method ToAbsolute on the line</p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre>                <span style=\"color:blue\">var</span> lastSegment = segments.Last;\r\n</pre>\r\n</div>\r\n<p>will return a pointer to SvgClosePathSegment, which has 0 values for points, this is bad for a relative move.</p>\r\n<p>As a workaround, I've modified the property Last in the file SvgSegmentList.cs from</p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre>        <span style=\"color:blue\">public</span> SvgPathSegment Last\r\n        {\r\n            <span style=\"color:blue\">get</span> { <span style=\"color:blue\">return</span> <span style=\"color:blue\">this</span>._segments[<span style=\"color:blue\">this</span>._segments.Count - 1]; }\r\n        }\r\n</pre>\r\n</div>\r\n<p>to</p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><span style=\"color:blue\">        public</span> SvgPathSegment Last\r\n        {\r\n            <span style=\"color:blue\">get</span> {\r\n                <span style=\"color:green\">// TODO : If last entry is SvgClosePathSegment, then return 2nd last entry</span>\r\n                <span style=\"color:green\">// Otherwise Start and End are 0s - not good for a relative move.</span>\r\n                <span style=\"color:blue\">if</span> (<span style=\"color:blue\">this</span>._segments[<span style=\"color:blue\">this</span>._segments.Count-1].GetType() != <span style=\"color:blue\">typeof</span>(SvgClosePathSegment))\r\n                    <span style=\"color:blue\">return</span> <span style=\"color:blue\">this</span>._segments[<span style=\"color:blue\">this</span>._segments.Count-1]; \r\n                <span style=\"color:blue\">else</span>\r\n                    <span style=\"color:blue\">return</span> <span style=\"color:blue\">this</span>._segments[<span style=\"color:blue\">this</span>._segments.Count - 2]; \r\n            }\r\n        }\r\n</pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-08-11T23:24:13.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "479517",
+    "ThreadId": "223310",
+    "Html": "<p>This was meant for the Issue tracker...</p>",
+    "PostedDate": "2010-08-11T23:30:17.447-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

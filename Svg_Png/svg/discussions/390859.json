@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "897523",
+    "ThreadId": "390859",
+    "Html": "\r\n<p>Would be really helpfull with a code example!</p>\r\n<p><strong>Update:</strong></p>\r\n<p>Okay so that was easier than i imagined, sorry for the pointlessness :p!</p>\r\n<pre>int newHeight = 30;\nvar svg = SvgDocument.Open(Server.MapPath(@&quot;\\test.svg&quot;));\nsvg.Width = svg.Width * (newHeight / svg.Height);\nsvg.Height = newHeight;\nsvg.Draw().Save(Server.MapPath(@&quot;\\test.png&quot;),ImageFormat.Png);</pre>\r\n",
+    "PostedDate": "2012-08-09T05:56:36.127-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

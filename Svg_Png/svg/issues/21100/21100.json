@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I'm using the 1.6.1 version from NuGet in a c# project.\n\nI've a setup were I take an SVG created on a canvas html element (PaperJS) and convert is server side to PNG. When adding text to the SVG, it's not on the PNG that is created:\n\n```\n<svg x=\"0\" y=\"0\" width=\"250\" height=\"580\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n\n<g fill=\"#0000ff\" stroke=\"none\" stroke-width=\"1\" stroke-linecap=\"butt\" stroke-linejoin=\"miter\" stroke-miterlimit=\"10\" stroke-dasharray=\"\" stroke-dashoffset=\"0\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" text-anchor=\"middle\" mix-blend-mode=\"normal\">\n<text x=\"123\" y=\"280\">THIS IS A TEST</text>\n</g>\n\n</svg>\n```\n\nThe SVG file is created automatically, but the text \"THIS IS A TEST\" is not shown in the PNG file.\n\nCan anyone assist as I'm trying to find out what the problem is.",
+    "LastUpdatedDate": "2017-06-28T18:48:43.623-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2014-06-24T05:30:51.173-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Text not rendering",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 21100
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi,\r\n\r\nsorry to re-open an old post but I'm facing the same issue. \nHave you finally found a solution ?\r\n\r\nThank you.",
+      "PostedDate": "2017-06-28T18:48:43.623-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

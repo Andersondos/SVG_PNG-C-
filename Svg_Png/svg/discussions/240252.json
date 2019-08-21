@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "543086",
+    "ThreadId": "240252",
+    "Html": "\r\n<p>Hi!</p>\r\n<p>How can i zoom a svg file in c# project? I can open a file but don't know how to zoom it?</p>\r\n<p>One more question, where can i display a svg file (on what c# component). Now i'am using picturebox and it works.</p>\r\n<p>&nbsp;</p>\r\n<p>Sorry for bad english :)</p>\r\n",
+    "PostedDate": "2011-01-03T01:58:39.883-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "827559",
+    "ThreadId": "240252",
+    "Html": "<p>Take a look at the SvgViewer project here for example of scaling / fitting of an image to a specific set of max height / width.</p>\r\n<p><a href=\"https://github.com/willowsystems/SVG-Rendering-Engine-dotNet\">https://github.com/willowsystems/SVG-Rendering-Engine-dotNet</a></p>",
+    "PostedDate": "2012-04-23T14:52:11.833-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

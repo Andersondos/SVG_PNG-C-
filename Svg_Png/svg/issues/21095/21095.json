@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi ,\n\nCan you please tell me what's wrong anything is missing in this svg.dll ..\n\nWhen i am trying to save image as png file it will not consider embedded image from the svg file.\n\nPlease see the attached svg file.\n\nPlease reply quickly ... i am stuck over here..!!\n\nThanks\nJevis",
+    "LastUpdatedDate": "2014-06-21T06:25:32.823-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2014-06-21T06:25:31.52-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Not able to see embedded image into exported png file.",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 21095
+  },
+  "FileAttachments": [
+    {
+      "FileId": 8509,
+      "FileName": "Signage Website Templates-34.svg",
+      "DownloadUrl": ".\\8509"
+    }
+  ],
+  "Comments": []
+}

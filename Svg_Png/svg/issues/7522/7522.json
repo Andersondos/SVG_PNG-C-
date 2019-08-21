@@ -1,0 +1,76 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "should be something like :\n                        case \"rotate\":\n                            string[] rotates = contents.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);\n \n                            if (rotates.Length != 1 && rotates.Length != 3)\n                            {\n                                throw new FormatException(\"Rotate transforms must be in the format 'rotate(angle [cx cy ])'\");\n                            }\n                            float angle = float.Parse(rotates[0].Trim(), NumberStyles.Float, CultureInfo.InvariantCulture);\n                            if (rotates.Length == 3)\n                            {\n                                // rotate about a given point.\n                                float cx = float.Parse(rotates[1].Trim(), NumberStyles.Float, CultureInfo.InvariantCulture);\n                                float cy = float.Parse(rotates[2].Trim(), NumberStyles.Float, CultureInfo.InvariantCulture);\n                                transformList.Add(new SvgTranslate(cx, cy));\n                                transformList.Add(new SvgRotate(angle));\n                                transformList.Add(new SvgTranslate(-cx, -cy));\n                            }\n                            else\n                            {\n                                transformList.Add(new SvgRotate(angle));\n                            }\n                            break;",
+    "LastUpdatedDate": "2013-06-14T00:27:51.997-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2008-09-04T23:28:32.8-07:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "support rotate(angle,cx,cy)",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7522
+  },
+  "FileAttachments": [
+    {
+      "FileId": 2088,
+      "FileName": "sfupwm---------.svg",
+      "DownloadUrl": ".\\2088"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Fixed in change set 18245.",
+      "PostedDate": "2008-10-18T05:10:37.607-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-10-18T05:10:38.2-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:09.13-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:29.92-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:30.043-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-06-14T00:27:51.997-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

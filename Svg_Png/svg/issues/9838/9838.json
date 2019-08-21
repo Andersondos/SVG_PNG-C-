@@ -1,0 +1,81 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "http://www.croczilla.com/svg/samples/butterfly/butterfly.svg  (only half rendered)\nhttp://www.croczilla.com/svg/samples/diazepam/diazepam.xml  (crash)\nhttp://www.croczilla.com/svg/samples/invaders/invaders.svg  (crash)\nhttp://www.croczilla.com/svg/samples/svgtetris/svgtetris.svg  (crash)",
+    "LastUpdatedDate": "2013-02-21T16:26:05.333-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2009-04-23T03:11:48.097-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "problem with following files",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 9838
+  },
+  "FileAttachments": [
+    {
+      "FileId": 3416,
+      "FileName": "SvgDocument.cs",
+      "DownloadUrl": ".\\3416"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "you can find more samples here: http://www.croczilla.com/svg/samples/",
+      "PostedDate": "2009-04-23T03:12:13.267-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "and more:\r\n\r\nhttp://www.croczilla.com/svg/samples/xbl-shapes/xbl-shapes.xml\r\nhttp://www.croczilla.com/svg/samples/xbl-shapes2/xbl-shapes2.xml\r\nhttp://www.croczilla.com/svg/samples/gradients2/gradients2.svg",
+      "PostedDate": "2009-04-23T03:22:41.957-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "the following files are  half rendered.\r\n\r\nhttp://www.croczilla.com/svg/samples/ellipse1/ellipse1.xml\r\nhttp://www.croczilla.com/svg/samples/circles1/circles1.svg\r\nhttp://www.croczilla.com/svg/samples/line1/line1.xml\r\nhttp://www.croczilla.com/svg/samples/quadbezier1/quadbezier1.svg\r\nhttp://www.croczilla.com/svg/samples/rect1/rect1.svg\r\nhttp://www.croczilla.com/svg/samples/rect2/rect2.svg\r\n",
+      "PostedDate": "2009-04-23T03:26:01.457-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Thanks for that unruledboy. I was aware of the issues relating to these files (they're the ones I use in the test harness, only modified versions).\r\n\r\nThe issue *mostly* stems from the fact that the code doesn't yet support CSS and the error handling isn't all that great when things like that go wrong. It's good to have a work item to keep track of this though!",
+      "PostedDate": "2009-07-01T16:36:56.733-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "A lot of these seem to be due to the image not having clearly defined bounds.\r\nIf you include the transformed bounds changes to SVGVisualElement you can make the image calculate it's own bounds.\r\n\r\nI defaulted the SVGFragment to have a height and width of -1. The document then checks for this value and calculates the real bounds.\r\nI also added an optional IgnoreBounds parameter to the Open method.  This allows the calling application to re-calculate the bounds.",
+      "PostedDate": "2009-10-05T11:54:27.64-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-10-05T11:54:30.64-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:05.333-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

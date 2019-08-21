@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1476371",
+    "ThreadId": "655604",
+    "Html": "Hi. I am creating an SvgCircle<br />\n<pre><code>                SvgCircle circle = new SvgCircle()\n                {\n                    ID = &quot;theCircle&quot; + DateTime.Now.Second.ToString(),\n                    CenterX = int.Parse(LocationXEdit.Text),\n                    CenterY = int.Parse(LocationYEdit.Text),\n                    Radius = int.Parse(RadiusEdit.Text),\n                    Stroke = new SvgColourServer(Color.Black),\n                    StrokeWidth = 2,\n                    Fill= new SvgColourServer(Color.Crimson)\n                };</code></pre>\n\nNo problem adding the circle to my svg. However, I would like to assign a gradient rather than a solid color. In the past I have used javascript to add an element<br />\n<pre><code>circle.setAttribute(&quot;fill&quot;, &quot;url(#gradRed)&quot;);</code></pre>\n\nwhere gradRed is the id of a gradient in the &lt;defs&gt;.\r<br />\n<br />\nIs there a way to achieve this?\r<br />\n<br />\nThanks,\r<br />\nEd<br />\n",
+    "PostedDate": "2016-06-15T12:42:05.52-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

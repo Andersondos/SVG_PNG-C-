@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I've tried quite a few svg files from wikipedia, and many of them don't render properly, I'm using version 1.6.1 from NuGet, and for example this Manchester United logo http://en.wikipedia.org/wiki/File:Manchester_United_FC_crest.svg\n\nAny ideas why or is it just that the library isn't 100% done?",
+    "LastUpdatedDate": "2014-05-21T11:46:04.647-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2014-05-21T11:46:04.647-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Not rendering correctly",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 21014
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

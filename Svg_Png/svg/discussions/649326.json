@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1457219",
+    "ThreadId": "649326",
+    "Html": "I have take some svg from:\r<br />\n<br />\n<a href=\"http://goessner.net/articles/svg/fractals/\" rel=\"nofollow\">http://goessner.net/articles/svg/fractals/</a>\r<br />\n<br />\nand used these lines:\r<br />\n<br />\nconst string inputPath = &quot;D:\\fractal.svg&quot;;\r<br />\nconst string exportPath = &quot;d:\\fractal.jpeg&quot;;\r<br />\nvar sampleDoc = SvgDocument.Open(inputPath);\r<br />\nsampleDoc.Draw().Save(exportPath, ImageFormat.Jpeg);\r<br />\n<br />\nto transform the svg to a jpeg. This works fine but unfortunately, the background color is black rather than white as in the original svg. Is there anything I can do to overcome this issue? Thanks.<br />\n",
+    "PostedDate": "2015-12-26T10:36:41.463-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1498275",
+    "ThreadId": "649326",
+    "Html": "I have an image with color background, when I try to convert the image to png the background is transparent.<br />\n",
+    "PostedDate": "2017-10-18T06:03:14.967-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

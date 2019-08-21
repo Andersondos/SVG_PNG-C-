@@ -1,0 +1,96 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The map of the US here; http://en.wikipedia.org/wiki/File:Map_of_USA_with_state_names.svg has some state names in single text elements others in tspan with child text elements (mostly on the west coast). The tspan states names do no render.",
+    "LastUpdatedDate": "2013-02-21T16:26:04.303-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2009-10-05T12:19:47.387-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "TSpan elements not rendered correctly",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 4,
+    "Id": 10725
+  },
+  "FileAttachments": [
+    {
+      "FileId": 4752,
+      "FileName": "map.png",
+      "DownloadUrl": ".\\4752"
+    },
+    {
+      "FileId": 5827,
+      "FileName": "Svg.dll",
+      "DownloadUrl": ".\\5827"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "I have experienced this as well... Weird issue.",
+      "PostedDate": "2010-08-13T12:54:35.64-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-08-13T13:07:35.203-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "For the quick Fix you need to patch the getter in SvgText.cs For the Property Text\r\n\r\nIt does not correctly check for children elemements.\r\n\r\nThat is wherer the bug is...\r\n\r\nThe fixed getter is below:\r\n\r\nWith that simple patch the map now renders like so...\r\n\r\nI do not know what the propper fix is yet because I just found out where it was being caused but this should help the developers....\r\n\r\n get {\r\n                if (base.Content == null && base.Children.Count == 1)\r\n                {\r\n                    return (base.Children[0] as Svg.SvgText).Text;\r\n                }else return base.Content; \r\n            }\r\n",
+      "PostedDate": "2010-08-13T13:07:36.363-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-08-10T07:57:43.677-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-08-11T08:58:09.32-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Attached Svg.dll with\r\nhttp://svg.codeplex.com/discussions/262065\r\nhttp://svg.codeplex.com/workitem/10725\r\nchanges applied for Highcharts export: https://github.com/imclem/Highcharts-export-module-asp.net/issues/1",
+      "PostedDate": "2011-08-11T08:58:11.423-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "OlgaD - Beware: Your Svg.dll forces an upgrade from .NET 2.0 to .NET 3.5. The prior .dll worked with .NET 2.0. You might want to rebuild for 2.0.",
+      "PostedDate": "2011-08-18T02:27:14.73-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "OlgaD - I'd very much appreciate if you could rebuild for .NET 2.0 -- I'm working with imclem on the Highcharts export module. The new Svg.dll forces the entire project to .NET 3.5.",
+      "PostedDate": "2011-08-18T02:35:26.88-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:04.303-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1416485",
+    "ThreadId": "632031",
+    "Html": "<h1>Hello, I am trying to convert an SVG to a bitmap object all through streaming in a vb.net VS2010 web project targeting DOT.NET 4 with the following code, however, I noticed that no matter how simple the SVG is, the svgDocument.GetDimensions().Width and Height always returns 0 (zero). I have inspected to make sure that the xmldoc.innerXml property does in fact contain the SVG xml content. No matter how I load the SVG using svgDocument.Open() its always the same result: width and height are zero and the .Draw() call fails with a bad parameter exception. Please help - I have tried every permutation but I must be missing something... here is my code...</h1>\n<pre><code>        Dim xmldoc As New System.Xml.XmlDocument\n        Dim strSVG As String = &quot;&lt;?xml version=&quot;&quot;1.0&quot;&quot; encoding=&quot;&quot;UTF-8&quot;&quot;?&gt;&quot; _\n                + &quot;&lt;svg xmlns=&quot;&quot;http://www.w3.org/2000/svg&quot;&quot;&quot; _\n                + &quot; xmlns:xlink=&quot;&quot;http://www.w3.org/1999/xlink&quot;&quot; version=&quot;&quot;1.1&quot;&quot;&quot; _\n                + &quot; width=&quot;&quot;100&quot;&quot; height=&quot;&quot;100&quot;&quot; viewBox=&quot;&quot;0 0 100 100&quot;&quot;&gt;&quot; _\n                + &quot; &lt;rect x=&quot;&quot;10&quot;&quot; y=&quot;&quot;10&quot;&quot; height=&quot;&quot;100&quot;&quot; width=&quot;&quot;100&quot;&quot;&quot; _\n                + &quot;  style=&quot;&quot;stroke:#ff0000; fill: #0000ff&quot;&quot;/&gt;&quot; _\n                + &quot;&lt;/svg&gt;&quot;\n\n        xmldoc.LoadXml(strSVG)\n        'xmldoc.Load(msOrigSvg)\n\n        Dim svgDocument As New SvgDocument\n        svgDocument.Open(xmldoc)\n\n        Dim wdth As Integer = svgDocument.GetDimensions().Width\n        Dim hght As Integer = svgDocument.GetDimensions().Height\n\n        Dim tmpBitmap As New System.Drawing.Bitmap(wdth, hght,\n                                                   System.Drawing.Imaging.PixelFormat.Format32bppArgb)\n        svgDocument.Draw(tmpBitmap)</code></pre>\n\n<h1>            'Dim tmpBitmap As System.Drawing.Bitmap = svgDocument.Draw()</h1>\nI got your dll by installing your NuGet Package for version 2.0.0\r<br />\nThis would be the ideal solution if I could get it to work. I must be missing something simple.<br />\n",
+    "PostedDate": "2015-04-21T17:09:56.647-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1416966",
+    "ThreadId": "632031",
+    "Html": "Never Mind - I found the problem - nothing new to add to this thread.<br />\n",
+    "PostedDate": "2015-04-22T12:43:22.02-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

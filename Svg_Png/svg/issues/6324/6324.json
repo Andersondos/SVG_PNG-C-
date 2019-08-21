@@ -1,0 +1,116 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi,  I'm setting a SvgViewBox on the SvgDocument which is getting ignored if any of the child SvgElements have transforms on them.  I think the fix is to change the graphics.Transform = transformMatrix; to graphics.Transform.Multiply( transformMatrix ); but I'm not sure if this breaks the transformation Push/Popping.  Happy to supply code/examples if more explination is required.",
+    "LastUpdatedDate": "2013-06-14T00:27:52.48-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "High",
+      "Severity": 150,
+      "Id": 3
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2008-06-09T20:44:53.61-07:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "SvgElement.PushTransforms and ViewBox",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6324
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1541,
+      "FileName": "svg.zip",
+      "DownloadUrl": ".\\1541"
+    },
+    {
+      "FileId": 1585,
+      "FileName": "svgtest.zip",
+      "DownloadUrl": ".\\1585"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Simply multiplying the transforms does indeed break the push/popping as suspected.  Another approach is required to support the ViewBox on SvgFragment's.",
+      "PostedDate": "2008-06-11T02:48:10.333-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Hi, I've attached a rather lenghty problem example for this issue, however, it does contain a few other ideas/suggestions the project might be interested in... The zip contains a copy of the project with modifications along with a sample svg file created using Visio.  The modifications are to support the CSS style element and class attributes Visio spits out, and a bit to exclude any XML that's not in the default namespace to avoid the Visio extensions.  Please note that this is all experimental and I don't recomend anyone use this.  You can use this code to see the issue I've raised-:  If you use the form in the svgtest project, open the SVG file in the testdata dir and press render, you should get an image.  Resizing the form changes the width and height and pressing render again redraws the image scaled accordingly - all good.  Now,  if you comment out the workaround in line 140 of SvgElement you'll see that the image is never scaled.  The workaround uses a ViewPort added to the SvgDocument (_viewPortDebug) to apply the scale transform to each SvgElement, along with whatever other transforms exist on the element, not the best solution.  ",
+      "PostedDate": "2008-06-12T01:32:36.527-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-06-12T01:32:36.87-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Wow, thanks for the sample and work there. I'll try to get this up and running ASAP and get a fix out.\r\n\r\nSupporting the Style element (and external stylesheets) has been something I've wanted to support for a while so your modifications should speed that along.",
+      "PostedDate": "2008-06-12T07:32:59.717-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-06-12T07:32:59.907-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "This has (hopefully) been fixed in changeset #11730. The problem came from a very small mistake made in PushTransforms. Previous transforms weren't inherited and so there was no 'transform tree'. This is now supported so a ViewBox (or any transform) at any level will persist down as required.\r\n\r\nI haven't included the <style/> element support in this checkin though - this will come later after more work.\r\n\r\nAlso plan to include the test harness you created, but missing the \"using Sdi.Ogc.Wmc;\" reference - will I be able to access this somehow?",
+      "PostedDate": "2008-06-17T06:26:47.93-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-06-17T06:26:48.18-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "The ViewBox in #11730 looks good, thanks for that.  I've posted a really simple test form if you wish to include it.  The Sdi.Ogc.Wmc namespace is not related to testing the SVG at all - it's part of a GIS project I'm working on (you're SVG project is helping us create dynamic SVG legend images for the map layers using the OGC styling XML standards (SLD/SE) which are based on SVG styles).",
+      "PostedDate": "2008-06-23T18:18:04.583-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-06-23T18:18:07.583-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:10.07-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:30.833-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:30.943-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-06-14T00:27:52.48-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

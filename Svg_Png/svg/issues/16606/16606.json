@@ -1,0 +1,61 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When I try to render the attached svg the library simply renders an empty 100x100 bitmap.\nExample code that produces the problem:\n          \nSvgDocument svgDoc = SvgDocument.Open(@\"C:\\test2.svg\");\nBitmap map = svgDoc.Draw();\nmap.Save(@\"c:\\t.bmp\");",
+    "LastUpdatedDate": "2013-02-21T16:25:59.977-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2011-09-21T04:58:00.583-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Svg is not rendered",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 16606
+  },
+  "FileAttachments": [
+    {
+      "FileId": 5888,
+      "FileName": "test2.svg",
+      "DownloadUrl": ".\\5888"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "I did some testing and found out that apparently nodes with numeric id attributes are not displayed correctly\r\n\r\n   <rect\r\n       x=\"1064\"\r\n       y=\"1900\"\r\n       width=\"8\"\r\nstyle=\"fill:#ece9d8\"       \r\nheight=\"200\"\r\n        id=\"a\" />\r\n\r\nworks but \r\n\r\n  <rect\r\n       x=\"100\"\r\n       y=\"100\"\r\n       width=\"1800\"\r\n       height=\"1800\"\r\n    style=\"fill:#ece9d8\"       \r\n       id=\"10\" />\r\n\r\ndoes not",
+      "PostedDate": "2011-09-21T06:11:24.027-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-10-24T05:23:57.603-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:25:59.977-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

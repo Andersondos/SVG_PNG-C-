@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi\n\nI am generating png images from svg.  \nThe problem is that the images are blurry and not the best quality.\nI would just like to increase the DPI of the generated image (without decreasing the size of the image obviously).\n\nMy basic test  code is as follows:\n        string filePath = MapPath(\"chart.svg\");\n        var sampleDoc = SvgDocument.Open(filePath);\n        sampleDoc.Draw().Save(MapPath(\"output/chart.png\"));\n\nI have tried setting the PPI for the document before doing the Draw but that seemed to have no effect.\n\nIs anyone able to point me in the right direction?\n\nThanks",
+    "LastUpdatedDate": "2013-04-28T22:43:04.01-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2013-04-28T22:43:04.01-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Can I set the DPI for the generated image.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 19652
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

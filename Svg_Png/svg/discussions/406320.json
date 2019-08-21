@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "954222",
+    "ThreadId": "406320",
+    "Html": "\r\n<p>I am trying to using the svg.dll to convert the svg document into a png document.</p>\r\n<p>Here's a snippet of my code</p>\r\n<p><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\"></p>\r\n<p>Svg.SvgDocument svgDoc = null;<br>\r\nvar input = Convert.FromBase64String(svgdocument);<br>\r\nusing (var stream = new MemoryStream(input))<br>\r\n{<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>\r\nSvgDoc = SvgDocument.Open(stream);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>\r\n<p>}</p>\r\n<p><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\">I\r\n get an invalid xml exception : Data at the root level is invalid. Line 1, position 1.</span></span></span></span></span></span></p>\r\n<p>Any help in this regard will be useful</p>\r\n<p><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\">&nbsp;</span></span></span></span></span></span></p>\r\n<p>Thanks in advance</p>\r\n</span></span></span></span></span></span>\r\n<p></p>\r\n",
+    "PostedDate": "2012-12-10T15:47:04.907-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1006174",
+    "ThreadId": "406320",
+    "Html": "I've the same problem. Anyone know solution?<br />\n",
+    "PostedDate": "2013-02-25T01:28:50.633-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1122249",
+    "ThreadId": "406320",
+    "Html": "If you svg data it's on base64, yo need to use this:<br />\n<pre><code>byte[] byteBuffer = System.Convert.FromBase64String(svgBase64String);</code></pre>\n\n",
+    "PostedDate": "2013-11-12T00:56:09.323-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

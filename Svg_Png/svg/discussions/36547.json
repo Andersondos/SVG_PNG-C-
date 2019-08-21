@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "121222",
+    "ThreadId": "36547",
+    "Html": "I can't seem to get this to work.&nbsp; I'm using the following line to try to render an SVG file created in Inkscape.&nbsp; I get a Jpeg file with the right dimensions, but no actual content.&nbsp; Am I doing something wrong?<br>\r\n<br>\r\nSvgDocument.Open(@&quot;c:\\temp\\Test_1.svg&quot;).Draw().Save(@&quot;c:\\temp\\Test_1.jpg&quot;, ImageFormat.Jpeg);<br>\r\n<br>\r\nthanks,<br>\r\n<br>\r\nJim\r\n",
+    "PostedDate": "2008-09-26T11:49:40.373-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "121287",
+    "ThreadId": "36547",
+    "Html": "Jim,<br>\r\n<br>\r\nThat should be all you need to do. I haven't had any issues rendering simple images made with inkscape (with the <em>latest source</em>, <strong>not </strong>latest release) but maybe the file has some data that the project doesn't like. I can give it a test if you want to send me the test svg file?<br>\r\n<br>\r\nCheers,<br>\r\nDave<br>\r\n",
+    "PostedDate": "2008-09-26T21:55:02.267-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "121372",
+    "ThreadId": "36547",
+    "Html": "Dave,<br>\r\n<br>\r\nThanks for looking into this.&nbsp; I created Issue #\r\n<span id=\"ctl00_ctl00_Content_TabContentPanel_Content_WorkItemDetailsControl_DetailsSidebar_IssueIdLabel\">7694 with the attached SVG file.<br>\r\n<br>\r\nJim<br>\r\n</span>\r\n",
+    "PostedDate": "2008-09-27T16:12:32.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "124538",
+    "ThreadId": "36547",
+    "Html": "Dave--Did you have any luck with the file?<br>\r\n<br>\r\nthanks,<br>\r\n<br>\r\nJim<br>\r\n",
+    "PostedDate": "2008-10-11T23:04:13.73-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "125167",
+    "ThreadId": "36547",
+    "Html": "I had a similar problem when using the dll assembly on the main page.&nbsp; However the code worked when re-compiled from source.\r\n",
+    "PostedDate": "2008-10-14T17:56:14.61-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "125360",
+    "ThreadId": "36547",
+    "Html": "I downloaded the code and compiled from source, and it mostly worked.&nbsp; My only problem is that I can't get an ellipse to render.&nbsp; Everything else I've tried works great.&nbsp; Any thoughts on that?<br>\r\n<br>\r\nThanks for the suggestion.\r\n",
+    "PostedDate": "2008-10-15T09:55:28.593-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "125449",
+    "ThreadId": "36547",
+    "Html": "Jim,<br>\r\n<br>\r\nSorry i haven't got back on this one - I've been on holiday 'til recently :)<br>\r\n<br>\r\nI did look at your sample .svg file before I went away, but as you've already discovered the ellipse won't render. Inkscape (probably for very good reasons) renders ellipses using several Arc segments rather than a single &lt;ellipse/&gt; or &lt;circle/&gt; element and this project doesn't yet support Arc segments. There is a work item to support this though, - <a href=\"http://www.codeplex.com/svg/WorkItem/View.aspx?WorkItemId=6455\">#<span id=\"ctl00_ctl00_MasterContent_TabContentPanel_Content_WorkItemDetailsControl_DetailsSidebar_IssueIdLabel\">6455 </span><span id=\"ctl00_ctl00_MasterContent_TabContentPanel_Content_TitlePanel\"><span id=\"ctl00_ctl00_MasterContent_TabContentPanel_Content_TitleLabel\">Arc Segments in SvgPathBuilder.</span></span></a><br>\r\n<br>\r\nIf you browse to that and 'Vote' to have the work item fixed it will at least bump it up the priority cue. I <em>will</em> try to get arcs implemented when I can get the time. Sorry 'bout these issues!<br>\r\n<br>\r\nCheers,<br>\r\nDave<br>\r\n",
+    "PostedDate": "2008-10-15T16:27:51.877-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "125557",
+    "ThreadId": "36547",
+    "Html": "Thanks, Dave.&nbsp; I think this is a great project.<br>\r\n<br>\r\nJim\r\n",
+    "PostedDate": "2008-10-16T05:12:04.813-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "125995",
+    "ThreadId": "36547",
+    "Html": "Jim,<br>\r\n<br>\r\nThe latest source code (check-in 18243) has an arc implementation and I've tested your Test_2.svg file against this latest code and the rendered image appears identical to the one rendered&nbsp; by Inkscape. Try this latest code out if you can and hopefully it will sort most of the issues you and others have been having with Inkscape ellipses :)<br>\r\n<br>\r\nCheers,<br>\r\nDave<br>\r\n",
+    "PostedDate": "2008-10-18T04:12:15.283-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "130812",
+    "ThreadId": "36547",
+    "Html": "Dave,<br>\r\n<br>\r\nYes, everything works great.  Thanks for adding that functionality.<br>\r\n<br>\r\nJim\r\n",
+    "PostedDate": "2008-11-07T07:16:10.737-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

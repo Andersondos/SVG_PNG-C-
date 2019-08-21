@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "125170",
+    "ThreadId": "37743",
+    "Html": "Do you have any plan to support filter effects?&nbsp; I have an svg file that uses the gaussian filer to generate a soft shadow and specular lighting to give contours.&nbsp; It renders OK in Inkscape.&nbsp; Batik can render it but it would be ideal to have it rendered in a WPF app.&nbsp; None of the SVG2XAML file utilities support filters and I notice that Firefox has omitted this support as well.&nbsp; I guess its pretty hard to do.<br>\r\n<br>\r\nThanks<br>\r\n<br>\r\nBill\r\n",
+    "PostedDate": "2008-10-14T18:00:54.213-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "125453",
+    "ThreadId": "37743",
+    "Html": "Hi Bill,<br>\r\n<br>\r\nI do <em>intend </em>to support some filter effects but I have no real plan for doing so. The first will likely be gaussian blur but I haven't really looked into specular lighting and how it might be done. Are you working on something that has a specific deadline? I'd like to say that such features would be added soon but I really don't know how long they might take to implement unfortunately.<br>\r\n<br>\r\nI've created work item <a href=\"http://www.codeplex.com/svg/WorkItem/View.aspx?WorkItemId=7826\">#7826 - Support basic filter effects such as gaussian blur</a> for this work. If you want to you can vote for this functionality just to show that it's important. Maybe other folk will vote and it may turn out to be a more popular feature than I first thought it would be.<br>\r\n<br>\r\nCheers,<br>\r\nDave<br>\r\n<br>\r\nP.S. I think Firefox 3 has started to implement several filters and does so pretty well as I recall.<br>\r\n",
+    "PostedDate": "2008-10-15T16:47:40.263-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

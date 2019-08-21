@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "428390",
+    "ThreadId": "208590",
+    "Html": "<p>The .net project was setup to use .Net 3.5 framework, and I was wondering if that was manditory.&nbsp; We're currently using 2.0, and it would be good if I didn't have to update all of our projects to 3.5.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-04-07T10:17:27.78-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "428595",
+    "ThreadId": "208590",
+    "Html": "<p>The project itself depends on .NET 3.5 but you wouldnt have to upgrade your projects to 3.5 to use it because 3.5 still uses the 2.0 runtime.</p>\r\n<p>So you'd have to install .NET 3.5 to use the assembly but that should be the only work you have to do. If you're unable to install 3.5 let me know because there is probably still a possiblity of compiling it against .NET 2.0.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-04-07T19:21:44.82-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "428778",
+    "ThreadId": "208590",
+    "Html": "<p>I tried moving the svg project back to 2.0 and the Ling namespace was unavailable.&nbsp; It sure&nbsp;looked like there were only about 3-4&nbsp;classes from that namespace that were used.&nbsp; I certainly wouldn't want to suggest that you use 2.0 or have a 2.0 version, but if that is something your willing&nbsp;and have time to do that would be great.&nbsp; I just a little bit hesistant to change our requirements to 3.5(which I've had installed for a long time).&nbsp; Overall, I've tried several different methods for rendering svg, and&nbsp;this solution is by far the best I've found.&nbsp; Thank you!</p>\r\n<p>Scott</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-04-08T06:02:01.473-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

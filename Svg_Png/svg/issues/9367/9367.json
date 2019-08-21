@@ -1,0 +1,66 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Add support for the SVG <image/> element. Attached is basic support, but doesn't implement the preserveAspectRatio element. It parses it, and you'll see a placeholder for it, I just didn't acutally implement the resize. Shouldn't be hard to do, there's a marker in the code where we create the actual Image object, so the resize just needs to go there.",
+    "LastUpdatedDate": "2013-02-21T16:26:05.92-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2009-02-27T05:54:56.537-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Add Image suppport",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 9367
+  },
+  "FileAttachments": [
+    {
+      "FileId": 2785,
+      "FileName": "SvgImage.cs",
+      "DownloadUrl": ".\\2785"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Also, I've only tested with remote URLs (http://...). According to the SVG spec, it should support relative urls as well, but that's tricky since we're not working on the web here.",
+      "PostedDate": "2009-02-27T05:56:25.987-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-10-27T01:51:08.293-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-11-06T18:44:24.467-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:05.92-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

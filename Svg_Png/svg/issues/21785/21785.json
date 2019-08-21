@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "A second _m_ (lowercase _m_) command is not executed correctly when the last path element is closed with a z command. The z command has no valid start and end point, thea are always zero.\n\nSolution:\nModify construktor of __SvgClosePathSegment__ (Visual Basic Code):\n```\n   Public Sub New(ByVal Start As PointF, ByVal [End] As PointF)\n      MyBase.New(Start, [End])\n   End Sub\n```\n\nIn method __Parse__ of __SvgPathBuilder__:\n1) Add a local variable\n```\n    Dim mStartOfActElement As PointF\n```\n2) Fill this variable when executing an _M_ or _m_ command\n              Case \"M\"c, \"m\"c\n                  mSegments.Add(New SvgMoveToSegment(ToAbsolute(mCoords.Item(0), mCoords.Item(1), mSegments, mIsRelative)))\n                  mStartOfActElement = mSegments.Last.End\n                  ...\n3) Use it when executing the _z_ command\n               Case \"Z\"c, \"z\"c \n                  mSegments.Add(New SvgClosePathSegment(mSegments.Last.End, mStartOfActElement))\n                  ...",
+    "LastUpdatedDate": "2015-03-18T19:31:14.33-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2015-03-18T19:31:14.33-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "m Command not working",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 21785
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

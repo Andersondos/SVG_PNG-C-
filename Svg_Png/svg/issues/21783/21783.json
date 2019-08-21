@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I converted a JPG to SVG with Inksape 0.91. The format of one of the coordinates was \"10e-4\". \"e\" ist interpretet as command in function \"SplitCommands\". The Line\n   \"if (char.IsLetter(path[i]))\"\nhas to be replaced by\n   \"If Char.IsLetter(Path.Chars(mI)) And Char.ToLower(Path.Chars(mI)) <> \"e\" Then\"\n(This is the Visual Basic translation. I am not familiar wit c#)",
+    "LastUpdatedDate": "2015-03-17T19:38:10.013-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2015-03-17T19:28:51.12-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Bugs in SvgPathBuilder: Coordiantes with e-format",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 21783
+  },
+  "FileAttachments": [
+    {
+      "FileId": 8839,
+      "FileName": "Easter.svg",
+      "DownloadUrl": ".\\8839"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "(Sorry, I hit a wrong key.)\r\n\r\nThere ist another spot that has to be modified. In function \"ParseCoordinates\" the line\n \"var parts = coords.Remove(0, 1).Replace(\"-\", \" -\").Split(new[] { ',', ' ', '\\r', '\\n' }, StringSplitOptions.RemoveEmptyEntries);\"\nresults 10e-4 to converted into \"10e -4\" that will be interpreted as two values by the following \"Split\" function. It has to be replaces by\n ... Replace(\"-\", \" -\").Replace(\"e -\", \"e-\").Replace(\"E -\", \"E-\").\r\n\r\nI added the file as attachement.",
+      "PostedDate": "2015-03-17T19:38:10.013-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

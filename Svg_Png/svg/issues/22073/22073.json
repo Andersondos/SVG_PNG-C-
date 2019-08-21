@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "This Library is currently not managing all objects created in SVG format.\nThat's why I have met XML level issue while opening a document.\nExplanantion:\nI try to open a document created with Inkscape containing markers.\nMarkers will look like this:\n``` XML\n    <marker\n       inkscape:stockid=\"Arrow1Lstart\"\n       orient=\"auto\"\n       refY=\"0.0\"\n       refX=\"0.0\"\n       id=\"Arrow1Lstart\"\n       style=\"overflow:visible\"\n       inkscape:isstock=\"true\">\n      <path\n         id=\"path4162\"\n         d=\"M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z \"\n         style=\"fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt\"\n         transform=\"scale(0.8) translate(12.5,0)\" />\n    </marker>\n``` \nAs explained before, \"marker\" is unknown element for this Library, but not \"path\" which is a child element of marker.\nBecause known elements are stacked/unstacked during document opening, in order to manage elements levels, this will lead to exception when you reach next sibling because your stack count will reach 0 !\n\nIn order to solve this issue I had to change code in ___SvgDocument.Open___ method.\nMy solution is this:\n``` C#\nswitch (reader.NodeType)\n{\ncase XmlNodeType.Element:\n   ...\n   if (element == null)\n    {\n        //Skip non empty unknown element\n        //This is done to avoid any creation of known children of this element in document\n        string elementToSkip = reader.LocalName;\n        while (elementEmpty == false && reader.Read())\n        {\n            if (reader.NodeType == XmlNodeType.EndElement \n                && reader.LocalName == elementToSkip)\n                break;\n        }\n        continue;\n    }\n```\nThis simple change will solve the issue.\nIn addition, you will gain in performance, because unknown children won't be treated by library.",
+    "LastUpdatedDate": "2015-11-06T00:35:32.417-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2015-11-06T00:35:32.417-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Issue with unknown elements while opening document",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 22073
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

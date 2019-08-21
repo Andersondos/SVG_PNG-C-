@@ -1,0 +1,61 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2010-11-01T09:28:40.98-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I have out of memory exception when try draw bitmap from attached svg file.",
+    "LastUpdatedDate": "2013-05-16T04:04:27.047-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "svg",
+    "ReportedDate": "2009-11-13T11:55:42.5-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Out of memory exception",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 10937
+  },
+  "FileAttachments": [
+    {
+      "FileId": 3539,
+      "FileName": "drill bit.svg",
+      "DownloadUrl": ".\\3539"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Resolved with changeset 63164.",
+      "PostedDate": "2010-11-01T09:28:40.98-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:26:03.943-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:27.047-07:00",
+      "Id": -2147483648
+    }
+  ]
+}
